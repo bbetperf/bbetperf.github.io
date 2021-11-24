@@ -1,0 +1,379 @@
+/*Шрифты*/
+@font-face {
+    font-family: "Noto Serif Regular";
+    src: url(/fonts/Noto_Serif_Regular.ttf);
+    font-style: normal;
+    font-weight: normal;
+}
+p1 {
+    font-family: "Noto Serif Regular";
+    font-size: 24px;
+    color: #DEDEDE;
+    text-decoration: none;
+    transition: color 300ms ease;
+    margin: 0px;
+}
+p2 {
+    font-family: "Noto Serif Regular";
+    font-size: 24px;
+    color: #000000;
+    margin: 0px;
+}
+
+#star {
+    position: fixed;
+    right: 200px;
+    width: 70px;
+    top: 180px;
+    transform: rotate(-19.76deg);
+    z-index: -1;
+}
+#orange {
+    position: fixed;
+    left: 200px;
+    width: 150px;
+    bottom: 200px;
+    transform: rotate(136.12deg);
+    z-index: -1;
+}
+#pink {
+    position: fixed;
+    right: 300px;
+    width: 90px;
+    top: 350px;
+    transform: rotate(136.12deg);
+    z-index: -1;
+}
+#circle {
+    position: fixed;
+    right: 100px;
+    width: 70px;
+    top: 300px;
+    transform: rotate(26.18deg);
+    z-index: -1;
+}
+
+#lightbox {
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, .8);
+    display: none;
+}
+
+#lightbox.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_div img {
+    margin-right: 10px;
+    width: 300px;
+    cursor: pointer;
+}
+
+#footer_sites p2, .footer_texts p2 {
+    font-size: 20px;
+  }
+
+button {
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+button.name::after {
+    content: '';
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: black;
+    transition: 300ms;
+}
+button.name:hover::after {
+    width: 100%;
+}
+
+#title {
+    transition: color 300ms ease;
+    color: #DEDEDE;
+}
+
+#title:hover {
+    color: #000000;
+}
+
+.all_logo {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    margin: 0px;
+    width: 40%;
+}
+.all_logo li {
+    display: inline-block;
+}
+.all_logo li a {
+    position: static;
+    font-family: "Noto Serif Regular";
+    font-size: 36px;
+    display: block;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+.all_logo li #logo::after {
+    content: '';
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: rgb(0, 0, 0);
+    transition: 300ms;
+}
+.all_logo li #logo:hover::after {
+    width: 100%;
+}
+
+
+
+
+
+
+.footer {
+    list-style-type: none;
+    margin: 0px;
+}
+.footer li {
+    display: inline-block;
+    margin-left: 40px;
+}
+.footer li a::after {
+    content: '';
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: rgb(255, 255, 255);
+    transition: 300ms;
+}
+.footer li a:hover::after {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+/*Шапка сайта*/
+header {
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: relative;
+    margin: 50px auto;
+    max-width: 91%;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: space-between;
+}
+header p1 {
+    font-family: "Noto Serif Regular";
+    position: absolute;
+    margin-left: 5px;
+    font-size: 36px;
+    text-decoration: none;
+}
+header div p1:hover {
+    color: black;
+}
+header .menu_top {
+    list-style-type: none;
+    margin: 0px;
+}
+header .menu_top li {
+    display: inline-block;
+    margin-left: 50px;
+}
+header .menu_top li a {
+    position: static;
+    font-family: "Noto Serif Regular";
+    font-size: 24px;
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+header .menu_top li a::after {
+    content: '';
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: black;
+    transition: 300ms;
+}
+header .menu_top li a:hover::after {
+    width: 100%;
+}
+nav {
+    text-align: right;
+    width: 60%;
+}
+
+/*Бургер-меню*/
+.burger {
+    position: absolute;
+    opacity: 0;
+}
+.logo {
+    font-family: "Noto Serif Regular";
+    font-size: 36px;
+    text-decoration: none;
+    color: black;
+}
+#menu {
+    padding: 10px 0px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    width: 100%;
+    z-index: 1;
+}
+
+/*Скроллбар*/
+body {
+    margin: 0;
+}
+body::-webkit-scrollbar {
+    width: 7px;
+}
+body::-webkit-scrollbar-track {
+    background-color:rgb(255, 255, 255)
+}
+body::-webkit-scrollbar-thumb {
+    background-color:rgb(0, 0, 0)
+}
+
+/*Первый блок (с фото)*/
+#first_sec .container {
+    justify-content: space-between;
+    display: flex;
+    width: 91%;
+    margin: 60px auto;
+}
+#first_main_image {
+    max-width: 30%;
+}
+#first_main_image_texts {
+    margin: 0px 60px;
+    display: flex;
+    width: auto;
+    flex-direction: column;
+    justify-content: space-between;
+}
+main #first_main_image_texts p1:hover {
+    color: black;
+}
+
+/*Второй блок (обо мне)*/
+#second_sec .container {
+    width: 91%;
+    height: auto;
+    margin: 180px auto;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -ms-align-items: top;
+    align-items: top;
+    float: center;
+}
+#second_sec_texts {
+    margin: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*Третий блок (давайте обсудим)*/
+#third_sec p2 {
+    font-size: 36px;
+}
+#third_sec .container {
+    width: 91%;
+    margin: 180px auto;
+    text-align: center;
+}
+
+/*Футер*/
+footer {
+    justify-content: space-between;
+    -ms-align-items: center;
+    align-items: center;
+    padding: 40px 0px;
+    background-color: #7100E2;
+}
+.footer_texts {
+    width: 91%;
+    height: auto;
+    margin: 10px auto;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_texts p2 {
+    color: white;
+}
+
+/*Надписи*/
+#responsibilities {
+    padding: 100px 0px;
+    padding-left: 300px;
+    text-align: right;
+}
+#working_in_figma {
+    text-align: left;
+}
+#creativity p2{
+    font-size: 36px;
+}
+#description :hover {
+    color: black;
+}
+.name p2 {
+    font-size: 24px;
+}
+#subtitle {
+    margin: 40px auto;
+}
+#subtitle p2 {
+    font-size: 36px;
+    color: black;
+}
+#work_block .container {
+    width: 91%;
+    height: auto;
+    margin: 60px auto;
+}
+#place_of_work {
+    margin: 40px auto;
+}
+#place_of_work p2 {
+    font-size: 24px;
+    color: black;
+}
+
+/*Без подчеркивания синей линией*/
+a, a:hover, a:visited
+{
+    text-decoration: none;
+}
