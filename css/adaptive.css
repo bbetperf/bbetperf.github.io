@@ -15,8 +15,11 @@
   #description p1, p2, #place_of_work p2, #menu a, p1 {
     font-size: 22px;
   }
-  #creativity p2, #third_sec .container p2, #subtitle p2, header p1, #logo, #title {
+  #third_sec .container p2, #subtitle p2, header p1, #logo, #title {
     font-size: 30px;
+  }
+  #creativity p2 {
+    font-size: 26px;
   }
 }
 
@@ -24,8 +27,11 @@
   #description p1, p2, #place_of_work p2, #menu a, #footer_sites p2, .footer_texts p2, p1 {
     font-size: 18px;
   }
-  #creativity p2, #third_sec .container p2, #subtitle p2, header p1, #logo, #title {
+  #third_sec .container p2, #subtitle p2, header p1, #logo, #title {
     font-size: 26px;
+  }
+  #creativity p2 {
+    font-size: 22px;
   }
   #first_main_image_texts {
     margin: 0px;
@@ -49,11 +55,23 @@
 }
 
 @media only screen and (max-width: 643px) {
-  #description p1, p2, #place_of_work p2, #menu a, p1 {
-    font-size: 16px;
+  header .menu_top li {
+    margin-left: 30px;
   }
-  #creativity p2, #third_sec .container p2, #subtitle p2, header p1, #logo, #title {
+  nav {
+    width: 50%;
+  }
+  .all_logo {
+    width: 50%;
+  }
+  #description p1, p2, #place_of_work p2, #menu a, p1 {
+    font-size: 14px;
+  }
+  #third_sec .container p2, #subtitle p2, header p1, #logo, #title {
     font-size: 24px;
+  }
+  #creativity p2 {
+    font-size: 20px;
   }
   header .menu_top {
     margin-left: 0px;
@@ -72,14 +90,17 @@
   #description p1, p2, #place_of_work p2, #menu a, p1 {
     font-size: 20px;
   }
-  #creativity p2, #third_sec .container p2, #subtitle p2, header p1, #logo, #title {
+  #third_sec .container p2, #subtitle p2, header p1, #logo, #title {
     font-size: 28px;
+  }
+  #creativity p2 {
+    font-size: 26px;
   }
   #footer_sites p2, .footer_texts p2 {
     font-size: 16px;
   }
   .footer li {
-    margin-left: 20px;
+    margin-left: 10px;
   }
   #first_sec .container {
     flex-wrap: wrap;
@@ -96,7 +117,7 @@
     margin: auto;
   }
   #first_main_image_texts {
-    height: 300px;
+    height: 500px;
     margin: 180px 0px;
   }
   nav {
@@ -174,14 +195,18 @@
 }
 
 @media only screen and (max-width: 371px) {
-  #first_main_image_texts {
-    height: 350px;
-  }
   #footer_sites p2, .footer_texts p2 {
     font-size: 14px;
   }
   .footer li {
-    margin-left: 20px;
+    margin-left: 10px;
+  }
+  #first_main_image_texts {
+    height: 400px;
+  }
+  
+  #creativity p2 {
+    font-size: 24px;
   }
 }
 
@@ -189,10 +214,10 @@
   #description p1, p2, #place_of_work p2, #menu a, p1 {
     font-size: 16px;
   }
-  #first_main_image_texts {
-    height: 350px;
-  }
   #creativity p2, #third_sec .container p2, #subtitle p2, header p1, #logo, #title {
     font-size: 24px;
+  }
+  #footer_sites p2, .footer_texts p2 {
+    font-size: 12px;
   }
 }
