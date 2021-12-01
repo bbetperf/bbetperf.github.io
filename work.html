@@ -10,9 +10,7 @@
     <link rel="icon" href="/favicon/logo_favicon.svg" type="image/svg">
 </head>
 <body>
-
-    <script src="/js/script.js"></script>
-    
+    <script defer src="script.js"></script>
     <header>
         <ul class="all_logo">
             <li><a id="logo" href="index.html">bbetperf.</a></li>
@@ -26,18 +24,16 @@
                 <li><a href="work.html">work</a></li>
                 <li><a href="resume.html">resume</a></li>
                 <li><a href="contact.html">contact</a></li>
+                <li><a href="photos.html">photos</a></li>
             </ul>
         </nav>
     </header>
-
     <main>
         <section id="work_block">
             <div class="container">
-
                 <div id="subtitle">
                     <p2>ux and ui</p2>
                 </div>
-
                 <div id="place_of_work">
                     <button class="name" id="1" onclick="OpenGallery(this.id)">
                         <p2>carrots kitchen</p2>
@@ -46,12 +42,13 @@
                         <p1>designing of carrots kitchen mobile app</p1>
                     </div>
                 </div>
-                <div class="img_div" id="b1" style="display: none;">
-                    <img src="/projects/carrots-1.png">
-                    <img src="/projects/carrots-2.png">
-                    <img src="/projects/carrots-3.png">
-                </div>
-
+                <section id="b1" style="display: none;">
+                    <div class="img_div" id="photos_line">
+                        <div class="scale" id="photo_div"><img src="/projects/carrots-1.png" class="scale" id="photo"></div>
+                        <div class="scale" id="photo_div"><img src="/projects/carrots-2.png" class="scale" id="photo"></div>
+                        <div class="scale" id="photo_div"><img src="/projects/carrots-3.png" class="scale" id="photo"></div>
+                    </div>
+                </section>
                 <div id="place_of_work">
                     <button class="name" id="2" onclick="OpenGallery(this.id)">
                         <p2>apple store</p2>
@@ -60,11 +57,12 @@
                         <p1>concept design of Apple Store app</p1>
                     </div>
                 </div>
-                <div class="img_div" id="b2" style="display: none;">
-                    <img src="/projects/applestore-1.png">
-                    <img src="/projects/applestore-2.png">
-                </div>
-
+                <section id="b2" style="display: none;">
+                    <div class="img_div" id="photos_line">
+                        <div class="scale" id="photo_div"><img src="/projects/applestore-1.png" class="scale" id="photo"></div>
+                        <div class="scale" id="photo_div"><img src="/projects/applestore-2.png" class="scale" id="photo"></div>
+                    </div>
+                </section>
                 <div id="place_of_work">
                     <button class="name" id="3" onclick="OpenGallery(this.id)">
                         <p2>fansfer</p2>
@@ -73,12 +71,13 @@
                         <p1>full-fledged design project of the app concept for fast money transfers</p1>
                     </div>
                 </div>
-                <div class="img_div" id="b3" style="display: none;">
-                    <img src="/projects/fansfer-1.png">
-                    <img src="/projects/fansfer-2.png">
-                    <img src="/projects/fansfer-3.png">
-                </div>
-
+                <section id="b3" style="display: none;">
+                    <div class="img_div" id="photos_line">
+                        <div class="scale" id="photo_div"><img src="/projects/fansfer-1.png" class="scale" id="photo"></div>
+                        <div class="scale" id="photo_div"><img src="/projects/fansfer-2.png" class="scale" id="photo"></div>
+                        <div class="scale" id="photo_div"><img src="/projects/fansfer-3.png" class="scale" id="photo"></div>
+                    </div>
+                </section>
                 <div id="place_of_work">
                     <button class="name" id="4" onclick="OpenGallery(this.id)">
                         <p2>distudy</p2>
@@ -87,12 +86,13 @@
                         <p1>concept design app for online-study</p1>
                     </div>
                 </div>
-                <div class="img_div" id="b4" style="display: none;">
-                    <img src="/projects/distudy-1.png">
-                    <img src="/projects/distudy-2.png">
-                    <img src="/projects/distudy-3.png">
-                </div>
-
+                <section id="b4" style="display: none;">
+                    <div class="img_div" id="photos_line">
+                        <div class="scale" id="photo_div"><img src="/projects/distudy-1.png" class="scale" id="photo"></div>
+                        <div class="scale" id="photo_div"><img src="/projects/distudy-2.png" class="scale" id="photo"></div>
+                        <div class="scale" id="photo_div"><img src="/projects/distudy-3.png" class="scale" id="photo"></div>
+                    </div>
+                </section>
                 <div id="place_of_work">
                     <button class="name" id="5" onclick="OpenGallery(this.id)">
                         <p2>clubhouse</p2>
@@ -101,10 +101,11 @@
                         <p1>clubhouse mobile app redesign</p1>
                     </div>
                 </div>
-                <div class="img_div" id="b5" style="display: none;">
-                    <img src="/projects/clubhouse-1.png">
-                </div>
-
+                <section id="b5" style="display: none;">
+                    <div class="img_div" id="photos_line">
+                        <div class="scale" id="photo_div"><img src="/projects/clubhouse-1.png" class="scale" id="photo"></div>
+                    </div>
+                </section>
                 <div id="place_of_work">
                     <button class="name" id="6" onclick="OpenGallery(this.id)">
                         <p2>weather app</p2>
@@ -113,10 +114,11 @@
                         <p1>concept design app for weather forecast and outfit recommendations</p1>
                     </div>
                 </div>
-                <div class="img_div" id="b6" style="display: none;">
-                    <img src="/projects/weather-1.png">
-                </div>
-
+                <section id="b6" style="display: none;">
+                    <div class="img_div" id="photos_line">
+                        <div class="scale" id="photo_div"><img src="/projects/weather-1.png" class="scale" id="photo"></div>
+                    </div>
+                </section>
                 <div id="place_of_work">
                     <button class="name" id="7" onclick="OpenGallery(this.id)">
                         <p2>restaurantion</p2>
@@ -125,10 +127,11 @@
                         <p1>concept design app for table reservation in restaurants</p1>
                     </div>
                 </div>
-                <div class="img_div" id="b7" style="display: none;">
-                    <img src="/projects/rest-1.png">
-                </div>
-
+                <section id="b7" style="display: none;">
+                    <div class="img_div" id="photos_line">
+                        <div class="scale" id="photo_div"><img src="/projects/rest-1.png" class="scale" id="photo"></div>
+                    </div>
+                </section>
                 <div id="place_of_work">
                     <button class="name" id="8" onclick="OpenGallery(this.id)">
                         <p2>tasker</p2>
@@ -137,10 +140,11 @@
                         <p1>concept design for solving joint tasks</p1>
                     </div>
                 </div>
-                <div class="img_div" id="b8" style="display: none;">
-                    <img src="/projects/tasker-1.png">
-                </div>
-
+                <section id="b8" style="display: none;">
+                    <div class="img_div" id="photos_line">
+                        <div class="scale" id="photo_div"><img src="/projects/tasker-1.png" class="scale" id="photo"></div>
+                    </div>
+                </section>
                 <div id="place_of_work">
                     <button class="name" id="9" onclick="OpenGallery(this.id)">
                         <p2>traveller</p2>
@@ -149,14 +153,14 @@
                         <p1>concept design for travelling</p1>
                     </div>
                 </div>
-                <div class="img_div" id="b9" style="display: none;">
-                    <img src="/projects/traveller-1.png">
-                </div>
-
+                <section id="b9" style="display: none;">
+                    <div class="img_div" id="photos_line">
+                        <div class="scale" id="photo_div"><img src="/projects/traveller-1.png" class="scale" id="photo"></div>
+                    </div>
+                </section>
                 <div id="subtitle">
                     <p2>presentations</p2>
                 </div>
-
                 <div id="place_of_work">
                     <button class="name" id="10" onclick="OpenGallery(this.id)">
                         <p2>development group “etalon”</p2>
@@ -165,16 +169,36 @@
                         <p1>presentation of the case solution for the adaptation of acceptance</p1>
                     </div>
                 </div>
-                <div class="img_div" id="b10" style="display: none;">
-                    <img src="/projects/slide-1.png">
-                    <img src="/projects/slide-3.png">
-                    <img src="/projects/slide-6.png">
-                </div>
-
+                <section id="b10" style="display: none;">
+                    <div class="img_div" id="photos_line">
+                        <div class="scale" id="photo_div"><img src="/projects/slide-1.png" class="scale" id="photo"></div>
+                        <div class="scale" id="photo_div"><img src="/projects/slide-2.png" class="scale" id="photo"></div>
+                        <div class="scale" id="photo_div"><img src="/projects/slide-3.png" class="scale" id="photo"></div>
+                        <div class="scale" id="photo_div"><img src="/projects/slide-4.png" class="scale" id="photo"></div>
+                        <div class="scale" id="photo_div"><img src="/projects/slide-5.png" class="scale" id="photo"></div>
+                    </div>
+                    <div class="img_div" id="photos_line">
+                        <div class="scale" id="photo_div"><img src="/projects/slide-6.png" class="scale" id="photo"></div>
+                        <div class="scale" id="photo_div"><img src="/projects/slide-7.png" class="scale" id="photo"></div>
+                        <div class="scale" id="photo_div"><img src="/projects/slide-8.png" class="scale" id="photo"></div>
+                        <div class="scale" id="photo_div"><img src="/projects/slide-9.png" class="scale" id="photo"></div>
+                        <div class="scale" id="photo_div"><img src="/projects/slide-10.png" class="scale" id="photo"></div>
+                    </div>
+                    <div class="img_div" id="photos_line">
+                        <div class="scale" id="photo_div"><img src="/projects/slide-11.png" class="scale" id="photo"></div>
+                        <div class="scale" id="photo_div"><img src="/projects/slide-12.png" class="scale" id="photo"></div>
+                        <div class="scale" id="photo_div"><img src="/projects/slide-13.png" class="scale" id="photo"></div>
+                        <div class="scale" id="photo_div"><img src="/projects/slide-14.png" class="scale" id="photo"></div>
+                        <div class="scale" id="photo_div"><img src="/projects/slide-15.png" class="scale" id="photo"></div>
+                    </div>
+                    <div class="img_div" id="photos_line">
+                        <div class="scale" id="photo_div"><img src="/projects/slide-16.png" class="scale" id="photo"></div>
+                        <div class="scale" id="photo_div"><img src="/projects/slide-17.png" class="scale" id="photo"></div>
+                    </div>
+                </section>
             </div>
         </section>
     </main>
-
     <footer>
         <div class="footer_texts">
             <p2>© bbetperf 2021</p2>
@@ -184,8 +208,5 @@
             </ul>
         </div>
     </footer>
-
-    <script defer src="script.js"></script>
-
 </body>
 </html>
