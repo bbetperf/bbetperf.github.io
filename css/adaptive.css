@@ -1,37 +1,51 @@
 @media only screen and (max-width: 1200px) {
+  #description p1, p2, #place_of_work p2, #menu a, #footer_sites p2, .footer_texts p2, p1 {
+    font-size: 1.6vw;
+  }
+  #third_sec .container p2, #subtitle p2, header p1, #logo, #title, #creativity p2 {
+    font-size: 2.3vw;
+  }
   #first_main_image_texts {
     margin: 0px 50px;
-  }
-  #footer_sites p2, .footer_texts p2 {
-    font-size: 20px;
   }
   .img_div img {
     margin-right: 5px;
     width: 230px;
   }
-}
-
-@media only screen and (max-width: 992px) {
-  #description p1, p2, #place_of_work p2, #menu a, p1 {
-    font-size: 22px;
-  }
-  #third_sec .container p2, #subtitle p2, header p1, #logo, #title {
-    font-size: 30px;
-  }
-  #creativity p2 {
-    font-size: 26px;
+  #responsibilities {
+    padding: 100px 0px;
+    text-align: left;
   }
 }
-
+@media only screen and (max-width: 1024px) {
+  #description p1, p2, #place_of_work p2, #menu a, #footer_sites p2, .footer_texts p2, p1 {
+    font-size: 1.7vw;
+  }
+  #third_sec .container p2, #subtitle p2, header p1, #logo, #title, #creativity p2 {
+    font-size: 2.4vw;
+  }
+}
+@media only screen and (max-width: 897px) {
+  #description p1, p2, #place_of_work p2, #menu a, #footer_sites p2, .footer_texts p2, p1 {
+    font-size: 1.8vw;
+  }
+  #third_sec .container p2, #subtitle p2, header p1, #logo, #title, #creativity p2 {
+    font-size: 2.5vw;
+  }
+  header .menu_top {
+    margin-left: 0px;
+    padding: 0px;
+  }
+  #first_main_image_texts {
+    width: 60%;
+  }
+}
 @media only screen and (max-width: 800px) {
   #description p1, p2, #place_of_work p2, #menu a, #footer_sites p2, .footer_texts p2, p1 {
-    font-size: 18px;
+    font-size: 2vw;
   }
-  #third_sec .container p2, #subtitle p2, header p1, #logo, #title {
-    font-size: 26px;
-  }
-  #creativity p2 {
-    font-size: 22px;
+  #third_sec .container p2, #subtitle p2, header p1, #logo, #title, #creativity p2 {
+    font-size: 2.7vw;
   }
   #first_main_image_texts {
     margin: 0px;
@@ -52,9 +66,17 @@
     margin-right: 0px;
     width: 190px;
   }
+  header .menu_top li {
+    margin-left: 30px;
+  }
 }
-
 @media only screen and (max-width: 643px) {
+  #description p1, p2, #place_of_work p2, #menu a, #footer_sites p2, .footer_texts p2, p1 {
+    font-size: 2.2vw;
+  }
+  #third_sec .container p2, #subtitle p2, header p1, #logo, #title, #creativity p2 {
+    font-size: 2.9vw;
+  }
   header .menu_top li {
     margin-left: 30px;
   }
@@ -63,15 +85,6 @@
   }
   .all_logo {
     width: 50%;
-  }
-  #description p1, p2, #place_of_work p2, #menu a, p1 {
-    font-size: 14px;
-  }
-  #third_sec .container p2, #subtitle p2, header p1, #logo, #title {
-    font-size: 24px;
-  }
-  #creativity p2 {
-    font-size: 20px;
   }
   header .menu_top {
     margin-left: 0px;
@@ -83,42 +96,6 @@
   }
   #second_sec .container {
     margin: 100px auto;
-  }
-}
-
-@media only screen and (max-width: 526px) {
-  #description p1, p2, #place_of_work p2, #menu a, p1 {
-    font-size: 20px;
-  }
-  #third_sec .container p2, #subtitle p2, header p1, #logo, #title {
-    font-size: 28px;
-  }
-  #creativity p2 {
-    font-size: 26px;
-  }
-  #footer_sites p2, .footer_texts p2 {
-    font-size: 16px;
-  }
-  .footer li {
-    margin-left: 10px;
-  }
-  #first_sec .container {
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
-  #first_main_image {
-    margin-top: 30px;
-    max-width: 100%;
-  }
-  #first_sec .container {
-    margin: 0px auto;
-  }
-  #second_sec .container {
-    margin: auto;
-  }
-  #first_main_image_texts {
-    height: 500px;
-    margin: 180px 0px;
   }
   nav {
     width: 100%;
@@ -151,10 +128,10 @@
       padding: 0;
       background-color: white;
       position: absolute;
-      right: 10px;
+      right: 0px;
       border: 0;
-      width: 2rem;
-      height: 2rem;
+      width: 20px;
+      height: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -178,7 +155,7 @@
       top: -.5rem;
   }
   .burger .line {
-      width: 70%;
+      width: 100%;
       position: relative;
   }
   .burger.active .line{
@@ -192,11 +169,50 @@
       top: 0;
       transform: rotate(-135deg);
   }
+  #photos_line {
+    display:block;
+  }
+  .img_div #photo_div {
+    width: 200px;
+    display: flex;
+  }
+  #photo {
+    display: flex;
+  }
 }
-
-@media only screen and (max-width: 371px) {
-  #footer_sites p2, .footer_texts p2 {
-    font-size: 14px;
+@media only screen and (max-width: 526px) {
+  #description p1, p2, #place_of_work p2, #menu a, #footer_sites p2, .footer_texts p2, p1 {
+    font-size: 3.3vw;
+  }
+  #third_sec .container p2, #subtitle p2, header p1, #logo, #title, #creativity p2 {
+    font-size: 4.5vw;
+  }
+  #first_sec .container {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  #first_main_image {
+    margin-top: 30px;
+    max-width: 100%;
+  }
+  #first_sec .container {
+    margin: 0px auto;
+  }
+  #second_sec .container {
+    margin: auto;
+  }
+  #first_main_image_texts {
+    height: 500px;
+    width: 100%;
+    margin: 180px 0px;
+  }
+}
+@media only screen and (max-width: 430px) {
+  #description p1, p2, #place_of_work p2, #menu a, #footer_sites p2, .footer_texts p2, p1 {
+    font-size: 3.9vw;
+  }
+  #third_sec .container p2, #subtitle p2, header p1, #logo, #title, #creativity p2 {
+    font-size: 5.1vw;
   }
   .footer li {
     margin-left: 10px;
@@ -204,20 +220,15 @@
   #first_main_image_texts {
     height: 400px;
   }
-  
-  #creativity p2 {
-    font-size: 24px;
+  header .menu_top li {
+    margin-right: 20px;
   }
 }
-
-@media only screen and (max-width: 335px) {
-  #description p1, p2, #place_of_work p2, #menu a, p1 {
-    font-size: 16px;
+@media only screen and (max-width: 390px) {
+  #description p1, p2, #place_of_work p2, #menu a, #footer_sites p2, .footer_texts p2, p1 {
+    font-size: 4.2vw;
   }
-  #creativity p2, #third_sec .container p2, #subtitle p2, header p1, #logo, #title {
-    font-size: 24px;
-  }
-  #footer_sites p2, .footer_texts p2 {
-    font-size: 12px;
+  #third_sec .container p2, #subtitle p2, header p1, #logo, #title, #creativity p2 {
+    font-size: 5.4vw;
   }
 }
