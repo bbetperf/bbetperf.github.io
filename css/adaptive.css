@@ -118,12 +118,18 @@
     background: rgb(255, 255, 255);
     transition-duration: .5s;
     opacity: 0;
+    pointer-events: none;
+    cursor: default;
   }
   .menu_top.active {
     opacity: 1;
+    pointer-events: auto;
+    cursor: pointer;
   }
   .burger {
     opacity: 1;
+    pointer-events: auto;
+    cursor: pointer;
     margin: 0;
     padding: 0;
     background-color: white;
