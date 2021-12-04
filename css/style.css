@@ -37,6 +37,9 @@ p2 {
     width: 250px;
     cursor: pointer;
 }
+.gallery {
+    margin-bottom: 40px;
+}
 #photos_sec {
     justify-content: space-between;
     width: 91%;
@@ -58,6 +61,11 @@ p2 {
     width: 100%;
 }
 #photos_line {
+    display: flex;
+}
+#photos_line_2 {
+    flex-direction: row;
+    flex-wrap: wrap;
     display: flex;
 }
 #work_block.container {
