@@ -40,7 +40,8 @@ p2 {
 #photos_sec {
     justify-content: space-between;
     width: 91%;
-    margin: 60px auto;
+    margin: 0px auto;
+    margin-bottom: 60px;
 }
 .scale {
     overflow: hidden;
