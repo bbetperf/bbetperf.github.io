@@ -202,7 +202,6 @@
     flex-direction: row;
   }
   #first_main_image {
-    margin-top: 30px;
     max-width: 100%;
   }
   #first_sec .container {
