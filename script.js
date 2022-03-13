@@ -89,6 +89,38 @@ function OpenGallery(val){
                 document.getElementById('b10').style.display = "none";
             }
             break;
+        case '11':
+            if (document.getElementById('b11').style.display == "none") {
+                document.getElementById('b11').style.display = "block";
+            }
+            else {
+                document.getElementById('b11').style.display = "none";
+            }
+            break;
+        case '12':
+            if (document.getElementById('b12').style.display == "none") {
+                document.getElementById('b12').style.display = "block";
+            }
+            else {
+                document.getElementById('b12').style.display = "none";
+            }
+            break;
+        case '13':
+                if (document.getElementById('b13').style.display == "none") {
+                    document.getElementById('b13').style.display = "block";
+                }
+                else {
+                    document.getElementById('b13').style.display = "none";
+                }
+                break;
+        case '14':
+                if (document.getElementById('b14').style.display == "none") {
+                    document.getElementById('b14').style.display = "block";
+                }
+                else {
+                    document.getElementById('b14').style.display = "none";
+                }
+                break;
     }
 }
 
