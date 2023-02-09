@@ -198,6 +198,8 @@ nav {
 .burger {
     position: absolute;
     opacity: 0;
+    top: 100px;
+    cursor: default;
 }
 .logo {
     font-family: "Aeonik Pro Regular";
@@ -234,6 +236,12 @@ body::-webkit-scrollbar-thumb {
 #zero_sec {
     height: 100vh;
     margin-bottom: 40%;
+    opacity: 0;
+    animation: ani 1.0s forwards;
+}
+@keyframes ani {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 #zero_sec .svg_image {
     position: sticky;
@@ -285,6 +293,7 @@ main #first_main_image_texts p1:hover {
 /*Второй блок (обо мне)*/
 #second_sec {
     height: 100vh;
+    margin-bottom: 40%;
 }
 #second_sec .container {
     width: 60%;
@@ -325,13 +334,12 @@ main #first_main_image_texts p1:hover {
 }
 #third_sec .container {
     width: 60%;
-    position: relative;
+    position: sticky;
     margin: 0;
     padding: 0;
-    width: 60%;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 20%;
+    transform: translate(0%, -50%);
     display: flex;
     -ms-align-items: top;
     align-items: top;
@@ -406,6 +414,8 @@ footer {
 #zero_block_resume {
     height: 100vh;
     margin-bottom: 40%;
+    opacity: 0;
+    animation: ani 1.0s forwards;
 }
 #zero_block_resume .container {
     position: sticky;
@@ -470,6 +480,8 @@ footer {
 #zero_block_contact {
     height: 100vh;
     margin-bottom: 40%;
+    opacity: 0;
+    animation: ani 1.0s forwards;
 }
 #zero_block_contact .container {
     position: sticky;

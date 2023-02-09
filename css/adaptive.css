@@ -82,7 +82,6 @@
   .footer li {
     margin-left: 10px;
   }
-  
   .page_name {
     visibility: hidden;
     position: absolute;
@@ -125,6 +124,7 @@
     cursor: pointer;
     margin: 0;
     padding: 0;
+    top: 0;
     background-color: white;
     position: relative;
     border: 0;
