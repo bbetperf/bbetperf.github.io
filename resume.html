@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,122 +11,106 @@
 </head>
 <body>
     <script defer src="script.js"></script>
-    <div class="page">
-        <header>
-            <ul class="all_logo">
-                <li><a id="logo" href="index.html">bbetperf.</a></li>
-                <li><a id="title">resume</a></li>
+    <header>
+        <ul class="logo">
+            <li><a href="index.html">bbetperf.</a></li>
+        </ul>
+        <button class="burger" id="burger" onclick="ToggleMenu()">
+            <div class="line"><p2>🍔</p2></div>
+        </button>
+        <ul class="page_name">
+            <li><a >resume</a></li>
+        </ul>
+        <nav>
+            <ul class="menu_top" id="menu">
+                <li><a href="resume.html">resume</a></li>
+                <li><a href="contact.html">contact</a></li>
             </ul>
-            <button class="burger" id="burger" onclick="ToggleMenu()">
-                <div class="line"></div>
-            </button>
-            <nav>
-                <ul class="menu_top" id="menu">
-                    <li><a href="work.html">work</a></li>
-                    <li><a href="resume.html">resume</a></li>
-                    <li><a href="photos.html">photos</a></li>
-                    <li><a href="contact.html">contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <section id="work_block">
-                <div class="container">
-                    <div id="subtitle">
-                        <p2>work experience</p2>
-                    </div>
-                    <div id="place_of_work">
-                        <div id="name">
-                            <p2>havas worldwide moscow</p2>
-                        </div>
-                        <div id="description">
-                            <p1>designing presentations for tender<br>
-                                working with design systems, used for ready-made ones and creating a new ones<br>
-                                participating in product design development for corporations</p1>
-                        </div>
-                    </div>
-                    <div id="place_of_work">
-                        <div id="name">
-                            <p2>freelance</p2>
-                        </div>
-                        <div id="description">
-                            <p1>development of the design of a mobile app for startups</p1>
-                        </div>
-                    </div>
-                    <div id="subtitle">
-                        <p2>skills</p2>
-                    </div>
-                    <div id="place_of_work">
-                        <div id="description">
-                            <p1>figma </p1> <p1>css </p1> <p1>sketch </p1> <p1>adobe xd </p1> <p1>adobe lightroom </p1> <p1>adobe photoshop </p1> <p1>html </p1> <p1>adobe illustrator </p1> <p1>js </p1> <p1>eng b1 </p1>
-                        </div>
-                    </div>
-                    <div id="place_of_work">
-                        <div id="name">
-                            <p2>designing user-friendly interfaces for mobile applications</p2>
-                        </div>
-                    </div>
-                    <div id="place_of_work">
-                        <div id="name">
-                            <p2>interface prototyping</p2>
-                        </div>
-                    </div>
-                    <div id="place_of_work">
-                        <div id="name">
-                            <p2>development and testing of interactive prototypes</p2>
-                        </div>
-                    </div>
-                    <div id="place_of_work">
-                        <div id="name">
-                            <p2>ios and android user interface app development</p2>
-                        </div>
-                    </div>
-                    <div id="place_of_work">
-                        <div id="name">
-                            <p2>designing ui according to the guidelines</p2>
-                        </div>
-                    </div>
-                    <div id="place_of_work">
-                        <div id="name">
-                            <p2>effective problem solving</p2>
-                        </div>
-                    </div>
-                    <div id="subtitle">
-                        <p2>certificates</p2>
-                    </div>
-                    <div id="place_of_work">
-                        <button class="name" id="13" onclick="OpenGallery(this.id)">
-                            <p2>McKinsey & Company</p2>
-                        </button>
-                        <div id="description">
-                            <p1>hackathon finalist certificate from McKinsey & Company</p1>
-                        </div>
-                    </div>
-                    <section id="b13" style="display: none;" class="gallery">
-                        <iframe src="https://drive.google.com/file/d/1bGIoPLZan3v9LxXh4VGiAFibxw1YXEfm/preview" frameborder="0" width="100%" height="500px" allow="autoplay"></iframe>
-                    </section>
-                    <div id="place_of_work">
-                        <button class="name" id="14" onclick="OpenGallery(this.id)">
-                            <p2>Cup Construction 2021 by Changellenge</p2>
-                        </button>
-                        <div id="description">
-                            <p1>award Hign Quality Award 25% for the highest quality case solution</p1>
-                        </div>
-                    </div>
-                    <section id="b14" style="display: none;" class="gallery">
-                        <iframe src="https://drive.google.com/file/d/1couy8VkeWH5veBbbgwO0hM9XtenpAdYY/preview" frameborder="0" width="100%" height="700px" allow="autoplay"></iframe>
-                    </section>
-                </div>
-            </section>
-        </main>
-        <footer>
-            <div class="footer_texts">
-                <p2 id="footer_sites">© bbetperf 2021</p2>
-                <ul class="footer">
-                    <li><a href="https://www.behance.net/bbetperf" target="_blank" id="footer_sites"><p2>behance</p2></a></li>
-                </ul>
+        </nav>
+    </header>
+    <section id="zero_block_resume">
+        <div class="container">
+            <div id="subtitle">
+                <p2>work experience</p2>
             </div>
-        </footer>
-    </div>
+        </div>
+    </section>
+    <section id="first_block_resume">
+        <div class="container">
+            <div id="responsibilities">
+                <div id="name">
+                    <p2>2️⃣ – idaproject</p2>
+                    <p2>ui/ux designer</p2>
+                </div>
+                <div id="description">
+                    <p1>creation and development of cjm</p1>
+                    <p1>formation of interface descriptions and requirements for developers</p1>
+                    <p1>development, design, systematization, development and improvement of ui-kit and design system</p1>
+                    <p1>estimation of labor costs by tasks</p1>
+                    <p1>analysis of analytics and improvement of existing projects</p1>
+                    <p1>adaptation of layouts for different devices and resolutions</p1>
+                </div>
+            </div>
+            <div id="responsibilities">
+                <div id="name">
+                    <p2>1️⃣ – havas worldwide moscow</p2>
+                    <p2>intern art director</p2>
+                </div>
+                <div id="description">
+                    <p1>working with design systems, used for ready-made ones and creating a new ones</p1>
+                    <p1>participated in the development of product design for large clients</p1>
+                    <p1>defended ideas directly with clients, participated in briefs with clients</p1>
+                </div>
+            </div>
+            <div id="responsibilities">
+                <div id="name">
+                    <p2>0️⃣ – freelance</p2>
+                </div>
+                <div id="description">
+                    <p1>development of the design of a mobile app for startups</p1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="second_block_resume">
+        <div class="container">
+            <div id="subtitle">
+                <p2>skills</p2>
+            </div>
+        </div>
+    </section>
+    <section id="third_block_resume">
+        <div class="container">
+            <div id="responsibilities">
+                <div id="description">
+                    <p1>figma</p1> <p1>css</p1> <p1>tilda</p1> <p1>sketch</p1> <p1>adobe xd<br></p1> <p1>adobe lightroom</p1> <p1>adobe photoshop</p1> <p1>html</p1> <p1>adobe illustrator</p1> <p1>eng b1</p1>
+                </div>
+            </div>
+            <div id="responsibilities">
+                <div id="description">
+                    <p1>designing user-friendly interfaces for mobile applications</p1>
+                    <p1>interface prototyping</p1>
+                    <p1>development and testing of interactive prototypes</p1>
+                    <p1>ios and android user interface app development</p1>
+                    <p1>designing ui according to the guidelines</p1>
+                    <p1>adobe photoshop</p1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer_texts">
+            <ul class="footer_sites">
+                <li><a target="_blank"><p2>upd 2023</p2></a></li>
+            </ul>
+            <ul class="footer_figma">
+                <li><a href="https://www.figma.com/proto/6xVrWbMGVfhfcvKo6HsbWK/Portfolio?page-id=0%3A1&node-id=11%3A1468&starting-point-node-id=11%3A1468&scaling=scale-down" target="_blank"><p2>look in figma</p2></a></li>
+            </ul>
+            <ul class="footer">
+                <li><a href="https://t.me/bbetperf" target="_blank"><p2>telegram</p2></a></li>
+                <li><a href="https://www.instagram.com/bbetperf/" target="_blank"><p2>instagram</p2></a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>

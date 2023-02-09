@@ -1,21 +1,22 @@
 /*Шрифты*/
 @font-face {
-    font-family: "Noto Serif Regular";
-    src: url(/fonts/Noto_Serif_Regular.ttf);
+    font-family: "Aeonik Pro Regular";
+    src: url(/fonts/AeonikPro-Regular.ttf);
     font-style: normal;
     font-weight: normal;
+    letter-spacing: -0.03em;
 }
 p1 {
-    font-family: "Noto Serif Regular";
-    font-size: 1.3vw;
+    font-family: "Aeonik Pro Regular";
+    font-size: 1.1vw;
     color: #DEDEDE;
     text-decoration: none;
     transition: color 300ms ease;
     margin: 0px;
 }
 p2 {
-    font-family: "Noto Serif Regular";
-    font-size: 1.3vw;
+    font-family: "Aeonik Pro Regular";
+    font-size: 1.1vw;
     color: #000000;
     margin: 0px;
 }
@@ -38,13 +39,12 @@ p2 {
     cursor: pointer;
 }
 .gallery {
-    margin-bottom: 40px;
+    margin-bottom: 24px;
 }
 #photos_sec {
     justify-content: space-between;
-    width: 91%;
-    margin: 0px auto;
-    margin-bottom: 60px;
+    width: 100%;
+    margin: 120px auto 120px auto;
 }
 .scale {
     overflow: hidden;
@@ -68,9 +68,9 @@ p2 {
     flex-wrap: wrap;
     display: flex;
 }
-#work_block.container {
+#_block.container {
     justify-content: space-between;
-    width: 91%;
+    width: 100%;
 }
 button {
     cursor: pointer;
@@ -85,38 +85,42 @@ button.name::after {
     width: 0px;
     height: 1px;
     display: block;
-    background: black;
+    background: #111111;
     transition: 300ms;
 }
 button.name:hover::after {
     width: 100%;
 }
 #title {
-    transition: color 300ms ease;
-    color: #DEDEDE;
+    color: #111111;
+    opacity: 0.2;
 }
 #title:hover {
-    color: #000000;
+    opacity: 1.0;
+    transition: 300ms;
 }
 /*Шапка сайта*/
 header {
     flex-wrap: wrap;
     flex-direction: row;
-    position: relative;
-    margin: 50px auto;
-    width: 91%;
-    display: -webkit-flex;
-    display: -ms-flex;
+    position: fixed;
+    max-width: 100%;
+    left: 0;
+    right: 0;
+    padding: 24px;
     display: flex;
     -ms-align-items: center;
     align-items: center;
     justify-content: space-between;
+    background-color: white;
+    z-index: 2;
+    opacity: 0.97;
 }
 header p1 {
-    font-family: "Noto Serif Regular";
+    font-family: "Aeonik Pro Regular";
     position: absolute;
     margin-left: 5px;
-    font-size: 2vw;
+    font-size: 1.1vw;
     text-decoration: none;
 }
 header div p1:hover {
@@ -128,59 +132,67 @@ header .menu_top {
 }
 header .menu_top li {
     display: inline-block;
-    margin-left: 40px;
+    margin-left: 24px;
 }
 header .menu_top li a {
     position: static;
-    font-family: "Noto Serif Regular";
-    font-size: 1.3vw;
+    font-family: "Aeonik Pro Regular";
+    font-size: 1.1vw;
     display: block;
     text-decoration: none;
-    color: black;
+    color: #111111;
+    opacity: 0.2;
 }
-header .menu_top li a::after {
-    content: '';
-    width: 0px;
-    height: 1px;
-    display: block;
-    background: black;
+header .menu_top li a:hover {
+    color: #111111;
+    opacity: 1;
     transition: 300ms;
-}
-header .menu_top li a:hover::after {
-    width: 100%;
 }
 nav {
     text-align: right;
-    width: 60%;
+    width: calc(100%/3);
 }
-.all_logo {
+.logo {
     list-style-type: none;
     margin: 0px;
     padding: 0px;
-    margin: 0px;
-    width: 40%;
+    width: calc(100%/3);
 }
-.all_logo li {
+.logo li {
     display: inline-block;
 }
-.all_logo li a {
+.logo li a {
     position: static;
-    font-family: "Noto Serif Regular";
-    font-size: 2vw;
+    font-family: "Aeonik Pro Regular";
+    font-size: 1.1vw;
     display: block;
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: #111111;
+    opacity: 0.2;
 }
-.all_logo li #logo::after {
-    content: '';
-    width: 0px;
-    height: 1px;
-    display: block;
-    background: rgb(0, 0, 0);
+.logo li a:hover {
+    color: #111111;
+    opacity: 1;
     transition: 300ms;
 }
-.all_logo li #logo:hover::after {
-    width: 100%;
+.page_name {
+    list-style-type: none;
+    width: calc(100%/3);
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+.page_name li a {
+    font-family: "Aeonik Pro Regular";
+    font-size: 1.1vw;
+    text-decoration: none;
+    color: #111111;
+    opacity: 0.2;
+}
+.page_name li a:hover {
+    transition: 300ms;
+    opacity: 1.0;
+    cursor: default; 
 }
 /*Бургер-меню*/
 .burger {
@@ -188,17 +200,14 @@ nav {
     opacity: 0;
 }
 .logo {
-    font-family: "Noto Serif Regular";
-    font-size: 2vw;
+    font-family: "Aeonik Pro Regular";
+    font-size: 1.1vw;
     text-decoration: none;
     color: black;
 }
 #menu {
-    padding: 10px 0px;
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    padding: 0px 0px;
     width: 100%;
-    z-index: 1;
 }
 .page {
     overflow: hidden;
@@ -206,10 +215,12 @@ nav {
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
 }
-
 /*Скроллбар*/
-body {
+.page-wrapper, html, body {
+    width: 100%;
+    height: 100%;
     margin: 0;
+    padding: 0;
 }
 body::-webkit-scrollbar {
     width: 7px;
@@ -220,19 +231,51 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
     background-color:rgb(0, 0, 0)
 }
+#zero_sec {
+    height: 100vh;
+    margin-bottom: 40%;
+}
+#zero_sec .svg_image {
+    position: sticky;
+    height: 23%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 /*Первый блок (с фото)*/
-#first_main_image {
-    max-width: 30%;
+#first_sec {
+    height: 100vh;
+    margin-bottom: 40%;
+}
+#sticky_container {
+    position: sticky;
+    top: calc(100vh/2 - 306.5px/2);
 }
 #first_sec .container {
-    display: flex;
-    width: 91%;
-    margin: auto;
+    position: sticky;
+    margin: 0;
+    padding: 0;
+    width: 60%;
+    left: 20%;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+#creativity {
+    padding: 64px 0px;
+}
+#first_sec .container p1{
+    color: #111111;
+    opacity: 0.2;
+}
+#first_sec .container p1:hover{
+    color: #111111;
+    opacity: 1;
+    transition: 300ms;
+    cursor: default;
 }
 #first_main_image_texts {
-    margin: 0px 60px;
-    display: flex;
-    width: 50%;
+    margin: 0;
+    padding: 0;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -240,12 +283,18 @@ main #first_main_image_texts p1:hover {
     color: black;
 }
 /*Второй блок (обо мне)*/
+#second_sec {
+    height: 100vh;
+}
 #second_sec .container {
-    width: 91%;
-    height: auto;
-    margin: 180px auto;
-    display: -webkit-flex;
-    display: -ms-flex;
+    width: 60%;
+    position: sticky;
+    margin: 0;
+    padding: 0;
+    width: 60%;
+    left: 20%;
+    top: 50%;
+    transform: translate(0%, -50%);
     display: flex;
     -ms-align-items: top;
     align-items: top;
@@ -260,32 +309,67 @@ main #first_main_image_texts p1:hover {
 }
 /*Третий блок (давайте обсудим)*/
 #third_sec p2 {
-    font-size: 2vw;
+    font-size: 2.4vw;
+}
+#third_sec .container p2 a {
+    color: #111111;
+    opacity: 0.2;
+    text-decoration: none;
+}
+#third_sec .container p2 a:hover {
+    opacity: 1.0;
+    transition: 300ms;
+}
+#third_sec {
+    height: 100vh;
 }
 #third_sec .container {
-    width: 91%;
-    margin: 180px auto;
-    text-align: center;
+    width: 60%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    -ms-align-items: top;
+    align-items: top;
+    float: center;
 }
 /*Футер*/
 footer {
-    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: fixed;
+    max-width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 24px;
+    display: flex;
     -ms-align-items: center;
     align-items: center;
-    padding: 30px 0px;
-    background-color: #000000;
+    justify-content: space-between;
+    background-color: white;
+    z-index: 2;
+    opacity: 0.97;
 }
 .footer_texts {
-    width: 91%;
+    width: 100%;
     height: auto;
-    margin: 10px auto;
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     justify-content: space-between;
 }
 .footer_texts p2 {
-    color: white;
+    color: #111111;
+    opacity: 0.2;
+}
+.footer_texts p2:hover {
+    opacity: 1.0;
+    transition: 300ms;
 }
 .footer {
     list-style-type: none;
@@ -293,59 +377,157 @@ footer {
 }
 .footer li {
     display: inline-block;
-    margin-left: 40px;
-}
-.footer li a::after {
-    content: '';
-    width: 0px;
-    height: 1px;
-    display: block;
-    background: rgb(255, 255, 255);
-    transition: 300ms;
-}
-.footer li a:hover::after {
-    width: 100%;
+    margin-left: 24px;
 }
 /*Надписи*/
 #responsibilities {
-    padding: 100px 0px;
-    padding-left: 300px;
-    text-align: right;
+    padding: 32px 0px;
+    width: 100%;
 }
 #working_in_figma {
     text-align: left;
 }
 #creativity p2{
-    font-size: 2vw;
+    font-size: 2.4vw;
 }
 #description :hover {
     color: black;
 }
 .name p2 {
-    font-size: 1.3vw;
+    font-size: 1.1vw;
 }
 #subtitle {
     margin: 0px auto;
-    margin-bottom: 40px;
 }
 #subtitle p2 {
-    font-size: 2vw;
+    font-size: 2.4vw;
     color: black;
 }
-#work_block .container {
-    width: 91%;
-    height: auto;
-    margin: 0px auto;
+#zero_block_resume {
+    height: 100vh;
+    margin-bottom: 40%;
 }
-#place_of_work {
-    margin: 40px auto;
+#zero_block_resume .container {
+    position: sticky;
+    margin: 0;
+    padding: 0;
+    width: 60%;
+    top: 50%;
+    left: 20%;
+    transform: translate(0%, -50%);
 }
-#place_of_work p2 {
-    font-size: 1.3vw;
-    color: black;
+#first_block_resume {
+    height: 100vh;
+    margin-bottom: 40%;
+}
+#first_block_resume .container {
+    position: sticky;
+    margin: 0;
+    padding: 0;
+    width: 60%;
+    top: 50%;
+    left: 20%;
+    transform: translate(0%, -50%);
+}
+#first_block_resume {
+    height: 100vh;
+    margin-bottom: 40%;
+}
+#first_block_resume .container {
+    position: sticky;
+    margin: 0;
+    padding: 0;
+    width: 60%;
+    top: 50%;
+    left: 20%;
+    transform: translate(0%, -50%);
+}
+#second_block_resume {
+    height: 100vh;
+    margin-bottom: 40%;
+}
+#second_block_resume .container {
+    position: sticky;
+    margin: 0;
+    padding: 0;
+    width: 60%;
+    top: 50%;
+    left: 20%;
+    transform: translate(0%, -50%);
+}
+#third_block_resume {
+    height: 100vh;
+}
+#third_block_resume .container {
+    position: sticky;
+    margin: 0;
+    padding: 0;
+    width: 60%;
+    top: 50%;
+    left: 20%;
+    transform: translate(0%, -50%);
+}
+#zero_block_contact {
+    height: 100vh;
+    margin-bottom: 40%;
+}
+#zero_block_contact .container {
+    position: sticky;
+    margin: 0;
+    padding: 0;
+    width: 60%;
+    top: 50%;
+    left: 20%;
+    transform: translate(0%, -50%);
+}
+#first_block_contact {
+    height: 100vh;
+}
+#first_block_contact .container {
+    position: sticky;
+    margin: 0;
+    padding: 0;
+    width: 60%;
+    top: 50%;
+    left: 20%;
+    transform: translate(0%, -50%);
+}
+#contact_link a p1 {
+    font-size: 2.4vw;
+    color: #111111;
+    opacity: 0.2;
+}
+#contact_link a p1:hover {
+    transition: 300ms;
+    opacity: 1.0;
+}
+#contact_link p1 {
+    font-size: 2.4vw;
+    color: #111111;
 }
 /*Без подчеркивания синей линией*/
 a, a:hover, a:visited
 {
     text-decoration: none;
+}
+.footer_sites {
+    width: calc(100%/3);
+    list-style-type: none;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    cursor: default;
+}
+.footer {
+    width: calc(100%/3);
+    text-align: right;
+    padding: 0;
+    margin: 0;
+}
+.footer_figma {
+    width: calc(100%/3);
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
