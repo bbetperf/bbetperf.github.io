@@ -28,7 +28,6 @@ button {
     cursor: pointer;
     padding: 0px;
     border: none;
-    font: inherit;
     color: inherit;
     background-color: transparent;
 }
@@ -57,17 +56,20 @@ header {
     flex-direction: row;
     position: fixed;
     max-width: 100%;
+    height: auto;
     left: 0;
     right: 0;
-    padding: 24px;
+    padding-top: 24px;
+    padding-bottom: 24px;
     display: flex;
     -ms-align-items: center;
     align-items: center;
     justify-content: space-between;
     background-color: rgba(255, 255, 255, 0.85);
-    z-index: 9999;
+    z-index: 999;
     backdrop-filter: blur(15px);
     border-bottom: 2px solid #111111;
+    font-size: x-small;
 }
 header p1 {
     font-family: "Aeonik Pro Regular";
@@ -102,14 +104,15 @@ header .menu_top li a:hover {
     transition: 300ms;
 }
 nav {
+    margin: 0px 24px 0px 0px;
     text-align: right;
-    width: calc(100%/3);
+    width: calc(100%/3 - 24px);
 }
 .logo {
     list-style-type: none;
-    margin: 0px;
+    margin: 0px 0px 0px 24px;
     padding: 0px;
-    width: calc(100%/3);
+    width: calc(100%/3 - 24px);
 }
 .logo li {
     display: inline-block;
@@ -161,8 +164,41 @@ nav {
     color: black;
 }
 #menu {
+    visibility: hidden;
+    position: fixed;
     padding: 0px 0px;
     width: 100%;
+    list-style-type: none;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.85);
+    z-index: 999;
+    backdrop-filter: blur(15px);
+    border-bottom: 2px solid #111111;
+}
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: x-small;
+}
+#menu li a {
+    position: static;
+    font-family: "Aeonik Pro Regular";
+    font-size: 1.1vw;
+    display: block;
+    text-decoration: none;
+    list-style-type: none;
+    color: #111111;
+    opacity: 0.2;
+}
+#menu li {
+    display: inline-block;
+    margin-right: 10px;
+}
+#menu li a:hover {
+    color: #111111;
+    opacity: 1;
+    transition: 300ms;
 }
 .page {
     overflow: hidden;
@@ -332,6 +368,7 @@ footer {
     display: -ms-flex;
     display: flex;
     justify-content: space-between;
+    font-size: x-small;
 }
 .footer_texts p2 {
     color: #111111;
@@ -525,4 +562,15 @@ a, a:hover, a:visited
 }
 .element-animation {
     opacity: 0;
+}
+.line {
+    font-size: x-small;
+}
+.line p2 {
+    color: #111111;
+    opacity: 0.2;
+}
+.line p2:hover  {
+    opacity: 1.0;
+    transition: 300ms;
 }

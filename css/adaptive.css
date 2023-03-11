@@ -1,5 +1,5 @@
 @media only screen and (max-width: 1200px) {
-  #description p1, p2, #place_of_work p2, #menu a, #footer_sites p2, .footer_texts p2, p1, .page_name li a, .logo li a {
+  #description p1, p2, #place_of_work p2, header .menu_top li a , #footer_sites p2, .footer_texts p2, p1, .page_name li a, .logo li a {
     font-size: 1.2vw;
   }
   #third_sec .container p2, #subtitle p2, header p1, #logo, #title, #creativity p2, #contact_link a p1, #contact_link p1 {
@@ -7,15 +7,18 @@
   }
 }
 @media only screen and (max-width: 1024px) {
-  #description p1, p2, #place_of_work p2, #menu a, #footer_sites p2, .footer_texts p2, p1, .page_name li a, .logo li a {
+  #description p1, p2, #place_of_work p2, header .menu_top li a , #footer_sites p2, .footer_texts p2, p1, .page_name li a, .logo li a {
     font-size: 1.4vw;
+  }
+  .pagination_status_line {
+    visibility: hidden;
   }
   #third_sec .container p2, #subtitle p2, header p1, #logo, #title, #creativity p2, #contact_link a p1, #contact_link p1 {
     font-size: 2.4vw;
   }
 }
 @media only screen and (max-width: 897px) {
-  #description p1, p2, #place_of_work p2, #menu a, #footer_sites p2, .footer_texts p2, p1, .page_name li a, .logo li a {
+  #description p1, p2, #place_of_work p2, header .menu_top li a , #footer_sites p2, .footer_texts p2, p1, .page_name li a, .logo li a {
     font-size: 1.6vw;
   }
   #third_sec .container p2, #subtitle p2, header p1, #logo, #title, #creativity p2, #contact_link a p1, #contact_link p1 {
@@ -26,7 +29,7 @@
   }
 }
 @media only screen and (max-width: 800px) {
-  #description p1, p2, #place_of_work p2, #menu a, #footer_sites p2, .footer_texts p2, p1, .page_name li a, .logo li a {
+  #description p1, p2, #place_of_work p2, header .menu_top li a , #footer_sites p2, .footer_texts p2, p1, .page_name li a, .logo li a {
     font-size: 1.8vw;
   }
   #third_sec .container p2, #subtitle p2, header p1, #logo, #title, #creativity p2, #contact_link a p1, #contact_link p1 {
@@ -37,7 +40,7 @@
   }
 }
 @media only screen and (max-width: 643px) {
-  #description p1, p2, #place_of_work p2, #menu a, #footer_sites p2, .footer_texts p2, p1, .page_name li a, .logo li a {
+  #description p1, p2, #place_of_work p2, header .menu_top li a , #footer_sites p2, .footer_texts p2, p1, .page_name li a, .logo li a {
     font-size: 2.2vw;
   }
   #third_sec .container p2, #subtitle p2, header p1, #logo, #title, #creativity p2, #contact_link a p1, #contact_link p1 {
@@ -51,7 +54,7 @@
   }
 }
 @media only screen and (max-width: 526px) {
-  #description p1, p2, #place_of_work p2, #menu a, #footer_sites p2, .footer_texts p2, p1, .page_name li a, .logo li a {
+  #description p1, p2, #place_of_work p2, header .menu_top li a , #footer_sites p2, .footer_texts p2, p1, .page_name li a, .logo li a {
     font-size: 2.6vw;
   }
   #third_sec .container p2, #subtitle p2, header p1, #logo, #title, #creativity p2, #contact_link a p1, #contact_link p1  {
@@ -71,9 +74,16 @@
   #zero_block_contact {
     margin-bottom: 70%;
   }
+  .logo, nav {
+    width: calc(100%/2 - 24px);
+  }
+  .page_name {
+    visibility: hidden;
+    position: absolute;
+  }
 }
 @media only screen and (max-width: 430px) {
-  #description p1, p2, #place_of_work p2, #menu a, #footer_sites p2, .footer_texts p2, p1, .page_name li a, .logo li a {
+  #menu li a, #description p1, p2, #place_of_work p2, header .menu_top li a , #footer_sites p2, .footer_texts p2, p1, .page_name li a, .logo li a {
     font-size: 3.4vw;
   }
   #third_sec .container p2, #subtitle p2, header p1, #logo, #title, #creativity p2, #contact_link a p1, #contact_link p1 {
@@ -81,10 +91,6 @@
   }
   .footer li {
     margin-left: 10px;
-  }
-  .page_name {
-    visibility: hidden;
-    position: absolute;
   }
   header .menu_top li {
     margin-left: 30px;
@@ -102,30 +108,34 @@
     text-align: left;
   }
   #menu {
-    padding: 16px 0px 16px 0px;
+    padding: 24px;
     width: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(15px);
   }
   .menu_top {
     position: absolute;
-    background: rgb(255, 255, 255);
-    transition-duration: .5s;
-    opacity: 0;
+    border-bottom: 2px solid #111111;
+    visibility: hidden;
     pointer-events: none;
     cursor: default;
   }
-  .menu_top.active {
-    opacity: 1;
+  #menu.active {
+    visibility: visible;
     pointer-events: auto;
     cursor: pointer;
+    top: 64px;
+    z-index: 500;
   }
   .burger {
     opacity: 1;
     pointer-events: auto;
     cursor: pointer;
-    margin: 0;
+    margin: 0px 24px 0px 0px;
     padding: 0;
     top: 0;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(15px);
     position: relative;
     border: 0;
     width: auto;
@@ -136,15 +146,15 @@
   }
 }
 @media only screen and (max-width: 390px) {
-  #description p1, p2, #place_of_work p2, #menu a, #footer_sites p2, .footer_texts p2, p1, .page_name li a, .logo li a {
+  #menu li a, #description p1, p2, #place_of_work p2, header .menu_top li a , #footer_sites p2, .footer_texts p2, p1, .page_name li a, .logo li a {
     font-size: 3.8vw;
   }
   #third_sec .container p2, #subtitle p2, header p1, #logo, #title, #creativity p2, #contact_link a p1, #contact_link p1 {
     font-size: 4.4vw;
   }
   #first_sec .container, #second_sec .container, #third_sec .container, #zero_block_resume .container, #first_block_resume .container, #second_block_resume .container, #third_block_resume .container, #zero_block_contact .container, #first_block_contact .container {
-    width: 80%;
-    left: 10%;
+    width: 90%;
+    left: 5%;
   }
   #third_sec .container {
     transform: translate(0%, 0%);
