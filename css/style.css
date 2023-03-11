@@ -106,13 +106,13 @@ header .menu_top li a:hover {
 nav {
     margin: 0px 24px 0px 0px;
     text-align: right;
-    width: calc(100%/3 - 24px);
+    width: calc(100%/3);
 }
 .logo {
     list-style-type: none;
     margin: 0px 0px 0px 24px;
     padding: 0px;
-    width: calc(100%/3 - 24px);
+    width: calc(100%/3);
 }
 .logo li {
     display: inline-block;
@@ -133,7 +133,7 @@ nav {
 }
 .page_name {
     list-style-type: none;
-    width: calc(100%/3);
+    width: calc(100%/3 - 48px);
     margin: 0px;
     padding: 0px;
     text-align: center;
@@ -207,9 +207,15 @@ nav {
     min-height: 100vh;
 }
 /*Скроллбар*/
-.page-wrapper, html, body {
+.page-wrapper, html {
     width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+    height: fit-content;
     margin: 0;
     padding: 0;
 }
@@ -543,6 +549,8 @@ a, a:hover, a:visited
     padding: 0;
 }
 .pagination_status_line {
+    opacity: 0;
+    transition: opacity .5s;
     z-index: 3;
     position: fixed;
     top: 50%;
