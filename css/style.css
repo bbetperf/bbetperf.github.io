@@ -585,3 +585,11 @@ a, a:hover, a:visited
     opacity: 1.0;
     transition: 300ms;
 }
+#button_menu {
+    color: #111111;
+    opacity: 0.2;
+}
+#button_menu:hover {
+    opacity: 1.0;
+    transition: 300ms;
+}
