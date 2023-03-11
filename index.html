@@ -11,6 +11,8 @@
 </head>
 <body>
     <script defer src="script.js"></script>
+    <script defer src="show.js"></script>
+    <script defer src="scroll.js"></script>
     <header>
         <ul class="logo">
             <li><a href="index.html">bbetperf.</a></li>
@@ -28,39 +30,43 @@
             </ul>
         </nav>
     </header>
-        <section id="zero_sec">
-            <div class="cube">
-                <script type="module" src="viewer.js"></script>
-                <spline-viewer hint loading-anim url="https://prod.spline.design/7xesWe1v3RU8hSg2/scene.splinecode"></spline-viewer>
+    <div class="pagination_status_line">
+        <div class="line"></div>
+    </div>
+    <section id="zero_sec" class="element-animation">
+        <div class="cube">
+            <script type="module" src="viewer.js"></script>
+            <spline-viewer hint loading-anim url="https://prod.spline.design/7xesWe1v3RU8hSg2/scene.splinecode"></spline-viewer>
+        </div>
+    </section>
+    <section id="first_sec" class="element-animation">
+        <div class="container">
+            <div id="creativity">
+                <p2>design is not just about how it looks,<br>
+                    but how it works</p2>
             </div>
-        </section>
-        <section id="first_sec">
-            <div class="container">
-                <div id="creativity">
-                    <p2>design is not just what it looks like, is how it works</p2>
+        </div>
+    </section>
+    <section id="second_sec" class="element-animation">
+        <div class="container">
+            <div id="second_sec_texts">
+                <div id="responsibilities">
+                    <p2>so, i am max – digital design creator based in los angeles, california</p2>
+                </div>
+                <div id="responsibilities">
+                    <p2>with a focus on human-centered design, my work is aimed at creating seamless experiences that prioritize user needs and preferences</p2>
+                </div>
+                <div id="responsibilities">
+                    <p2>i believe that good design has the power to enhance people's lives and solve real-world problems</p2>
                 </div>
             </div>
-        </section>
-        <section id="second_sec">
-            <div class="container">
-                <div id="second_sec_texts">
-                    <div id="responsibilities">
-                        <p2>so, i am max – digital design creator based in los angeles, california</p2>
-                    </div>
-                    <div id="responsibilities">
-                        <p2>with a focus on human-centered design, my work is aimed at creating seamless experiences that prioritize user needs and preferences</p2>
-                    </div>
-                    <div id="responsibilities">
-                        <p2>i believe that good design has the power to enhance people's lives and solve real-world problems</p2>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="third_sec">
-            <div class="container">
-                <p2>see my current work in my portfolio – <a href="https://www.figma.com/proto/6xVrWbMGVfhfcvKo6HsbWK/Portfolio?page-id=0%3A1&node-id=11%3A1468&starting-point-node-id=11%3A1468&scaling=scale-down" target="_blank">figma</a></p2>
-            </div>
-        </section>
+        </div>
+    </section>
+    <section id="third_sec" class="element-animation">
+        <div class="container">
+            <p2>see my current work in my portfolio – <a href="https://www.figma.com/proto/6xVrWbMGVfhfcvKo6HsbWK/Portfolio?page-id=0%3A1&node-id=11%3A1468&starting-point-node-id=11%3A1468&scaling=scale-down" target="_blank">figma</a></p2>
+        </div>
+    </section>
     <footer>
         <div class="footer_texts">
             <ul class="footer_sites">
