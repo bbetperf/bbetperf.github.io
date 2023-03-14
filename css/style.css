@@ -560,7 +560,7 @@ a, a:hover, a:visited
     transform: translate(0%, -50%);
     margin-left: 24px;
     height: 128px;
-    width: 2px;
+    width: 1px;
     background-color: #E6E6E6;
 }
 .pagination_status_line > .line {
