@@ -69,7 +69,7 @@ header {
     z-index: 999;
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
-    border-bottom: 2px solid #111111;
+    border-bottom: 1px solid #111111;
     font-size: x-small;
 }
 header p1 {
@@ -368,7 +368,7 @@ footer {
     z-index: 9999;
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
-    border-top: 2px solid #111111;
+    border-top: 1px solid #111111;
 }
 .footer_texts {
     width: 100%;
