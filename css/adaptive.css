@@ -1,27 +1,6 @@
-@media only screen and (max-width: 1024px) and (orientation: portrait) {
+@media only screen and (max-width: 1024px) {
   html {
     font-size: 2.5vw;
-  }
-  .spline {
-    aspect-ratio: auto;
-    width: auto;
-  }
-  .container {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 0.5fr 0.5fr 0.5fr 0.5fr;
-    grid-template-areas:
-      "spline spline"
-      "name location"
-      "about about"
-      "nickname contact"
-      "experience experience";
-    gap: 0.5rem;
-  }
-}
-
-@media only screen and (max-width: 512px) and (orientation: portrait) {
-  html {
-    font-size: 3.5vw;
   }
   .container {
     display: grid;
@@ -40,12 +19,11 @@
     align-self: stretch;
   }
   .name,
-  .location {
+  .location,
+  .spline {
     aspect-ratio: auto;
   }
-  .location .additional {
-    display: none;
-  }
+  .location .additional, 
   br {
     display: none;
   }
@@ -57,14 +35,6 @@
   .location .title {
     gap: 1.5rem;
   }
-  .name,
-  .location,
-  .about,
-  .nickname,
-  .contact,
-  .experience {
-    justify-content: start;
-  }
   .spline {
     min-height: 20rem;
     display: flex;
@@ -72,5 +42,11 @@
     align-items: flex-start;
     flex: 1 0 0;
     align-self: stretch;
+  }
+}
+
+@media only screen and (max-width: 512px) {
+  html {
+    font-size: 3.5vw;
   }
 }
