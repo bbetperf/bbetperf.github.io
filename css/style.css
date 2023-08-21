@@ -1,7 +1,7 @@
 /*Шрифты*/
 @font-face {
   font-family: "Aeonik Pro Regular";
-  src: url(/fonts/AeonikPro-Regular.ttf);
+  src: url(/bbetperf.github.io/fonts/AeonikPro-Regular.ttf);
 }
 
 body {
@@ -43,7 +43,7 @@ p2 {
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 115%;
+  line-height: 125%;
   letter-spacing: -0.015rem;
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
