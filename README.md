@@ -14,8 +14,8 @@ I pay only $1 a month to support this site, to pay for a domain name. The 3D com
 2. CSS;
 3. JS.
 ## Programs
-1. VS Code;
-2. Figma;
+1. [VS Code](https://code.visualstudio.com);
+2. [Figma](https://www.figma.com);
 3. [Spline](https://spline.design);
 4. [Google Domains](https://domains.google).
 # Let's enjoy!
