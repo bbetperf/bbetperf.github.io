@@ -34,6 +34,8 @@ p1 {
   opacity: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  leading-trim: both;
+  text-edge: cap;
 }
 
 /*Основной текст*/
@@ -50,6 +52,8 @@ p2 {
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  leading-trim: both;
+  text-edge: cap;
 }
 
 /*Ссылка*/
