@@ -1,4 +1,8 @@
 @media only screen and (max-width: 1024px) {
+  p2 {
+    font-size: 1rem;
+    line-height: 125%;
+  }
   html {
     font-size: 2.5vw;
   }
@@ -13,9 +17,9 @@
       "location nickname"
       "contact contact"
       "experience experience";
-    grid-gap: 0.5rem;
+    grid-gap: 0.25rem;
     align-self: none;
-    padding: 0.5rem;
+    padding: 0rem;
     align-self: stretch;
   }
   .name,
@@ -36,7 +40,7 @@
     gap: 1.5rem;
   }
   .spline {
-    min-height: 20rem;
+    min-height: 15rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
