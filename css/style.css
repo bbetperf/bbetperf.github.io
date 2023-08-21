@@ -1,7 +1,7 @@
 /*Шрифты*/
 @font-face {
   font-family: "Aeonik Pro Regular";
-  src: url(/fonts/AeonikPro-Regular.ttf);
+  src: url(/bbetperf.github.io/fonts/AeonikPro-Regular.ttf);
 }
 
 body {
@@ -34,8 +34,6 @@ p1 {
   opacity: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  leading-trim: both;
-  text-edge: cap;
 }
 
 /*Основной текст*/
@@ -52,8 +50,6 @@ p2 {
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  leading-trim: both;
-  text-edge: cap;
 }
 
 /*Ссылка*/
