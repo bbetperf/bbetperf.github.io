@@ -1,166 +1,75 @@
-@media only screen and (max-width: 1200px) {
-  header, #menu {
-    border-bottom: 1px solid #111111;
+@media only screen and (max-width: 1024px) and (orientation: portrait) {
+  html {
+    font-size: 2.5vw;
   }
-  footer {
-    border-top: 1px solid #111111;
-  }
-  #description p1, p2, #place_of_work p2, header .menu_top li a , #footer_sites p2, .footer_texts p2, p1, .page_name li a, .logo li a {
-    font-size: 1.2vw;
-  }
-  #third_sec .container p2, #subtitle p2, header p1, #logo, #title, #creativity p2, #contact_link a p1, #contact_link p1 {
-    font-size: 2.2vw;
-  }
-}
-@media only screen and (max-width: 1024px) {
-  #description p1, p2, #place_of_work p2, header .menu_top li a , #footer_sites p2, .footer_texts p2, p1, .page_name li a, .logo li a {
-    font-size: 1.4vw;
-  }
-  .pagination_status_line {
-    visibility: hidden;
-  }
-  #third_sec .container p2, #subtitle p2, header p1, #logo, #title, #creativity p2, #contact_link a p1, #contact_link p1 {
-    font-size: 2.4vw;
-  }
-}
-@media only screen and (max-width: 897px) {
-  #description p1, p2, #place_of_work p2, header .menu_top li a , #footer_sites p2, .footer_texts p2, p1, .page_name li a, .logo li a {
-    font-size: 1.6vw;
-  }
-  #third_sec .container p2, #subtitle p2, header p1, #logo, #title, #creativity p2, #contact_link a p1, #contact_link p1 {
-    font-size: 2.6vw;
-  }
-  #zero_sec .svg_image {
-    height: 15%;
-  }
-}
-@media only screen and (max-width: 800px) {
-  #description p1, p2, #place_of_work p2, header .menu_top li a , #footer_sites p2, .footer_texts p2, p1, .page_name li a, .logo li a {
-    font-size: 1.8vw;
-  }
-  #third_sec .container p2, #subtitle p2, header p1, #logo, #title, #creativity p2, #contact_link a p1, #contact_link p1 {
-    font-size: 2.8vw;
-  }
-  #zero_block_resume {
-    margin-bottom: 70%;
-  }
-}
-@media only screen and (max-width: 643px) {
-  #first_sec .container, #second_sec .container, #third_sec .container, #zero_block_resume .container, #first_block_resume .container, #second_block_resume .container, #third_block_resume .container, #zero_block_contact .container, #first_block_contact .container {
+  .spline {
+    aspect-ratio: auto;
     width: auto;
-    margin: 0px 24px;
   }
-  #description p1, p2, #place_of_work p2, header .menu_top li a , #footer_sites p2, .footer_texts p2, p1, .page_name li a, .logo li a {
-    font-size: 2.2vw;
-  }
-  #third_sec .container p2, #subtitle p2, header p1, #logo, #title, #creativity p2, #contact_link a p1, #contact_link p1 {
-    font-size: 3.2vw;
-  }
-  #first_sec, #zero_sec {
-    margin-bottom: 70%;
-  }
-  #second_block_resume {
-    margin-bottom: 70%;
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    grid-template-areas:
+      "spline spline"
+      "name location"
+      "about about"
+      "nickname contact"
+      "experience experience";
+    gap: 0.5rem;
   }
 }
-@media only screen and (max-width: 526px) {
-  #description p1, p2, #place_of_work p2, header .menu_top li a , #footer_sites p2, .footer_texts p2, p1, .page_name li a, .logo li a {
-    font-size: 2.6vw;
+
+@media only screen and (max-width: 512px) and (orientation: portrait) {
+  html {
+    font-size: 3.5vw;
   }
-  #third_sec .container p2, #subtitle p2, header p1, #logo, #title, #creativity p2, #contact_link a p1, #contact_link p1  {
-    font-size: 4.0vw;
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: none;
+    grid-template-areas:
+      "spline spline"
+      "name name"
+      "about about"
+      "location nickname"
+      "contact contact"
+      "experience experience";
+    grid-gap: 0.5rem;
+    align-self: none;
+    padding: 0.5rem;
+    align-self: stretch;
   }
-  #first_block_resume #description {
-    visibility: hidden;
-    position: absolute;
+  .name,
+  .location {
+    aspect-ratio: auto;
   }
-  .footer, .footer_sites {
-    width: calc(100%/2);;
+  .location .additional {
+    display: none;
   }
-  .footer_figma {
-    visibility: hidden;
-    position: absolute;
+  br {
+    display: none;
   }
-  #zero_block_contact {
-    margin-bottom: 70%;
+  .name,
+  .experience,
+  .contact,
+  .about,
+  .nickname,
+  .location .title {
+    gap: 1.5rem;
   }
-  .logo, nav {
-    width: calc(100%/2 - 24px);
+  .name,
+  .location,
+  .about,
+  .nickname,
+  .contact,
+  .experience {
+    justify-content: start;
   }
-  .page_name {
-    visibility: hidden;
-    position: absolute;
-  }
-}
-@media only screen and (max-width: 430px) {
-  #menu li a, #description p1, p2, #place_of_work p2, header .menu_top li a , #footer_sites p2, .footer_texts p2, p1, .page_name li a, .logo li a {
-    font-size: 3.4vw;
-  }
-  #third_sec .container p2, #subtitle p2, header p1, #logo, #title, #creativity p2, #contact_link a p1, #contact_link p1 {
-    font-size: 4.6vw;
-  }
-  .footer li {
-    margin-left: 10px;
-  }
-  header .menu_top li {
-    margin-left: 30px;
-  }
-  nav {
-    width: 50%;
-  }
-  header .menu_top li {
-    display: inline-block;
-    margin-left: 0px;
-    margin-right: 30px;
-  }
-  nav {
-    width: 100%;
-    text-align: left;
-  }
-  #menu {
-    padding: 24px;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(15px);
-  }
-  .menu_top {
-    position: absolute;
-    border-bottom: 2px solid #111111;
-    visibility: hidden;
-    pointer-events: none;
-    cursor: default;
-  }
-  #menu.active {
-    visibility: visible;
-    pointer-events: auto;
-    cursor: pointer;
-    top: 64px;
-    z-index: 500;
-  }
-  .burger {
-    opacity: 1;
-    pointer-events: auto;
-    cursor: pointer;
-    margin: 0px 24px 0px 0px;
-    padding: 0;
-    top: 0;
-    position: relative;
-    border: 0;
-    width: auto;
-    height: auto;
+  .spline {
     display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-}
-@media only screen and (max-width: 390px) {
-  #menu li a, #description p1, p2, #place_of_work p2, header .menu_top li a , #footer_sites p2, .footer_texts p2, p1, .page_name li a, .logo li a {
-    font-size: 3.8vw;
-  }
-  #third_sec .container p2, #subtitle p2, header p1, #logo, #title, #creativity p2, #contact_link a p1, #contact_link p1 {
-    font-size: 5.4vw;
-  }
-  #third_sec .container {
-    transform: translate(0%, 0%);
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 0 0;
+    align-self: stretch;
   }
 }
