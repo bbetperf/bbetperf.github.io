@@ -25,10 +25,6 @@
   .spline {
     aspect-ratio: auto;
   }
-  .location .additional, 
-  br {
-    display: none;
-  }
   .name,
   .experience,
   .contact,
@@ -46,7 +42,6 @@
     align-self: stretch;
   }
 }
-
 @media only screen and (max-width: 512px) {
   html {
     font-size: 3.5vw;
