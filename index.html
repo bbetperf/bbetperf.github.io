@@ -31,19 +31,26 @@
   <body>
     <script>
       document.addEventListener("mousemove", function (event) {
-        document.querySelectorAll('#parall').forEach(function(move) {
+        document.querySelectorAll("#parall").forEach(function (move) {
           const moving_value = move.getAttribute("data-value");
           const screenWidth = window.screen.width;
           const screenHeight = window.screen.height;
-          const x = (event.clientX * moving_value - screenWidth/2) / 300;
-          const y = (event.clientY * moving_value - screenWidth/2) / 300;
-        move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+          if (screenWidth > 1024) {
+            const x = (event.clientX * moving_value - screenWidth / 2) / 300;
+            const y = (event.clientY * moving_value - screenWidth / 2) / 300;
+            move.style.transform =
+              "translateX(" + x + "px) translateY(" + y + "px)";
+          }
+          else move.style.transform =
+          "translateX(" + 0 + "px) translateY(" + 0 + "px)";
         });
       });
     </script>
     <div class="container">
       <div class="name" id="parall" data-value="1">
-        <div class="title" id="parall" data-value="1"><p1>Max Anisimov</p1><p2>digital creator</p2></div>
+        <div class="title" id="parall" data-value="1">
+          <p1>Max Anisimov</p1><p2>digital creator</p2>
+        </div>
         <div class="additional" id="parall" data-value="1">
           <div class="current">
             <div class="line" style="background-color: #34c759"></div>
@@ -58,7 +65,9 @@
         </div>
       </div>
       <div class="location" id="parall" data-value="1">
-        <div class="title" id="parall" data-value="1"><p1>Los Angeles</p1><p2>based and living</p2></div>
+        <div class="title" id="parall" data-value="1">
+          <p1>Los Angeles</p1><p2>based and living</p2>
+        </div>
         <div class="additional" id="parall" data-value="1">
           <div class="locator">
             <div class="circle"></div>
@@ -79,7 +88,8 @@
         >
       </div>
       <div class="nickname" id="parall" data-value="1">
-        <p1 id="parall" data-value="1">Nickname</p1><p2 id="parall" data-value="1">bbetperf – be better than perfect</p2>
+        <p1 id="parall" data-value="1">Nickname</p1
+        ><p2 id="parall" data-value="1">bbetperf – be better than perfect</p2>
       </div>
       <div class="contact" id="parall" data-value="1">
         <p1 id="parall" data-value="1">Contact me</p1>
