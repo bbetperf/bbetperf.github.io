@@ -4,21 +4,47 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>bbetperf.</title>
+    <title>be better than perfect</title>
     <link href="/css/style.css" rel="stylesheet" />
     <link href="/css/adaptive.css" rel="stylesheet" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
     <link rel="manifest" href="/favicon/site.webmanifest" />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
   </head>
   <body>
+    <script>
+      document.addEventListener("mousemove", function (event) {
+        document.querySelectorAll('#parall').forEach(function(move) {
+          const moving_value = move.getAttribute("data-value");
+          const screenWidth = window.screen.width;
+          const screenHeight = window.screen.height;
+          const x = (event.clientX * moving_value - screenWidth/2) / 300;
+          const y = (event.clientY * moving_value - screenWidth/2) / 300;
+        move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+        });
+      });
+    </script>
     <div class="container">
-      <div class="name">
-        <div class="title"><p1>Max Anisimov</p1><p2>digital creator</p2></div>
-        <div class="additional">
+      <div class="name" id="parall" data-value="1">
+        <div class="title" id="parall" data-value="1"><p1>Max Anisimov</p1><p2>digital creator</p2></div>
+        <div class="additional" id="parall" data-value="1">
           <div class="current">
             <div class="line" style="background-color: #34c759"></div>
             <div class="ages">
@@ -31,44 +57,44 @@
           </div>
         </div>
       </div>
-      <div class="location">
-        <div class="title"><p1>Los Angeles</p1><p2>based and living</p2></div>
-        <div class="additional">
+      <div class="location" id="parall" data-value="1">
+        <div class="title" id="parall" data-value="1"><p1>Los Angeles</p1><p2>based and living</p2></div>
+        <div class="additional" id="parall" data-value="1">
           <div class="locator">
             <div class="circle"></div>
           </div>
         </div>
       </div>
-      <div class="spline">
+      <div class="spline" id="parall" data-value="1">
         <script type="module" src="/viewer.js"></script>
         <spline-viewer
           url="https://prod.spline.design/PSp4m8SME0OEywKp/scene.splinecode"
         ></spline-viewer>
       </div>
-      <div class="about">
-        <p1>About me</p1
-        ><p2
+      <div class="about" id="parall" data-value="1">
+        <p1 id="parall" data-value="1">About me</p1
+        ><p2 id="parall" data-value="1"
           >i am an interface designer and developer focused on improving the
           lives of human interaction with electronic computers</p2
         >
       </div>
-      <div class="nickname">
-        <p1>Nickname</p1><p2>bbetperf – be better than perfect</p2>
+      <div class="nickname" id="parall" data-value="1">
+        <p1 id="parall" data-value="1">Nickname</p1><p2 id="parall" data-value="1">bbetperf – be better than perfect</p2>
       </div>
-      <div class="contact">
-        <p1>Contact me</p1>
-        <p2>
+      <div class="contact" id="parall" data-value="1">
+        <p1 id="parall" data-value="1">Contact me</p1>
+        <p2 id="parall" data-value="1">
           <a
             href="mailto:bbetperf@gmail.com?subject=Hey, Max!&body=I am writing to you about the collaboration."
             >bbetperf@gmail.com</a
           >
         </p2>
       </div>
-      <div class="experience">
-        <div class="double_title">
+      <div class="experience" id="parall" data-value="1">
+        <div class="double_title" id="parall" data-value="1">
           <p1>Experience</p1><p1 style="text-align: right">2+ years</p1>
         </div>
-        <div class="places_of_work">
+        <div class="places_of_work" id="parall" data-value="1">
           <div class="havas">
             <div class="line"></div>
             <p2>havas worldwide</p2>
