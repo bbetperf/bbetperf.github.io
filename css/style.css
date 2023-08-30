@@ -52,6 +52,7 @@ p2 a:hover {
   transition: 300ms;
 }
 .container {
+  position: absolute;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 2fr 1fr 1fr;
@@ -69,9 +70,11 @@ p2 a:hover {
   grid-area: location;
 }
 .about {
+  text-wrap: balance;
   grid-area: about;
 }
 .nickname {
+  text-wrap: balance;
   grid-area: nickname;
 }
 .contact {
