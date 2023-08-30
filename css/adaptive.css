@@ -25,6 +25,10 @@
   .spline {
     aspect-ratio: auto;
   }
+  .location .additional {
+    visibility: hidden;
+    display: none;
+  }
   .name,
   .experience,
   .contact,
