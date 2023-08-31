@@ -31,13 +31,13 @@
   <body>
     <script>
       document.addEventListener("mousemove", function (event) {
-        document.querySelectorAll("#parall").forEach(function (move) {
+        document.querySelectorAll(".container").forEach(function (move) {
           const moving_value = move.getAttribute("data-value");
           const screenWidth = window.screen.width;
           const screenHeight = window.screen.height;
           if (screenWidth > 1024) {
-            const x = (event.clientX * moving_value - screenWidth / 2) / 300;
-            const y = (event.clientY * moving_value - screenWidth / 2) / 300;
+            const x = (event.clientX * moving_value - screenWidth / 2) / 250;
+            const y = (event.clientY * moving_value - screenWidth / 2) / 250;
             move.style.transform =
               "translateX(" + x + "px) translateY(" + y + "px)";
           }
@@ -46,12 +46,12 @@
         });
       });
     </script>
-    <div class="container">
-      <div class="name" id="parall" data-value="1">
-        <div class="title" id="parall" data-value="1">
+    <div class="container" data-value="1">
+      <div class="name">
+        <div class="title">
           <p1>Max Anisimov</p1><p2>digital creator</p2>
         </div>
-        <div class="additional" id="parall" data-value="1">
+        <div class="additional">
           <div class="current">
             <div class="line" style="background-color: #34c759"></div>
             <div class="ages">
@@ -64,47 +64,47 @@
           </div>
         </div>
       </div>
-      <div class="location" id="parall" data-value="1">
-        <div class="title" id="parall" data-value="1">
+      <div class="location">
+        <div class="title">
           <p1>Los Angeles</p1><p2>based and living</p2>
         </div>
-        <div class="additional" id="parall" data-value="1">
+        <div class="additional">
           <div class="locator">
             <div class="circle"></div>
           </div>
         </div>
       </div>
-      <div class="spline" id="parall" data-value="1">
+      <div class="spline">
         <script type="module" src="/viewer.js"></script>
         <spline-viewer
           url="https://prod.spline.design/PSp4m8SME0OEywKp/scene.splinecode"
         ></spline-viewer>
       </div>
-      <div class="about" id="parall" data-value="1">
-        <p1 id="parall" data-value="1">About me</p1
-        ><p2 id="parall" data-value="1"
+      <div class="about">
+        <p1>About me</p1
+        ><p2
           >i am an interface designer and developer focused on improving the
           lives of human interaction with electronic computers</p2
         >
       </div>
-      <div class="nickname" id="parall" data-value="1">
-        <p1 id="parall" data-value="1">Nickname</p1
-        ><p2 id="parall" data-value="1">bbetperf – be better than perfect</p2>
+      <div class="nickname">
+        <p1>Nickname</p1
+        ><p2>bbetperf – be better than perfect</p2>
       </div>
-      <div class="contact" id="parall" data-value="1">
-        <p1 id="parall" data-value="1">Contact me</p1>
-        <p2 id="parall" data-value="1">
+      <div class="contact">
+        <p1>Contact me</p1>
+        <p2>
           <a
             href="mailto:bbetperf@gmail.com?subject=Hey, Max!&body=I am writing to you about the collaboration."
             >bbetperf@gmail.com</a
           >
         </p2>
       </div>
-      <div class="experience" id="parall" data-value="1">
-        <div class="double_title" id="parall" data-value="1">
+      <div class="experience">
+        <div class="double_title">
           <p1>Experience</p1><p1 style="text-align: right">2+ years</p1>
         </div>
-        <div class="places_of_work" id="parall" data-value="1">
+        <div class="places_of_work">
           <div class="havas">
             <div class="line"></div>
             <p2>havas worldwide</p2>
