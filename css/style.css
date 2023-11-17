@@ -93,7 +93,7 @@ p2 a:hover {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  border-radius: 2rem;
+  border-radius: 0rem;
 }
 .name,
 .location,
@@ -194,22 +194,23 @@ p2 a:hover {
   justify-content: flex-end;
   align-items: flex-start;
   gap: 0.75rem;
-  flex: 1 0 0;
+  flex: 1;
 }
 .idaproject_upwork {
   display: flex;
   align-items: flex-end;
   gap: 0.25rem;
-  flex: 1 0 0;
+  flex: 1;
 }
 .idaproject,
-.upwork {
+.upwork,
+.fam {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
   gap: 0.75rem;
-  flex: 1 0 0;
+  flex: 1;
 }
 .line {
   display: flex;
