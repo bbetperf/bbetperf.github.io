@@ -32,8 +32,8 @@ p1 {
 }
 p2 {
   font-family: "Aeonik Pro Regular";
-  color: #a6a6a6;
-  font-size: 0.9375rem;
+  color: #cbcbcb;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 400;
   line-height: 125%;
@@ -116,6 +116,16 @@ p2 a:hover {
   align-items: flex-start;
   justify-content: space-between;
 }
+
+.name:hover,
+.location:hover,
+.about:hover,
+.nickname:hover,
+.contact:hover,
+.experience:hover {
+  outline: solid 1px #ebebeb;
+}
+
 .title {
   display: flex;
   flex-direction: column;
