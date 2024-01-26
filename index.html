@@ -29,45 +29,11 @@
     <meta name="theme-color" content="#ffffff" />
   </head>
   <body>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        let birthDate = new Date("2003-01-15");
-        let agesElement = document.querySelector(".ages");
-        let currentElement = document.querySelector(".current");
-        function updateAgeAndLine() {
-          const currentDate = new Date();
-          let age = currentDate.getFullYear() - birthDate.getFullYear();
-          if (
-            currentDate.getMonth() < birthDate.getMonth() ||
-            (currentDate.getMonth() === birthDate.getMonth() &&
-              currentDate.getDate() < birthDate.getDate())
-          ) {
-            age--;
-          }
-          agesElement.innerHTML = `<p2>0</p2><p2 style="text-align: right">${age}</p2>`;
-          const maxAge = 80;
-          const currentWidth = (age / maxAge) * 100;
-          currentElement.style.width = `${currentWidth}%`;
-        }
-        setInterval(updateAgeAndLine, 60000);
-        updateAgeAndLine();
-        document.addEventListener("mousemove", function (event) {
-          document.querySelectorAll(".container").forEach(function (move) {
-            const moving_value = move.getAttribute("data-value");
-            const screenWidth = window.screen.width;
-            const screenHeight = window.screen.height;
-            if (screenWidth > 1024) {
-              const x = (event.clientX * moving_value - screenWidth / 2) / 250;
-              const y = (event.clientY * moving_value - screenWidth / 2) / 250;
-              move.style.transform =
-                "translateX(" + x + "px) translateY(" + y + "px)";
-            } else move.style.transform = "translateX(" + 0 + "px) translateY(" + 0 + "px)";
-          });
-        });
-      });
-    </script>
-    <div class="container draggable" data-value="1">
-      <div class="name">
+    <script src="/blur.js"></script>
+    <script src="/move.js"></script>
+    <script src="/dob.js"></script>
+    <div class="container" data-value="1">
+      <div class="name blur">
         <div class="title"><p1>Max Anisimov</p1><p2>digital creator</p2></div>
         <div class="additional draggable">
           <div class="current">
@@ -82,29 +48,29 @@
           </div>
         </div>
       </div>
-      <div class="location draggable">
+      <div class="location blur">
         <div class="title"><p1>Los Angeles</p1><p2>based and living</p2></div>
         <div class="additional">
           <img src="/locator.svg" class="locator" />
         </div>
       </div>
-      <div class="spline draggable">
+      <div class="spline blur">
         <script type="module" src="/viewer.js"></script>
         <spline-viewer
           url="https://prod.spline.design/PSp4m8SME0OEywKp/scene.splinecode"
         ></spline-viewer>
       </div>
-      <div class="about draggable">
+      <div class="about blur">
         <p1>About me</p1
         ><p2
           >i am an interface designer and developer focused on improving the
           lives of human interaction with electronic computers</p2
         >
       </div>
-      <div class="nickname draggable">
+      <div class="nickname blur">
         <p1>Nickname</p1><p2>be better than perfect</p2>
       </div>
-      <div class="contact draggable">
+      <div class="contact blur">
         <p1>Contact me</p1>
         <p2>
           <a
@@ -113,7 +79,7 @@
           >
         </p2>
       </div>
-      <div class="experience draggable">
+      <div class="experience blur">
         <div class="double_title">
           <p1>Experience</p1><p1 style="text-align: right">2+ years</p1>
         </div>
