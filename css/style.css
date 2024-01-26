@@ -145,7 +145,7 @@ p2 a:hover {
 }
 .current {
   display: flex;
-  width: 25%;
+  width: 16.8%;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
@@ -168,11 +168,6 @@ p2 a:hover {
 .locator {
   width: 3.5rem;
   height: 3.5rem;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  border-radius: 2rem;
-  background: #34c759;
 }
 .circle {
   margin: auto;
@@ -230,4 +225,12 @@ p2 a:hover {
   gap: 0.625rem;
   align-self: stretch;
   background: #f4f4f4;
+}
+::-moz-selection {
+  color: #1d1d1d;
+  background: #e8e8e8;
+}
+::selection {
+  color: #1d1d1d;
+  background: #e8e8e8;
 }
