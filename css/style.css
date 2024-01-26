@@ -63,7 +63,6 @@ p2 a:hover {
   grid-gap: 0.25rem;
   padding: 0 10rem;
   max-width: 1120px;
-
 }
 .name {
   grid-area: name;
@@ -235,4 +234,10 @@ p2 a:hover {
 ::selection {
   color: #1d1d1d;
   background: #e8e8e8;
+}
+.blur {
+  transition: filter 0.5s;
+}
+.blur::after {
+  transition: filter 0.5s;
 }
