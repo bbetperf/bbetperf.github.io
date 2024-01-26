@@ -61,7 +61,9 @@ p2 a:hover {
     "about about nickname contact"
     ". experience experience .";
   grid-gap: 0.25rem;
-  padding: 0 10vw;
+  padding: 0 10rem;
+  max-width: 1120px;
+
 }
 .name {
   grid-area: name;
