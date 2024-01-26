@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>bbetperf</title>
+    <title>max sim</title>
     <link href="/css/style.css" rel="stylesheet" />
     <link href="/css/adaptive.css" rel="stylesheet" />
     <link
@@ -30,32 +30,50 @@
   </head>
   <body>
     <script>
-      document.addEventListener("mousemove", function (event) {
-        document.querySelectorAll(".container").forEach(function (move) {
-          const moving_value = move.getAttribute("data-value");
-          const screenWidth = window.screen.width;
-          const screenHeight = window.screen.height;
-          if (screenWidth > 1024) {
-            const x = (event.clientX * moving_value - screenWidth / 2) / 250;
-            const y = (event.clientY * moving_value - screenWidth / 2) / 250;
-            move.style.transform =
-              "translateX(" + x + "px) translateY(" + y + "px)";
+      document.addEventListener("DOMContentLoaded", function () {
+        let birthDate = new Date("2003-01-15");
+        let agesElement = document.querySelector(".ages");
+        let currentElement = document.querySelector(".current");
+        function updateAgeAndLine() {
+          const currentDate = new Date();
+          let age = currentDate.getFullYear() - birthDate.getFullYear();
+          if (
+            currentDate.getMonth() < birthDate.getMonth() ||
+            (currentDate.getMonth() === birthDate.getMonth() &&
+              currentDate.getDate() < birthDate.getDate())
+          ) {
+            age--;
           }
-          else move.style.transform =
-          "translateX(" + 0 + "px) translateY(" + 0 + "px)";
+          agesElement.innerHTML = `<p2>0</p2><p2 style="text-align: right">${age}</p2>`;
+          const maxAge = 80;
+          const currentWidth = (age / maxAge) * 100;
+          currentElement.style.width = `${currentWidth}%`;
+        }
+        setInterval(updateAgeAndLine, 60000);
+        updateAgeAndLine();
+        document.addEventListener("mousemove", function (event) {
+          document.querySelectorAll(".container").forEach(function (move) {
+            const moving_value = move.getAttribute("data-value");
+            const screenWidth = window.screen.width;
+            const screenHeight = window.screen.height;
+            if (screenWidth > 1024) {
+              const x = (event.clientX * moving_value - screenWidth / 2) / 250;
+              const y = (event.clientY * moving_value - screenWidth / 2) / 250;
+              move.style.transform =
+                "translateX(" + x + "px) translateY(" + y + "px)";
+            } else move.style.transform = "translateX(" + 0 + "px) translateY(" + 0 + "px)";
+          });
         });
       });
     </script>
-    <div class="container" data-value="1">
+    <div class="container draggable" data-value="1">
       <div class="name">
-        <div class="title">
-          <p1>Max Anisimov</p1><p2>digital creator</p2>
-        </div>
-        <div class="additional">
+        <div class="title"><p1>Max Anisimov</p1><p2>digital creator</p2></div>
+        <div class="additional draggable">
           <div class="current">
             <div class="line" style="background-color: #34c759"></div>
             <div class="ages">
-              <p2>0</p2><p2 style="text-align: right">20</p2>
+              <p2>0</p2><p2 style="text-align: right">age</p2>
             </div>
           </div>
           <div class="future">
@@ -64,34 +82,29 @@
           </div>
         </div>
       </div>
-      <div class="location">
-        <div class="title">
-          <p1>Los Angeles</p1><p2>based and living</p2>
-        </div>
+      <div class="location draggable">
+        <div class="title"><p1>Los Angeles</p1><p2>based and living</p2></div>
         <div class="additional">
-          <div class="locator">
-            <div class="circle"></div>
-          </div>
+          <img src="/locator.svg" class="locator" />
         </div>
       </div>
-      <div class="spline">
+      <div class="spline draggable">
         <script type="module" src="/viewer.js"></script>
         <spline-viewer
           url="https://prod.spline.design/PSp4m8SME0OEywKp/scene.splinecode"
         ></spline-viewer>
       </div>
-      <div class="about">
+      <div class="about draggable">
         <p1>About me</p1
         ><p2
           >i am an interface designer and developer focused on improving the
           lives of human interaction with electronic computers</p2
         >
       </div>
-      <div class="nickname">
-        <p1>Nickname</p1
-        ><p2>be better than perfect</p2>
+      <div class="nickname draggable">
+        <p1>Nickname</p1><p2>be better than perfect</p2>
       </div>
-      <div class="contact">
+      <div class="contact draggable">
         <p1>Contact me</p1>
         <p2>
           <a
@@ -100,7 +113,7 @@
           >
         </p2>
       </div>
-      <div class="experience">
+      <div class="experience draggable">
         <div class="double_title">
           <p1>Experience</p1><p1 style="text-align: right">2+ years</p1>
         </div>
@@ -109,14 +122,18 @@
             <div class="line"></div>
             <p2><a href="https://ru.havas.com" target="_blank">havas</a></p2>
           </div>
-            <div class="idaproject">
-              <div class="line"></div>
-              <p2><a href="https://idaproject.com" target="_blank">idaproject</a></p2>
-            </div>
-            <div class="upwork">
-              <div class="line"></div>
-              <p2><a href="https://www.upwork.com" target="_blank">upwork</a></p2>
-            </div>
+          <div class="idaproject">
+            <div class="line"></div>
+            <p2
+              ><a href="https://idaproject.com" target="_blank"
+                >idaproject</a
+              ></p2
+            >
+          </div>
+          <div class="upwork">
+            <div class="line"></div>
+            <p2><a href="https://www.upwork.com" target="_blank">upwork</a></p2>
+          </div>
           <div class="fam">
             <div class="line" style="background-color: #0a84ff"></div>
             <p2><a href="https://fam.la" target="_blank">fam</a></p2>
