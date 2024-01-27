@@ -45,6 +45,10 @@
     flex: 1 0 0;
     align-self: stretch;
   }
+  .overlay {
+    visibility: hidden;
+    display: none;
+  }
 }
 @media only screen and (max-width: 512px) {
   html {
