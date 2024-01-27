@@ -20,6 +20,18 @@
     padding: 0rem;
     align-self: stretch;
   }
+  .spline:hover {
+    background-color: none;
+    outline: none;
+  }
+  .name:hover,
+  .location:hover,
+  .about:hover,
+  .nickname:hover,
+  .contact:hover,
+  .experience:hover {
+    outline: none;
+  }
   .name,
   .location,
   .spline {
