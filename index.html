@@ -1,123 +1,369 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Max Anisimov</title>
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/favicon/site.webmanifest" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-  </head>
-  <body>
-    <link href="/css/style.css" rel="stylesheet" />
-    <link href="/css/adaptive.css" rel="stylesheet" />
-    <link href="/portfolio.html" rel="stylesheet" />
-    <div class="container" data-value="1">
-      <div class="name blur">
-        <div class="title"><p1>Max Anisimov</p1><p2>digital creator</p2></div>
-        <div class="additional draggable">
-          <div class="current">
-            <div class="line" style="background-color: #34c759"></div>
-            <div class="ages">
-              <p2>0</p2><p2 style="text-align: right">age</p2>
-            </div>
-          </div>
-          <div class="future">
-            <div class="line"></div>
-            <p2 style="text-align: right">80+</p2>
-          </div>
-        </div>
-      </div>
-      <div class="location blur">
-        <div class="title"><p1>Los Angeles</p1><p2>based and living</p2></div>
-        <div class="additional">
-          <img src="/locator.svg" class="locator" />
-        </div>
-      </div>
-      <div class="spline blur">
-        <script type="module" src="/viewer.js"></script>
-        <spline-viewer
-          url="https://prod.spline.design/IHlXE2qOr2Nmp-To/scene.splinecode"
-        ></spline-viewer>
-      </div>
-      <div class="about blur">
-        <p1>About me</p1
-        ><p2
-          >i am an interface designer dedicated to improving human interaction
-          with electronic computers</p2
-        >
-      </div>
-      <div class="nickname blur">
-        <p1>Nickname</p1><p2>be better than perfect</p2>
-      </div>
-      <div class="contact blur">
-        <p1>Contact me</p1>
-        <p2>
-          <a
-            href="mailto:bbetperf@gmail.com?subject=Hey, Max!&body=I am writing to you about the collaboration."
-            >bbetperf@gmail.com</a
-          >
-        </p2>
-      </div>
-      <div class="experience blur">
-        <div class="double_title">
-          <p1>Experience</p1><p1 style="text-align: right">2+ years</p1>
-        </div>
-        <div class="places_of_work">
-          <div class="havas">
-            <div class="line"></div>
-            <p2><a href="https://ru.havas.com" target="_blank">havas</a></p2>
-          </div>
-          <div class="idaproject">
-            <div class="line"></div>
-            <p2
-              ><a href="https://idaproject.com" target="_blank"
-                >idaproject</a
-              ></p2
-            >
-          </div>
-          <div class="upwork">
-            <div class="line"></div>
-            <p2><a href="https://www.upwork.com" target="_blank">upwork</a></p2>
-          </div>
-          <div class="fam">
-            <div class="line" style="background-color: #0a84ff"></div>
-            <p2><a href="https://fam.la" target="_blank">fam</a></p2>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="overlay">
-      <div class="overlay-content">
-        <div id="date"></div>
-        <div id="timer"></div>
-        <div id="osAndWindowSize"></div>
-        <a href="https://www.linkedin.com/in/bbetperf/" target="_blank" class="linkedin-link">LinkedIn</a>
-        <a href="javascript:void(0);" class="theme" onclick="toggleTheme()"></a>
-      </div>
-    </div>
-    <script src="/blur.js"></script>
-    <script src="/move.js"></script>
-    <script src="/dob.js"></script>
-    <script src="/timer.js"></script>
-    <script src="/color.js"></script>
-  </body>
-</html>
+@font-face {
+  font-family: "Aeonik Pro Regular";
+  src: url(/fonts/AeonikPro-Regular.ttf);
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+html {
+  height: 100%;
+  font-size: 1vw;
+}
+p1 {
+  font-family: "Aeonik Pro Regular";
+  color: #1d1d1d;
+  leading-trim: both;
+  text-edge: cap;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  text-decoration: none;
+  opacity: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+p2 {
+  font-family: "Aeonik Pro Regular";
+  color: #bbbbbb;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+p2 a {
+  text-decoration: none;
+  color: #0a84ff;
+  transition: 300ms;
+}
+p2 a:hover {
+  text-decoration: none;
+  color: #055cb5;
+  transition: 300ms;
+}
+.container {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 2fr 1fr 1fr;
+  grid-template-areas:
+    ". name location spline"
+    "about about nickname contact"
+    ". experience experience .";
+  grid-gap: 0.25rem;
+  padding: 0 10rem;
+  max-width: 1120px;
+}
+.name {
+  grid-area: name;
+}
+.location {
+  grid-area: location;
+}
+.about {
+  text-wrap: balance;
+  grid-area: about;
+}
+.nickname {
+  text-wrap: balance;
+  grid-area: nickname;
+}
+.contact {
+  grid-area: contact;
+}
+.experience {
+  grid-area: experience;
+}
+.spline {
+  aspect-ratio: 1/1;
+  height: auto;
+  overflow: hidden;
+  box-sizing: border-box;
+  grid-area: spline;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 2rem;
+  outline: solid 0px #ebebeb;
+  transition: background-color 0.5s;
+}
+.spline:hover {
+  background-color: rgba(255, 255, 255, 1);
+  outline: solid 1px #ebebeb;
+  transition: background-color 0.5s;
+}
+.spline:not(:hover) {
+  background-color: rgba(255, 255, 255, 0);
+  outline: solid 0px #ebebeb;
+  transition: background-color 0.5s;
+}
+.name,
+.location,
+.about,
+.nickname,
+.contact,
+.experience {
+  background-color: #ffffff;
+  border-radius: 2rem;
+  padding: 1.5rem;
+}
+.name,
+.location,
+.about,
+.nickname,
+.contact,
+.experience {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.name:hover,
+.location:hover,
+.about:hover,
+.nickname:hover,
+.contact:hover,
+.experience:hover {
+  outline: solid 1px #ebebeb;
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.name,
+.location {
+  aspect-ratio: 1/1;
+}
+.additional {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  align-self: stretch;
+  gap: 0.25rem;
+}
+.current {
+  display: flex;
+  width: 16.8%;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 0.75rem;
+}
+.future {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 0.75rem;
+  flex: 1 0 0;
+}
+.ages {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  align-self: stretch;
+}
+.locator {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+.circle {
+  margin: auto;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 2rem;
+  background: #0a84ff;
+  border: 0.25rem solid #ffffff;
+}
+.location .additional {
+  justify-content: right;
+}
+.double_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+}
+.places_of_work {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 0.25rem;
+}
+.havas {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 0.75rem;
+  flex: 1;
+}
+.idaproject_upwork {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.25rem;
+  flex: 1;
+}
+.idaproject,
+.upwork,
+.fam {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 0.75rem;
+  flex: 1;
+}
+.line {
+  display: flex;
+  height: 0.25rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.625rem;
+  align-self: stretch;
+  background: #f4f4f4;
+}
+::-moz-selection {
+  color: #1d1d1d;
+  background: #e8e8e8;
+}
+::selection {
+  color: #1d1d1d;
+  background: #e8e8e8;
+}
+.blur {
+  transition: filter 0.5s;
+}
+.blur::after {
+  transition: filter 0.5s;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  pointer-events: none;
+}
+.overlay-content {
+  pointer-events: auto;
+  text-align: center;
+}
+#date,
+#timer,
+#osAndWindowSize {
+  font-family: "Aeonik Pro Regular";
+  color: #bbbbbb;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  text-decoration: none;
+  position: fixed;
+  top: 1.5rem;
+}
+#date {
+  left: 1.5rem;
+  text-align: left;
+}
+#timer {
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+#osAndWindowSize {
+  right: 1.5rem;
+  text-align: right;
+}
+.overlay-content a {
+  font-family: "Aeonik Pro Regular";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  color: #bbbbbb;
+  text-decoration: none;
+  transition: color 0.3s;
+  position: fixed;
+}
+.overlay-content a:hover {
+  color: #055cb5;
+}
+.linkedin-link {
+  bottom: 1.5rem;
+  left: 1.5rem;
+  text-align: left;
+}
+.theme {
+  bottom: 1.5rem;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.instagram-link {
+  bottom: 1.5rem;
+  right: 1.5rem;
+  text-align: right;
+}
+body {
+  transition: background-color 0.5s;
+}
+.dark-theme body {
+  background-color: #0F0F0F;
+}
+.dark-theme .spline:hover,
+.dark-theme .name,
+.dark-theme .location,
+.dark-theme .about,
+.dark-theme .nickname,
+.dark-theme .contact,
+.dark-theme .experience {
+  background-color: #030303;
+}
+.dark-theme .line {
+  background: #222222;
+}
+button {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.dark-theme p1 {
+  color: #FFFFFF;
+}
+.dark-theme .spline:hover,
+.dark-theme .name:hover,
+.dark-theme .location:hover,
+.dark-theme .about:hover,
+.dark-theme .nickname:hover,
+.dark-theme .contact:hover,
+.dark-theme .experience:hover {
+  outline: solid 1px #1C1C1C;
+}
+.dark-theme #date,
+.dark-theme #timer,
+.dark-theme #osAndWindowSize,
+.dark-theme .overlay-content a,
+.dark-theme p2 {
+  color: #545454;
+}
+.dark-theme .overlay-content a:hover {
+  color: #055cb5;
+}
