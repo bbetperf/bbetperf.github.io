@@ -24,7 +24,6 @@ p1 {
   font-style: normal;
   font-weight: 400;
   line-height: 100%;
-  letter-spacing: -0.02rem;
   text-decoration: none;
   opacity: 1;
   -webkit-font-smoothing: antialiased;
@@ -32,7 +31,7 @@ p1 {
 }
 p2 {
   font-family: "Aeonik Pro Regular";
-  color: #cbcbcb;
+  color: #bbbbbb;
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
@@ -272,7 +271,7 @@ p2 a:hover {
 #timer,
 #osAndWindowSize {
   font-family: "Aeonik Pro Regular";
-  color: #cbcbcb;
+  color: #bbbbbb;
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
@@ -280,7 +279,6 @@ p2 a:hover {
   text-decoration: none;
   position: fixed;
   top: 1.5rem;
-  color: #cbcbcb;
 }
 #date {
   left: 1.5rem;
@@ -294,4 +292,78 @@ p2 a:hover {
 #osAndWindowSize {
   right: 1.5rem;
   text-align: right;
+}
+.overlay-content a {
+  font-family: "Aeonik Pro Regular";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  color: #bbbbbb;
+  text-decoration: none;
+  transition: color 0.3s;
+  position: fixed;
+}
+.overlay-content a:hover {
+  color: #055cb5;
+}
+.linkedin-link {
+  bottom: 1.5rem;
+  left: 1.5rem;
+  text-align: left;
+}
+.theme {
+  bottom: 1.5rem;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.instagram-link {
+  bottom: 1.5rem;
+  right: 1.5rem;
+  text-align: right;
+}
+body {
+  transition: background-color 0.5s;
+}
+.dark-theme body {
+  background-color: #0F0F0F;
+}
+.dark-theme .spline:hover,
+.dark-theme .name,
+.dark-theme .location,
+.dark-theme .about,
+.dark-theme .nickname,
+.dark-theme .contact,
+.dark-theme .experience {
+  background-color: #030303;
+}
+.dark-theme .line {
+  background: #222222;
+}
+button {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.dark-theme p1 {
+  color: #FFFFFF;
+}
+.dark-theme .spline:hover,
+.dark-theme .name:hover,
+.dark-theme .location:hover,
+.dark-theme .about:hover,
+.dark-theme .nickname:hover,
+.dark-theme .contact:hover,
+.dark-theme .experience:hover {
+  outline: solid 1px #1C1C1C;
+}
+.dark-theme #date,
+.dark-theme #timer,
+.dark-theme #osAndWindowSize,
+.dark-theme .overlay-content a,
+.dark-theme p2 {
+  color: #545454;
+}
+.dark-theme .overlay-content a:hover {
+  color: #055cb5;
 }
