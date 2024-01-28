@@ -1,7 +1,4 @@
 @media only screen and (max-width: 1024px) {
-  p2 {
-    font-size: 1rem;
-  }
   html {
     font-size: 16px;
   }
@@ -21,8 +18,8 @@
     align-self: stretch;
   }
   .spline:hover {
-    background-color: none;
-    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+    outline: solid 0px #ebebeb;
   }
   .name:hover,
   .location:hover,
@@ -65,6 +62,12 @@
 @media only screen and (max-width: 512px) {
   html {
     font-size: 1rem;
+  }
+  p2 {
+    font-size: 0.95rem;
+  }
+  p1 {
+    font-size: 1.05rem;
   }
 }
 @media only screen and (min-width: 1440px) {
