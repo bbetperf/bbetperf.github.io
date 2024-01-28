@@ -312,6 +312,11 @@ p2 a:hover {
   left: 1.5rem;
   text-align: left;
 }
+.inspirations-link {
+  bottom: 1.5rem;
+  right: 1.5rem;
+  text-align: right;
+}
 .theme {
   bottom: 1.5rem;
   transform: translateX(-50%);
