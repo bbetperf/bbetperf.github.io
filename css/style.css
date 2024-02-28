@@ -336,7 +336,7 @@ body {
   transition: background-color 0.5s;
 }
 .dark-theme body {
-  background-color: #0F0F0F;
+  background-color: #212121;
 }
 .dark-theme .spline:hover,
 .dark-theme .name,
@@ -345,7 +345,7 @@ body {
 .dark-theme .nickname,
 .dark-theme .contact,
 .dark-theme .experience {
-  background-color: #030303;
+  background-color: #282828;
 }
 .dark-theme .line {
   background: #222222;
@@ -365,7 +365,7 @@ button {
 .dark-theme .nickname:hover,
 .dark-theme .contact:hover,
 .dark-theme .experience:hover {
-  outline: solid 1px #1C1C1C;
+  outline: solid 1px #373737;
 }
 .dark-theme #date,
 .dark-theme #timer,
