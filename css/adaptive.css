@@ -14,8 +14,12 @@
       "contact contact"
       "experience experience";
     align-self: none;
-    padding: 0rem;
+    padding: 0.25rem;
     align-self: stretch;
+  }
+  .blur {
+    border-radius: 0.25rem;
+    padding: 1.25rem;
   }
   .spline:hover {
     background-color: rgba(255, 255, 255, 0);
@@ -26,7 +30,14 @@
   .about:hover,
   .nickname:hover,
   .contact:hover,
-  .experience:hover {
+  .experience:hover,
+  .dark-theme .spline:hover,
+  .dark-theme .name:hover,
+  .dark-theme .location:hover,
+  .dark-theme .about:hover,
+  .dark-theme .nickname:hover,
+  .dark-theme .contact:hover,
+  .dark-theme .experience:hover {
     outline: none;
   }
   .name,
@@ -44,7 +55,7 @@
   .about,
   .nickname,
   .location .title {
-    gap: 1.5rem;
+    gap: 1.75rem;
   }
   .spline {
     min-height: 50vh;
