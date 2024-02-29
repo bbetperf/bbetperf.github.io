@@ -19,11 +19,15 @@
   }
   .blur {
     border-radius: 0.25rem;
-    padding: 1.25rem;
+    padding: 1rem;
   }
   .spline:hover {
     background-color: rgba(255, 255, 255, 0);
     outline: solid 0px #ebebeb;
+  }
+  .dark-theme .spline:hover {
+    background-color: rgba(255, 255, 255, 0);
+    outline: none;
   }
   .name:hover,
   .location:hover,
