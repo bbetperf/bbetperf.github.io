@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
       ) {
         age--;
       }
-      agesElement.innerHTML = `<p2>0</p2><p2 style="text-align: right">${age}</p2>`;
+      agesElement.innerHTML = `<p2>0</p2><p2 style="text-align: right" class="current_age">${age}</p2>`;
       const maxAge = 80;
       const currentWidth = (age / maxAge) * 100;
       currentElement.style.width = `${currentWidth}%`;
