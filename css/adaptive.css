@@ -9,6 +9,7 @@
     grid-template-areas:
       "spline spline"
       "name name"
+      "portfolio portfolio"
       "about about"
       "location nickname"
       "contact contact"
@@ -19,7 +20,15 @@
   }
   .blur {
     border-radius: 0.25rem;
-    padding: 1.15rem 1rem;
+    padding: 1rem;
+  }
+  .contact,
+  .portfolio {
+    padding: 0.5rem;
+    border-radius: 0.25rem 0.25rem 2.75rem 2.75rem;
+  }
+  .location {
+    padding: 0.5rem;
   }
   .spline:hover {
     background-color: rgba(255, 255, 255, 0);
@@ -29,12 +38,14 @@
     background-color: rgba(255, 255, 255, 0);
     outline: none;
   }
+  .portfolio:hover,
   .name:hover,
   .location:hover,
   .about:hover,
   .nickname:hover,
   .contact:hover,
   .experience:hover,
+  .dark-theme .portfolio:hover,
   .dark-theme .spline:hover,
   .dark-theme .name:hover,
   .dark-theme .location:hover,
@@ -44,6 +55,7 @@
   .dark-theme .experience:hover {
     outline: none;
   }
+  .portfolio,
   .name,
   .location,
   .spline {
@@ -53,6 +65,7 @@
     visibility: hidden;
     display: none;
   }
+  .portfolio,
   .name,
   .experience,
   .contact,
