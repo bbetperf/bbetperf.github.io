@@ -31,13 +31,29 @@
     <link href="/css/adaptive.css" rel="stylesheet" />
     <link href="/portfolio.html" rel="stylesheet" />
     <div class="container" data-value="1">
+      <div class="portfolio blur">
+        <div class="title">
+          <div class="double_title">
+            <p1>Portfolio</p1><p1 style="text-align: right" id="second_title">Soon</p1>
+          </div>
+          <p2 id="description">ux ui and digital design</p2>
+        </div>
+        <div class="primary_button_first_separator">
+          <div class="primary_button_second_separator">
+            <div class="primary_button" id="portfolio_button">
+              <p2>View</p2>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="name blur">
         <div class="title"><p1>Max Anisimov</p1><p2>digital creator</p2></div>
         <div class="additional draggable">
           <div class="current">
             <div class="line" style="background-color: #34c759"></div>
             <div class="ages">
-              <p2>0</p2><p2 style="text-align: right">age</p2>
+              <p2>0</p2
+              ><p2 style="text-align: right" class="current_age">age</p2>
             </div>
           </div>
           <div class="future">
@@ -49,7 +65,17 @@
       <div class="location blur">
         <div class="title"><p1>Los Angeles</p1><p2>based and living</p2></div>
         <div class="additional">
-          <img src="/locator.svg" class="locator" />
+          <div class="locator_first_separator">
+            <div class="locator_second_separator">
+              <div class="locator_background">
+                <div class="locator" id="myLocator">
+                  <div class="circle">
+                    <p2>&#8203;</p2><p2 class="rotated-text">&#8203;</p2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="spline blur">
@@ -70,16 +96,43 @@
       </div>
       <div class="contact blur">
         <p1>Contact me</p1>
-        <p2>
-          <a
-            href="mailto:bbetperf@gmail.com?subject=Hey, Max!&body=I am writing to you about the collaboration."
-            >bbetperf@gmail.com</a
-          >
-        </p2>
+        <div class="few_buttons">
+          <div class="primary_button_first_separator" id="email">
+            <div class="primary_button_second_separator">
+              <div class="primary_button" id="email_button">
+                <p2>bbetperf@gmail.com</p2>
+              </div>
+            </div>
+          </div>
+          <div class="secondary_button_first_separator">
+            <div class="secondary_button_second_separator">
+              <div class="secondary_button" id="copy_email">
+                <div class="icon">
+                  <p2>&#8203;</p2><p2 class="rotated-text">&#8203;</p2>
+                  <svg
+                    class="copy_icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g>
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M15 8H5V20H15V8ZM17 6V16H19V4H9V6H17ZM7 6H3V22H17V18H21V2H7V6Z"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="experience blur">
         <div class="double_title">
-          <p1>Experience</p1><p1 style="text-align: right">2+ years</p1>
+          <p1>Experience</p1><p1 style="text-align: right">3+ years</p1>
         </div>
         <div class="places_of_work">
           <div class="havas">
@@ -98,8 +151,8 @@
             <div class="line"></div>
             <p2><a href="https://www.upwork.com" target="_blank">upwork</a></p2>
           </div>
-          <div class="fam">
-            <div class="line" style="background-color: #0a84ff"></div>
+          <div class="fam" id="active">
+            <div class="line"></div>
             <p2><a href="https://fam.la" target="_blank">fam</a></p2>
           </div>
         </div>
@@ -117,6 +170,7 @@
           >LinkedIn</a
         >
         <a href="javascript:void(0);" class="theme" onclick="toggleTheme()"></a>
+        <div id="notification" class="notification"></div>
       </div>
     </div>
     <script src="/blur.js"></script>
@@ -125,5 +179,7 @@
     <script src="/timer.js"></script>
     <script src="/color.js"></script>
     <script src="/cursor.js"></script>
+    <script src="/notification.js"></script>
+    <script src="/email_send.js"></script>
   </body>
 </html>
