@@ -18,6 +18,9 @@
     padding: 0.25rem;
     align-self: stretch;
   }
+  .additional_buttons {
+    margin: 0.25rem;
+  }
   .blur {
     border-radius: 0.25rem;
     padding: 1rem;
