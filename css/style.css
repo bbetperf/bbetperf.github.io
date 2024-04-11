@@ -183,8 +183,8 @@ p2 a:hover {
   cursor: pointer;
 }
 .copy_icon {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1.3312rem;
+  height: 1.3312rem;
   fill: var(--light_theme_text_secondary);
 }
 #email_button {
@@ -193,9 +193,26 @@ p2 a:hover {
 #portfolio_button {
   flex: 1;
 }
-.locator {
+.locator_background {
+  background-color: var(--light_theme_green);
+  padding: 1.15rem !important;
   border-radius: 100rem;
-  aspect-ratio: 1/1;
+  transition: 300ms;
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  box-shadow: 0 0 0 0.25rem var(--light_theme_primary), 0 0 0 0.375rem var(--light_theme_secondary);
+  margin: 0.25rem;
+}
+.dark-theme .locator_background {
+  box-shadow: 0 0 0 0.25rem var(--dark_theme_secondary), 0 0 0 0.375rem var(--dark_theme_primary);
+}
+.locator_circle {
+  width: 1.3312rem;
+  height: 1.3312rem;
+  background-color: var(--light_theme_blue);
+  border-radius: 100rem;
+  box-shadow: inset 0 0 0 0.125rem var(--white), 0 0 0 0.125rem var(--white);
 }
 .rotated-text {
   writing-mode: vertical-rl;
@@ -473,9 +490,6 @@ body {
 .dark-theme .line {
   background-color: var(--dark_theme_primary);
 }
-.dark-theme .locator_second_separator,
-.dark-theme .primary_button_second_separator,
-.dark-theme .secondary_button_second_separator,
 .dark-theme .portfolio,
 .dark-theme .spline:hover,
 .dark-theme .name,
@@ -534,9 +548,6 @@ button {
 }
 .dark-theme .secondary_button:hover {
   background-color: var(--dark_theme_blue_hover);
-}
-.dark-theme .locator {
-  background-color: var(--dark_theme_blue);
 }
 .dark-theme p2 a:hover {
   color: var(--dark_theme_blue_hover);
