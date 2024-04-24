@@ -427,8 +427,11 @@ p2 a:hover {
   pointer-events: auto;
   text-align: center;
 }
+#project_name,
+#back,
 #date,
 #timer,
+#portfolio_title,
 #osAndWindowSize {
   font-family: "Outfit-Regular";
   color: var(--light_theme_text_tetriary);
@@ -438,15 +441,18 @@ p2 a:hover {
   position: fixed;
   top: 1.5rem;
 }
+#back,
 #date {
   left: 1.5rem;
   text-align: left;
 }
+#project_name,
 #timer {
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
 }
+#portfolio_title,
 #osAndWindowSize {
   right: 1.5rem;
   text-align: right;
@@ -461,7 +467,7 @@ p2 a:hover {
   position: fixed;
 }
 .overlay-content a:hover {
-  color: var(--light_theme_blue_hover);
+  color: var(--light_theme_blue_hover) !important;
 }
 .linkedin-link {
   bottom: 1.5rem;
@@ -521,15 +527,18 @@ button {
 .dark-theme .experience:hover {
   outline: solid 1px var(--dark_theme_stroke);
 }
+.dark-theme #back,
 .dark-theme #date,
+.dark-theme #project_name,
 .dark-theme #timer,
 .dark-theme #osAndWindowSize,
+.dark-theme #portfolio_title,
 .dark-theme .overlay-content a,
 .dark-theme p2 {
   color: var(--dark_theme_text_tetriary);
 }
 .dark-theme .overlay-content a:hover {
-  color: var(--dark_theme_blue_hover);
+  color: var(--dark_theme_blue_hover) !important;
 }
 .dark-theme .current_age {
   color: var(--dark_theme_green);
