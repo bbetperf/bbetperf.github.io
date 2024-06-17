@@ -73,7 +73,6 @@ p2 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   word-spacing: 0.024rem;
-  text-wrap: balance;
 }
 p2 a {
   text-decoration: none;
@@ -228,11 +227,9 @@ p2 a:hover {
   grid-area: location;
 }
 .about {
-  text-wrap: balance;
   grid-area: about;
 }
 .nickname {
-  text-wrap: balance;
   grid-area: nickname;
 }
 .contact {
