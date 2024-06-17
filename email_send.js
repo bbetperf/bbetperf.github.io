@@ -1,4 +1,4 @@
 document.getElementById('email_button').addEventListener('click', function() {
-    var mailtoLink = 'mailto:bbetperf@gmail.com?subject=Hey, Max!&body=I am writing to you about the collaboration.';
+    var mailtoLink = 'mailto:hello@bbetperf.com?subject=New friend.&body=Hey Max,';
     window.location.href = mailtoLink;
 });
