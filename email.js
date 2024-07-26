@@ -1,6 +1,12 @@
+let animationTimeout;
+let resetTimeout;
+
 document.getElementById('email_button').addEventListener('click', function() {
     var emailElement = this.querySelector('p2');
     var originalText = emailElement.innerHTML;
+    
+
+    this.style.pointerEvents = 'none';
 
     var email = 'hello@bbetperf.com';
     navigator.clipboard.writeText(email).then(() => {
@@ -9,18 +15,24 @@ document.getElementById('email_button').addEventListener('click', function() {
         console.error('Failed to copy email: ', err);
     });
 
+    this.classList.remove('copied');
+
     this.classList.add('copied');
 
-    setTimeout(() => {
+    clearTimeout(animationTimeout);
+    clearTimeout(resetTimeout);
+
+    animationTimeout = setTimeout(() => {
         emailElement.innerHTML = 'Copied';
         this.classList.remove('copied');
 
-        setTimeout(() => {
+        resetTimeout = setTimeout(() => {
             this.classList.add('copied');
 
             setTimeout(() => {
                 emailElement.innerHTML = originalText;
                 this.classList.remove('copied');
+                this.style.pointerEvents = 'auto';
             }, 300);
         }, 3000);
     }, 300);
