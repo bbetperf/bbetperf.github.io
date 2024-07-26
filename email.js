@@ -2,7 +2,7 @@ document.getElementById('email_button').addEventListener('click', function() {
     var emailElement = this.querySelector('p2');
     var originalText = emailElement.innerHTML;
 
-    var email = 'bbetperf@gmail.com';
+    var email = 'hello@bbetperf.com';
     navigator.clipboard.writeText(email).then(() => {
         console.log('Email copied to clipboard');
     }).catch(err => {
