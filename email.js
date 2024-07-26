@@ -1,10 +1,15 @@
-let animationTimeout;
-let resetTimeout;
+function debounce(func, wait) {
+    let timeout;
+    return function(...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+}
 
-document.getElementById('email_button').addEventListener('click', function() {
+const handleClick = debounce(function() {
     var emailElement = this.querySelector('p2');
     var originalText = emailElement.innerHTML;
-    
+
     this.style.pointerEvents = 'none';
 
     var email = 'hello@bbetperf.com';
@@ -18,14 +23,14 @@ document.getElementById('email_button').addEventListener('click', function() {
 
     this.classList.add('copied');
 
-    clearTimeout(animationTimeout);
-    clearTimeout(resetTimeout);
+    clearTimeout(this.animationTimeout);
+    clearTimeout(this.resetTimeout);
 
-    animationTimeout = setTimeout(() => {
+    this.animationTimeout = setTimeout(() => {
         emailElement.innerHTML = 'Copied';
         this.classList.remove('copied');
 
-        resetTimeout = setTimeout(() => {
+        this.resetTimeout = setTimeout(() => {
             this.classList.add('copied');
 
             setTimeout(() => {
@@ -35,4 +40,6 @@ document.getElementById('email_button').addEventListener('click', function() {
             }, 300);
         }, 3000);
     }, 300);
-});
+}, 500);
+
+document.getElementById('email_button').addEventListener('click', handleClick);
