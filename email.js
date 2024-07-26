@@ -5,7 +5,6 @@ document.getElementById('email_button').addEventListener('click', function() {
     var emailElement = this.querySelector('p2');
     var originalText = emailElement.innerHTML;
     
-
     this.style.pointerEvents = 'none';
 
     var email = 'hello@bbetperf.com';
