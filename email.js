@@ -3,11 +3,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const emailSpan = document.getElementById("email");
 
     copyButton.addEventListener("click", function () {
-        const emailText = emailSpan.textContent;
+        const emailText = "hello@bbetperf.com";
         navigator.clipboard.writeText(emailText).then(function() {
             emailSpan.textContent = "Copied";
             setTimeout(function() {
-                emailSpan.textContent = emailText;
+                emailSpan.textContent = "email";
             }, 1000);
         });
     });
