@@ -1,145 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Max Anisimov</title>
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/favicon/site.webmanifest" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-  </head>
-  <body>
-    <link href="/css/style.css" rel="stylesheet" />
-    <link href="/css/adaptive.css" rel="stylesheet" />
-    <link href="/portfolio.html" rel="stylesheet" />
-    <div class="container" data-value="1">
-      <div class="portfolio blur">
-        <div class="title">
-          <div class="double_title">
-            <p1>Portfolio</p1
-            ><p1 style="text-align: right" id="second_title">Soon</p1>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maksim Anisimov</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="/favicon/site.webmanifest" />
+</head>
+
+<body>
+  <link href="/css/style.css" rel="stylesheet" />
+  <link href="/css/adaptive.css" rel="stylesheet" />
+  <link href="/portfolio.html" rel="stylesheet" />
+  <div class="container">
+    <div class="frame" id="portfolio">
+      <div class="frame__main-text">
+        <div class="frame__title">
+          <div class="frame__title">
+            <h1 class="text_primary">portfolio</h1>
           </div>
-        </div>
-        <div class="additional_buttons">
-          <div class="primary_button" id="portfolio_button">
-            <p2>View</p2>
-          </div>
+          <h1 class="text_secondary">soon</h1>
         </div>
       </div>
-      <div class="name blur">
-        <div class="title"><p1>Max Anisimov</p1><p2>ui ux designer</p2></div>
-        <div class="additional draggable">
-          <div class="current">
-            <div class="line" style="background-color: #34c759"></div>
-            <div class="ages">
-              <p2>0</p2
-              ><p2 style="text-align: right" class="current_age">age</p2>
-            </div>
-          </div>
-          <div class="future">
-            <div class="line"></div>
-            <p2 style="text-align: right">80+</p2>
-          </div>
+      <div class="additional">
+        <a class="button secondary" style="color: var(--text_secondary_on_material); cursor: default !important; background-color: var(--accent_secondary);">view</a>
+      </div>
+    </div>
+    <div class="frame" id="name">
+      <div class="frame__main-text">
+        <div class="frame__title">
+          <h1 class="text_primary">maksim anisimov</h1>
         </div>
       </div>
-      <div class="location blur">
-        <div class="title"><p1>Los Angeles</p1><p2>based and living</p2></div>
-        <div class="additional" id="locator">
-          <div class="locator_background">
-            <div class="locator_circle"></div>
+      <div class="additional">
+        <div class="interval">
+          <div class="line active"></div>
+          <div class="ages">
+            <p class="text_secondary">0</p>
+            <p class="text_primary"><span id="current"></span></p>
           </div>
         </div>
-      </div>
-      <div class="spline blur">
-        <script type="module" src="/viewer.js"></script>
-        <spline-viewer
-          url="https://prod.spline.design/IHlXE2qOr2Nmp-To/scene.splinecode"
-        ></spline-viewer>
-      </div>
-      <div class="about blur">
-        <p1>About me</p1
-        ><p2
-          >i am a ui ux designer who creates digital products for users and businesses</p2
-        >
-      </div>
-      <div class="nickname blur">
-        <p1>Nickname</p1><p2>be better than perfect</p2>
-      </div>
-      <div class="contact blur">
-        <p1>Contact me</p1>
-        <div class="additional_buttons">
-          <div class="primary_button" id="email_button">
-            <p2>hello@bbetperf.com</p2>
-          </div>
-        </div>
-      </div>
-      <div class="experience blur">
-        <div class="double_title">
-          <p1>Experience</p1><p1 style="text-align: right">3+ years</p1>
-        </div>
-        <div class="additional">
-          <div class="havas">
-            <div class="line"></div>
-            <p2><a href="https://ru.havas.com" target="_blank">havas</a></p2>
-          </div>
-          <div class="idaproject">
-            <div class="line"></div>
-            <p2
-              ><a href="https://idaproject.com" target="_blank"
-                >idaproject</a
-              ></p2
-            >
-          </div>
-          <div class="upwork">
-            <div class="line"></div>
-            <p2><a href="https://www.upwork.com" target="_blank">upwork</a></p2>
-          </div>
-          <div class="fam" id="active">
-            <div class="line"></div>
-            <p2><a href="https://fam.la" target="_blank">fam</a></p2>
-          </div>
+        <div class="interval">
+          <div class="line inactive"></div>
+          <p class="text_secondary" style="text-align: right;">80+</p>
         </div>
       </div>
     </div>
-    <div class="overlay">
-      <div class="overlay-content">
-        <div id="date"></div>
-        <div id="timer"></div>
-        <div id="osAndWindowSize"></div>
-        <a
-          href="https://www.linkedin.com/in/bbetperf/"
-          target="_blank"
-          class="linkedin-link"
-          >LinkedIn</a
-        >
-        <a href="javascript:void(0);" class="theme" onclick="toggleTheme()"></a>
-        <div id="notification" class="notification"></div>
+    <div class="frame" id="about">
+      <div class="frame__main-text">
+        <div class="frame__title">
+          <h1 class="text_primary">about me</h1>
+        </div>
+      </div>
+      <p class="text_secondary">i am a ui ux designer who creates digital products for users and businesses</p>
+      <p class="text_primary">los angeles based</p>
+    </div>
+    <div class="frame" id="contact">
+      <div class="frame__main-text">
+        <div class="frame__title">
+          <h1 class="text_primary">contact me</h1>
+        </div>
+      </div>
+      <div class="additional">
+        <a class="button secondary" id="copy-button"><span id="email">email</span></a>
+        <a href="https://www.instagram.com/bbetperf/" target="_blank" class="button secondary">instagram</a>
+        <a href="https://www.linkedin.com/in/bbetperf/" target="_blank" class="button secondary">linkedin</a>
       </div>
     </div>
-    <script src="/blur.js"></script>
-    <script src="/move.js"></script>
-    <script src="/dob.js"></script>
-    <script src="/timer.js"></script>
-    <script src="/color.js"></script>
-    <script src="/cursor.js"></script>
-    <script src="/email.js"></script>
-  </body>
+    <div class="frame" id="theme">
+      <div class="frame__main-text">
+        <div class="frame__title">
+          <h1 class="text_primary">theme</h1>
+        </div>
+      </div>
+      <div class="additional">
+        <a class="button primary" id="light-button">light</a>
+        <a class="button secondary" id="dark-button">dark</a>
+      </div>
+    </div>
+    <div class="frame" id="experience">
+      <div class="frame__main-text">
+        <div class="frame__title">
+          <h1 class="text_primary">experience</h1>
+          <h1 class="text_primary">3+ years</h1>
+        </div>
+      </div>
+      <div class="additional">
+        <a href="https://www.havas.com" target="_blank" class="button secondary">havas</a>
+        <a href="https://idaproject.com" target="_blank" class="button secondary">idaproject</a>
+        <a href="https://fam.la" target="_blank" class="button secondary">fam</a>
+      </div>
+    </div>
+    <div class="info">
+      <p class="text_secondary"><span id="date">date</span></p>
+      <p class="text_secondary"><span id="timer">timer</span></p>
+      <p class="text_secondary"><span id="osAndWindowSize">osAndWindowSize</span></p>
+    </div>
+  </div>
+  <script src="/dob.js"></script>
+  <script src="/timer.js"></script>
+  <script src="/email.js"></script>
+  <script src="/theme.js"></script>
+  </text_secondary>
+
 </html>

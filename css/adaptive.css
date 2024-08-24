@@ -1,108 +1,60 @@
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 900px) {
   html {
-    font-size: 16px;
+    font-size: clamp(12px, 1vw, 90px);
   }
+
+  .frame {
+    height: fit-content;
+    gap: 1.5rem;
+  }
+
+  #about {
+    aspect-ratio: 1;
+  }
+
   .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: none;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     grid-template-areas:
-      "spline spline"
-      "name name"
-      "portfolio portfolio"
-      "about about"
-      "location nickname"
-      "contact contact"
-      "experience experience";
-    align-self: none;
-    padding: 0.25rem;
+      "name"
+      "contact"
+      "about"
+      "experience"
+      "portfolio"
+      "info"
+      "theme";
     align-self: stretch;
   }
-  .additional_buttons {
-    margin: 0.25rem;
-  }
-  .blur {
-    border-radius: 0.25rem;
-    padding: 1rem;
-  }
-  .contact,
-  .portfolio {
-    padding: 0.5rem;
-    border-radius: 0.25rem 0.25rem 2.75rem 2.75rem;
-  }
-  .location {
-    padding: 0.5rem;
-  }
-  .spline:hover {
-    background-color: rgba(255, 255, 255, 0);
-    outline: solid 0px #ebebeb;
-  }
-  .dark-theme .spline:hover {
-    background-color: rgba(255, 255, 255, 0);
-    outline: none;
-  }
-  .portfolio:hover,
-  .name:hover,
-  .location:hover,
-  .about:hover,
-  .nickname:hover,
-  .contact:hover,
-  .experience:hover,
-  .dark-theme .portfolio:hover,
-  .dark-theme .spline:hover,
-  .dark-theme .name:hover,
-  .dark-theme .location:hover,
-  .dark-theme .about:hover,
-  .dark-theme .nickname:hover,
-  .dark-theme .contact:hover,
-  .dark-theme .experience:hover {
-    outline: none;
-  }
-  .portfolio,
-  .name,
-  .location,
-  .spline {
-    aspect-ratio: auto;
-  }
-  .location .additional {
-    visibility: hidden;
-    display: none;
-  }
-  .portfolio,
-  .name,
-  .experience,
-  .contact,
-  .about,
-  .nickname,
-  .location .title {
-    gap: 1.75rem;
-  }
-  .spline {
-    min-height: 50vh;
+
+  .info {
+    position: relative;
+    background-color: var(--background_primary);
+    border-radius: 1.15rem;
+    padding: 1.15rem;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    flex: 1 0 0;
-    align-self: stretch;
+    justify-content: space-between;
+    gap: 1.5rem;
   }
-  .overlay {
-    visibility: hidden;
-    display: none;
+
+  #date {
+    position: relative;
+    left: unset;
   }
-}
-@media only screen and (max-width: 512px) {
-  html {
-    font-size: 1rem;
+
+  #osAndWindowSize {
+    position: relative;
+    right: unset;
+    text-align: left;
   }
-  p2 {
-    font-size: 0.95rem;
+
+  #timer {
+    position: relative;
+    left: unset;
+    text-align: left;
   }
-  p1 {
-    font-size: 1.05rem;
-  }
-}
-@media only screen and (min-width: 1440px) {
-  html {
-    font-size: 0.9rem;
+
+  .frame:hover {
+    box-shadow: none;
   }
 }
