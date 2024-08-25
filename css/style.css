@@ -221,29 +221,8 @@ html {
   gap: 0.5rem;
 }
 
-#theme {
-  grid-area: theme;
-}
-
-#portfolio {
-  grid-area: portfolio;
-}
-
 #name {
-  grid-area: name;
   aspect-ratio: 1;
-}
-
-#about {
-  grid-area: about;
-}
-
-#contact {
-  grid-area: contact;
-}
-
-#experience {
-  grid-area: experience;
 }
 
 .frame__main-text {
