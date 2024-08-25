@@ -114,6 +114,7 @@ html {
   text-decoration: none;
   margin: 0;
   padding: 0;
+  text-transform: lowercase;
 }
 
 .text_secondary {
@@ -125,6 +126,7 @@ html {
   text-decoration: none;
   margin: 0;
   padding: 0;
+  text-transform: lowercase;
 }
 
 .grid {
