@@ -128,13 +128,13 @@ html {
 }
 
 .grid {
-  position: fixed;
+  position: absolute;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 2fr 1fr 1fr;
   grid-template-areas:
     ". name about ."
-    "portfolio portfolio contact contact"
+    "portfolio blog contact contact"
     ". experience experience theme";
   grid-gap: 0.25rem;
   padding: 1.5rem;

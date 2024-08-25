@@ -17,10 +17,11 @@
     grid-template-rows: repeat(1, 1fr);
     grid-template-areas:
       "name"
-      "contact"
+      "portfolio"
       "about"
       "experience"
-      "portfolio"
+      "blog"
+      "contact"
       "info"
       "theme";
     align-self: stretch;
