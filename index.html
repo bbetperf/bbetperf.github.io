@@ -2,6 +2,14 @@
 <html lang="en">
 
 <head>
+  <script>
+    (function () {
+      const currentTheme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', currentTheme);
+    })();
+  </script>
+  <link href="/css/style.css" rel="stylesheet" />
+  <link href="/css/adaptive.css" rel="stylesheet" />
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,9 +28,6 @@
 </script>
 
 <body>
-  <link href="/css/style.css" rel="stylesheet" />
-  <link href="/css/adaptive.css" rel="stylesheet" />
-  <link href="/portfolio.html" rel="stylesheet" />
   <div class="grid">
     <div class="frame" id="portfolio" style="grid-area: portfolio;">
       <div class="frame__main-text">
@@ -30,12 +35,11 @@
           <div class="frame__title">
             <h1 class="text_primary">portfolio</h1>
           </div>
-          <h1 class="text_secondary">soon</h1>
+          <h1 class="text_secondary">new</h1>
         </div>
       </div>
       <div class="additional">
-        <a class="button secondary"
-          style="color: var(--text_secondary_on_material); cursor: default !important; background-color: var(--accent_secondary);">view</a>
+        <a class="button_secondary" href="/portfolio.html">view</a>
       </div>
     </div>
     <div class="frame" id="blog" style="grid-area: blog;">
@@ -48,7 +52,7 @@
         </div>
       </div>
       <div class="additional">
-        <a class="button secondary"
+        <a class="button_secondary"
           style="color: var(--text_secondary_on_material); cursor: default !important; background-color: var(--accent_secondary);">read</a>
       </div>
     </div>
@@ -78,7 +82,8 @@
           <h1 class="text_primary">about me</h1>
         </div>
       </div>
-      <p class="text_primary">future focused designer, specialized in brand identity, product design and workflows.</p>
+      <p class="text_secondary">future focused designer, specialized in brand identity, product design and workflows.
+      </p>
       <p class="text_primary">los angeles based</p>
     </div>
     <div class="frame" id="contact" style="grid-area: contact;">
@@ -88,9 +93,9 @@
         </div>
       </div>
       <div class="additional">
-        <a class="button secondary" id="copy-button"><span id="email">email</span></a>
-        <a href="https://www.instagram.com/bbetperf/" target="_blank" class="button secondary">instagram</a>
-        <a href="https://www.linkedin.com/in/bbetperf/" target="_blank" class="button secondary">linkedin</a>
+        <a class="button_secondary" id="copy-button"><span id="email">email</span></a>
+        <a href="https://www.instagram.com/bbetperf/" target="_blank" class="button_secondary">instagram</a>
+        <a href="https://www.linkedin.com/in/bbetperf/" target="_blank" class="button_secondary">linkedin</a>
       </div>
     </div>
     <div class="frame" id="theme" style="grid-area: theme;">
@@ -100,8 +105,8 @@
         </div>
       </div>
       <div class="additional">
-        <a class="button primary" id="light-button">light</a>
-        <a class="button secondary" id="dark-button">dark</a>
+        <a class="button_primary" id="light-button">light</a>
+        <a class="button_secondary" id="dark-button">dark</a>
       </div>
     </div>
     <div class="frame" id="experience" style="grid-area: experience;">
@@ -112,15 +117,21 @@
         </div>
       </div>
       <div class="additional">
-        <a href="https://www.havas.com" target="_blank" class="button secondary">havas</a>
-        <a href="https://idaproject.com" target="_blank" class="button secondary">idaproject</a>
-        <a href="https://fam.la" target="_blank" class="button secondary">fam</a>
+        <a href="https://www.havas.com" target="_blank" class="button_secondary">havas</a>
+        <a href="https://idaproject.com" target="_blank" class="button_secondary">idaproject</a>
+        <a href="https://fam.la" target="_blank" class="button_secondary">fam</a>
       </div>
     </div>
     <div class="info">
-      <p class="text_secondary"><span id="date">date</span></p>
-      <p class="text_secondary"><span id="timer">timer</span></p>
-      <p class="text_secondary"><span id="osAndWindowSize">osAndWindowSize</span></p>
+      <div class="info__frame" style="text-align: left;">
+        <h1 class="text_secondary" style="width:fit-content;">main</h1>
+      </div>
+      <div class="info__frame" style="text-align: center;">
+        <p class="text_secondary"><span id="timer">timer</span></p>
+      </div>
+      <div class="info__frame" style="text-align: right;">
+        <p class="text_secondary"><span id="date">date</span></p>
+      </div>
     </div>
   </div>
   <script src="/dob.js"></script>

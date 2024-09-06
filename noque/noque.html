@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        (function () {
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', currentTheme);
+        })();
+    </script>
+    <link href="/css/style.css" rel="stylesheet" />
+    <link href="/css/adaptive.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noque</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+</head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KXHLPHHP00"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-KXHLPHHP00');
+</script>
+
+<body>
+    <div class="grid" style="grid-template-rows: repeat(1, 20rem); grid-template-areas: none;">
+        <div class="frame">
+            <div class="frame__main-text">
+                <div class="frame__title">
+                    <h1 class="text_primary">noque</h1>
+                    <h1 class="text_secondary">product</h1>
+                </div>
+            </div>
+            <div class="additional">
+                <a class="button_secondary" href="/noque/noque.html">view</a>
+            </div>
+        </div>
+        <div class="frame">
+            <div class="frame__main-text">
+                <div class="frame__title">
+                    <h1 class="text_primary">kodomi</h1>
+                    <h1 class="text_secondary">product</h1>
+                </div>
+            </div>
+            <div class="additional">
+                <a class="button_secondary">view</a>
+            </div>
+        </div>
+        <div class="frame">
+            <div class="frame__main-text">
+                <div class="frame__title">
+                    <h1 class="text_primary">widgets</h1>
+                    <h1 class="text_secondary">product</h1>
+                </div>
+            </div>
+            <div class="additional">
+                <a class="button_secondary">view</a>
+            </div>
+        </div>
+        <div class="frame">
+            <div class="frame__main-text">
+                <div class="frame__title">
+                    <h1 class="text_primary">mesoki</h1>
+                    <h1 class="text_secondary">brand, 3d, motion</h1>
+                </div>
+            </div>
+            <div class="additional">
+                <a class="button_secondary">view</a>
+            </div>
+        </div>
+        <div class="info">
+            <div class="info__frame" style="text-align: left;">
+                <a class="link" href="/index.html"><span id="back">main</span></a>
+                <h1 class="text_secondary" style="width:fit-content;">/</h1>
+                <a class="link" href="/portfolio.html"><span id="back">portfolio</span></a>
+                <h1 class="text_secondary" style="width:fit-content;">/</h1>
+                <h1 class="text_secondary" style="width:fit-content;">noque</h1>
+            </div>
+            <div class="info__frame">
+            </div>
+        </div>
+    </div>
+    <script src="/theme.js"></script>
+
+</html>
