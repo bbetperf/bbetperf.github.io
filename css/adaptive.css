@@ -11,6 +11,10 @@
     height: fit-content;
   }
 
+  .frame-image {
+    width: 75%;
+  }
+
   .prev,
   .next {
     display: none;
