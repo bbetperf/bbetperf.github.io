@@ -11,6 +11,11 @@
     height: fit-content;
   }
 
+  .prev,
+  .next {
+    display: none;
+  }
+
   #name,
   #about {
     aspect-ratio: 1;
