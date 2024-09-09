@@ -64,6 +64,10 @@ body {
   background-color: var(--background_secondary);
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 html {
   font-size: clamp(12px, 1vw, 14px);
 }
@@ -74,7 +78,7 @@ html {
   left: 0;
   width: 100%;
   height: fit-content;
-  padding: 1.5rem;
+  padding: 1.3rem 1.5rem;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
@@ -98,7 +102,7 @@ html {
   color: var(--text_primary);
   font-size: 1rem;
   font-weight: 400;
-  line-height: 128%;
+  line-height: 1.5;
   text-decoration: none;
   margin: 0;
   padding: 0;
@@ -110,15 +114,11 @@ html {
   color: var(--text_secondary_on_material);
   font-size: 1rem;
   font-weight: 400;
-  line-height: 128%;
+  line-height: 1.5;
   text-decoration: none;
   margin: 0;
   padding: 0;
   text-transform: lowercase;
-}
-
-.sentence {
-  line-height: 1.5;
 }
 
 .grid_index {
@@ -136,7 +136,7 @@ html {
 .grid_portfolio {
   display: grid;
   grid-template-columns: repeat(4, minmax(5rem, 20rem));
-  grid-template-rows: repeat(2, minmax(5rem, 20.125rem));
+  grid-template-rows: repeat(2, minmax(5rem, 20rem));
   grid-template-areas: none;
   gap: 0.25rem;
   padding: 1.5rem;
@@ -148,7 +148,7 @@ html {
   gap: 0.25rem;
   padding: 1.5rem;
   width: calc(20rem * 4 + 0.25rem * 3);
-  margin: calc((100vh - (20.125rem * 2 + 0.25rem + 1.5rem * 2)) / 2) 0;
+  margin: calc((100vh - (20.125rem * 2 + 1.5rem * 2)) / 2) 0;
 }
 
 .page {
@@ -168,10 +168,11 @@ html {
 .frame {
   background-color: var(--background_primary);
   border-radius: 1.15rem;
-  padding: 1.15rem;
+  padding: 0.95rem 1.15rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 1.15rem;
 }
 
 .frame:hover {
@@ -179,16 +180,26 @@ html {
 }
 
 .frame-image {
-  width: 100%;
-  height: auto;
-  border-radius: inherit;
-  object-fit: cover;
   border-radius: 1.15rem;
   background-color: var(--background_tertiary);
+  flex-shrink: 0;
+  scroll-snap-stop: always;
+  width: calc(90% + 0px);
 }
 
 .separator {
   height: 4rem;
+}
+
+.scroll-container {
+  display: flex;
+  border-radius: 1.15rem;
+  overflow: auto;
+  gap: 1.15rem;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
 }
 
 .description {
@@ -213,7 +224,7 @@ img {
   color: var(--text_secondary_on_material);
   font-size: 1rem;
   font-weight: 400;
-  line-height: 128%;
+  line-height: 1.5;
   text-decoration: none;
   text-transform: lowercase;
 }
@@ -235,7 +246,7 @@ img {
   color: var(--text_secondary_on_material);
   font-size: 1rem;
   font-weight: 400;
-  line-height: 128%;
+  line-height: 1.5;
   text-decoration: none;
   text-transform: lowercase;
   border: 0;
@@ -260,7 +271,7 @@ img {
   color: var(--text_secondary_on_material);
   font-size: 1rem;
   font-weight: 400;
-  line-height: 128%;
+  line-height: 1.5;
   text-decoration: none;
   text-transform: lowercase;
   border: 0;
@@ -282,6 +293,7 @@ img {
   align-items: flex-end;
   align-self: stretch;
   gap: 0.5rem;
+  padding: 0 0 0.2rem 0;
 }
 
 .frame__main-text {
