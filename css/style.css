@@ -145,10 +145,18 @@ html {
 .grid_project {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 0.25rem;
   padding: 1.5rem;
-  width: calc(20rem * 4 + 0.25rem * 3);
+  width: 100%;
   margin: calc((100vh - (20.125rem * 2 + 1.5rem * 2)) / 2) 0;
+  box-sizing: border-box;
+}
+
+.grid_project .frame {
+  width: 100%;
+  max-width: calc(20rem * 2 + 0.25rem);
+  box-sizing: border-box;
 }
 
 .page {
@@ -184,11 +192,7 @@ html {
   background-color: var(--background_tertiary);
   flex-shrink: 0;
   scroll-snap-stop: always;
-  width: calc(90% + 0px);
-}
-
-.separator {
-  height: 4rem;
+  width: 85%;
 }
 
 .scroll-container {
@@ -196,10 +200,21 @@ html {
   border-radius: 1.15rem;
   overflow: auto;
   gap: 1.15rem;
+  width: 100%;
+  max-width: calc(20rem * 4 + 0.25rem * 3);
 }
 
 .scroll-container::-webkit-scrollbar {
   display: none;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.separator {
+  height: 4rem;
 }
 
 .description {
@@ -210,13 +225,6 @@ html {
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
-}
-
-img {
-  width: 100%;
-  height: auto;
-  border-radius: inherit;
-  object-fit: cover;
 }
 
 .link {
