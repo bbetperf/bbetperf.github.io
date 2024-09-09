@@ -4,16 +4,16 @@ document.addEventListener("DOMContentLoaded", function () {
     function setTheme(theme) {
         if (theme === "dark") {
             document.documentElement.setAttribute("data-theme", "dark");
-            lightButton.classList.remove("primary");
-            lightButton.classList.add("secondary");
-            darkButton.classList.remove("secondary");
-            darkButton.classList.add("primary");
+            lightButton.classList.remove("button_primary");
+            lightButton.classList.add("button_secondary");
+            darkButton.classList.remove("button_secondary");
+            darkButton.classList.add("button_primary");
         } else {
             document.documentElement.setAttribute("data-theme", "light");
-            lightButton.classList.remove("secondary");
-            lightButton.classList.add("primary");
-            darkButton.classList.remove("primary");
-            darkButton.classList.add("secondary");
+            lightButton.classList.remove("button_secondary");
+            lightButton.classList.add("button_primary");
+            darkButton.classList.remove("button_primary");
+            darkButton.classList.add("button_secondary");
         }
     }
     const currentTheme = localStorage.getItem("theme") || "light";
