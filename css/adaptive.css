@@ -1,41 +1,45 @@
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 800px) {
   html {
-    font-size: clamp(12px, 1vw, 90px);
+    font-size: clamp(12px, 1vw, 16px);
+  }
+
+  body {
+    align-items: flex-start;
   }
 
   .frame {
     height: fit-content;
-    gap: 1.5rem;
   }
 
+  #name,
   #about {
     aspect-ratio: 1;
   }
 
-  .grid {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    grid-template-areas:
-      "name"
-      "portfolio"
-      "about"
-      "experience"
-      "blog"
-      "contact"
-      "info"
-      "theme";
-    align-self: stretch;
+  .grid_index {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .grid_portfolio {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .grid_portfolio .frame {
+    aspect-ratio: 1;
+  }
+
+  .grid_project {
+    margin: 0;
+    padding: 1rem;
   }
 
   .info {
-    position: relative;
-    background-color: var(--background_primary);
-    border-radius: 1.15rem;
-    padding: 1.15rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 1.5rem;
+    display: none;
+    visibility: none;
   }
 
   #date {
