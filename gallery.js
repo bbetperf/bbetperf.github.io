@@ -1,29 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
     const scrollWrappers = document.querySelectorAll('.scroll-wrapper');
-
-    // Функция для получения размера rem в пикселях
     function getRemInPixels() {
         const rootFontSize = window.getComputedStyle(document.documentElement).fontSize;
-        return parseFloat(rootFontSize); // Возвращает размер 1rem в пикселях
+        return parseFloat(rootFontSize);
     }
-
-    const remSize = getRemInPixels(); // Получаем размер rem в пикселях
-    const gap = 1.15 * remSize; // gap в rem динамически преобразован в пиксели
-
-    // Функция для обновления видимости кнопок
+    const remSize = getRemInPixels();
+    const gap = 1.15 * remSize;
     function updateButtonVisibility(scrollContainer, prevButton, nextButton) {
         const scrollLeft = scrollContainer.scrollLeft;
         const scrollWidth = scrollContainer.scrollWidth;
         const clientWidth = scrollContainer.clientWidth;
-
-        // Если на первом элементе, скрываем prev
         if (scrollLeft === 0) {
             prevButton.style.visibility = 'hidden';
         } else {
             prevButton.style.visibility = 'visible';
         }
-
-        // Если на последнем элементе, скрываем next
         if (scrollLeft + clientWidth >= scrollWidth) {
             nextButton.style.visibility = 'hidden';
         } else {
@@ -32,37 +23,29 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     scrollWrappers.forEach(scrollWrapper => {
-        // Проверяем наличие кнопок в контейнере
         const prevButton = scrollWrapper.querySelector('.prev');
         const nextButton = scrollWrapper.querySelector('.next');
-
-        // Если кнопок нет, пропускаем этот scroll-wrapper
         if (!prevButton || !nextButton) return;
-
-        // Ищем либо .scroll-container, либо .responsive-container
-        const scrollContainer = scrollWrapper.querySelector('.scroll-container') || scrollWrapper.querySelector('.responsive-container');
-
-        // Если контейнера нет, пропускаем текущий scrollWrapper
+        const scrollContainer = scrollWrapper.querySelector('.scroll-container');
         if (!scrollContainer) return;
-
-        // Прокрутка влево
+        function getItemWidth() {
+            const item = scrollContainer.querySelector('.frame-image, img, iframe');
+            if (item) {
+                return item.clientWidth + gap;
+            }
+            return 0;
+        }
         prevButton.addEventListener('click', function () {
-            const itemWidth = scrollContainer.querySelector('.frame-image, iframe').clientWidth + gap; // ширина элемента + gap
+            const itemWidth = getItemWidth();
             scrollContainer.scrollBy({ left: -itemWidth, behavior: 'smooth' });
         });
-
-        // Прокрутка вправо
         nextButton.addEventListener('click', function () {
-            const itemWidth = scrollContainer.querySelector('.frame-image, iframe').clientWidth + gap; // ширина элемента + gap
+            const itemWidth = getItemWidth();
             scrollContainer.scrollBy({ left: itemWidth, behavior: 'smooth' });
         });
-
-        // Обновление видимости кнопок при прокрутке
         scrollContainer.addEventListener('scroll', function () {
             updateButtonVisibility(scrollContainer, prevButton, nextButton);
         });
-
-        // Инициализация видимости кнопок
         updateButtonVisibility(scrollContainer, prevButton, nextButton);
     });
 });
