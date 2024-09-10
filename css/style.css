@@ -201,6 +201,13 @@ html {
   max-width: calc(20rem * 4 + 0.25rem * 3);
 }
 
+iframe {
+  width: 100%;
+  height: 50rem;
+  border: none;
+  object-fit: cover;
+}
+
 .scroll-container {
   position: relative;
   display: flex;
