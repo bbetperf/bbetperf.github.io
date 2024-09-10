@@ -32,19 +32,28 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     scrollWrappers.forEach(scrollWrapper => {
-        const scrollContainer = scrollWrapper.querySelector('.scroll-container');
+        // Проверяем наличие кнопок в контейнере
         const prevButton = scrollWrapper.querySelector('.prev');
         const nextButton = scrollWrapper.querySelector('.next');
 
+        // Если кнопок нет, пропускаем этот scroll-wrapper
+        if (!prevButton || !nextButton) return;
+
+        // Ищем либо .scroll-container, либо .responsive-container
+        const scrollContainer = scrollWrapper.querySelector('.scroll-container') || scrollWrapper.querySelector('.responsive-container');
+
+        // Если контейнера нет, пропускаем текущий scrollWrapper
+        if (!scrollContainer) return;
+
         // Прокрутка влево
         prevButton.addEventListener('click', function () {
-            const itemWidth = scrollContainer.querySelector('.frame-image').clientWidth + gap; // ширина элемента + gap
+            const itemWidth = scrollContainer.querySelector('.frame-image, iframe').clientWidth + gap; // ширина элемента + gap
             scrollContainer.scrollBy({ left: -itemWidth, behavior: 'smooth' });
         });
 
         // Прокрутка вправо
         nextButton.addEventListener('click', function () {
-            const itemWidth = scrollContainer.querySelector('.frame-image').clientWidth + gap; // ширина элемента + gap
+            const itemWidth = scrollContainer.querySelector('.frame-image, iframe').clientWidth + gap; // ширина элемента + gap
             scrollContainer.scrollBy({ left: itemWidth, behavior: 'smooth' });
         });
 

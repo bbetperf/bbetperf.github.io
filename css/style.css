@@ -201,11 +201,21 @@ html {
   max-width: calc(20rem * 4 + 0.25rem * 3);
 }
 
-iframe {
+.responsive-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.responsive-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 50rem;
-  border: none;
-  object-fit: cover;
+  height: 100%;
+  border: 0;
+  border-radius: 1.15rem;
 }
 
 .scroll-container {
