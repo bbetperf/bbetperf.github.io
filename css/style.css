@@ -187,6 +187,14 @@ html {
   box-shadow: 0 0 0 0.25rem var(--outline);
 }
 
+.background-none {
+  background-color: unset;
+}
+
+.background-none:hover {
+  box-shadow: none !important;
+}
+
 .frame-image {
   border-radius: 1.15rem;
   background-color: var(--background_tertiary);
