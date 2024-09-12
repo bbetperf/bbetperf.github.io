@@ -417,6 +417,7 @@ table {
   background-color: var(--background_tertiary);
   padding: 0;
   border-spacing: 1.15rem;
+  border-radius: 1.15rem;
 }
 
 th,
