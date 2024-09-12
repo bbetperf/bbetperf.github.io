@@ -207,6 +207,45 @@ html {
   aspect-ratio: 16/9;
 }
 
+pre {
+  border-radius: 1.15rem !important;
+  background-color: var(--background_tertiary) !important;
+  flex-shrink: 0 !important;
+  scroll-snap-stop: always !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0.95rem 1.15rem !important;
+  align-items: left !important;
+  width: 100%;
+  box-sizing: border-box;
+  text-shadow: none !important;
+  font-family: 'Geist Mono', sans-serif !important;
+  color: var(--text_primary) !important;
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+  text-decoration: none !important;
+  text-transform: lowercase !important;
+  text-shadow: none !important;
+}
+
+code {
+  font-family: 'Geist Mono', sans-serif !important;
+  color: var(--text_primary) !important;
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+  text-decoration: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-transform: lowercase !important;
+  text-shadow: none !important;
+}
+
+.token.operator {
+  background: unset !important;
+}
+
 img {
   display: block;
   max-width: 100%;
