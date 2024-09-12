@@ -204,6 +204,7 @@ html {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  aspect-ratio: 16/9;
 }
 
 img {
@@ -410,4 +411,20 @@ img {
 ::selection {
   background-color: #ffea00;
   color: #000000;
+}
+
+table {
+  background-color: var(--background_tertiary);
+  padding: 0;
+  border-spacing: 1.15rem;
+}
+
+th,
+td {
+  text-align: left;
+  align-content: flex-start;
+  min-width: 20rem;
+  border-radius: 0.55rem;
+  padding: 0.95rem 1.15rem;
+  background-color: var(--background_secondary);
 }
