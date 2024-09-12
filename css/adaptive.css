@@ -38,8 +38,15 @@
   }
 
   .info {
-    display: none;
-    visibility: none;
+    position: relative;
+    background-color: var(--background_primary);
+    border-radius: 1.15rem;
+    padding: 0.95rem 1.15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 20;
+    margin: 0 0 3rem 0;
   }
 
   #date {
@@ -61,5 +68,13 @@
 
   .frame:hover {
     box-shadow: none;
+  }
+
+  .frame:last-child {
+    margin: 0 0 3rem 0;
+  }
+
+  #timer, #date {
+    display: none;
   }
 }
