@@ -270,6 +270,7 @@ img {
 
 .separator {
   height: 4rem;
+  width: 100%;
 }
 
 .description {
