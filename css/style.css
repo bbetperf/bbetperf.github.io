@@ -287,6 +287,12 @@ img {
   overflow-x: auto;
 }
 
+.icon-svg {
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+  fill: var(--text_tertiary) !important;
+}
+
 .prev,
 .next {
   position: absolute;
@@ -294,8 +300,13 @@ img {
   transform: translateY(-50%);
   margin: 0 1.15rem;
   z-index: 10;
-  padding: 0 !important;
-  border-radius: 0rem !important;
+  padding: 0.5rem !important;
+  background-color: var(--background_primary) !important;
+}
+
+.prev:hover .icon-svg,
+.next:hover .icon-svg {
+  fill: var(--text_tertiary_hover) !important;
 }
 
 .prev {
