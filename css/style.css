@@ -484,6 +484,16 @@ td {
 }
 
 #typing-text {
-  visibility: visible; /* Делаем текст видимым */
-  transition: color 0.5s ease; /* Анимация прозрачности */
+  visibility: visible;
+  /* Делаем текст видимым */
+  transition: color 0.5s ease;
+  /* Анимация прозрачности */
+}
+
+.frame_container_row {
+  max-width: calc(20rem * 4 + 0.25rem * 3);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;
 }
