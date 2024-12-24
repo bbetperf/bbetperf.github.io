@@ -77,4 +77,13 @@
   #timer, #date {
     display: none;
   }
+
+  .frame_container_row {
+    flex-direction: column;
+    max-width: calc(20rem * 2 + 0.25rem);
+  }
+  
+  .frame_container_row .frame {
+    max-width: calc(20rem * 2 + 0.25rem);
+  }
 }
