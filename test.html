@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<script async src="https://api.countapi.xyz/hit/bbetperf.com/visits?callback=liveViews"></script>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Views</title>
+</head>
+
+<body>
+    <h1>Total <span id="visits">0</span> views</h1>
+
+    <script>
+        function liveViews(response) {
+            document.getElementById('visits').innerText = response.value;
+        }
+    </script>
+    
+</body>
+
+</html>
