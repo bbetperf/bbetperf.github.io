@@ -1,22 +1,27 @@
-document.addEventListener("DOMContentLoaded", () => {
-    // Use the URL path as the unique key for each project
+document.addEventListener("DOMContentLoaded", function () {
     const namespace = "bbetperf-com"; // Namespace for your website
-    const projectKey = window.location.pathname.replace(/\//g, "-"); // Convert URL path to a unique key
+    const projectKey = "portfolio_carplay"; // Unique key for this page
+    const apiUrl = `https://api.countapi.xyz/hit/${namespace}/${projectKey}`; // Endpoint for CountAPI
 
-    // Fetch and increment the view count
-    fetch(`https://api.countapi.xyz/hit/${namespace}${projectKey}`)
-        .then((response) => response.json())
-        .then((data) => {
-            // Update the view count inside the existing HTML structure
+    // Fetch and update the view count
+    fetch(apiUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Update the view count in the HTML
             const viewCountElement = document.getElementById("view-count");
             if (viewCountElement) {
                 viewCountElement.textContent = data.value;
             } else {
-                console.error("View count element not found!");
+                console.error("View count element not found in the DOM.");
             }
         })
-        .catch((error) => {
-            console.error("Error updating view count:", error);
+        .catch(error => {
+            console.error("Failed to fetch or update the view count:", error);
             const viewCountElement = document.getElementById("view-count");
             if (viewCountElement) {
                 viewCountElement.textContent = "Error";
