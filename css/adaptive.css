@@ -4,6 +4,7 @@
   }
 
   body {
+    display: unset;
     align-items: flex-start;
   }
 
@@ -85,5 +86,20 @@
   
   .frame_container_row .frame {
     max-width: calc(20rem * 2 + 0.25rem);
+  }
+
+  body.page_not_found {
+    display: flex;
+  }
+
+  .grid_project.page_not_found {
+    height: 100%;
+  }
+
+  div .page_not_found {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    align-content: center;
   }
 }

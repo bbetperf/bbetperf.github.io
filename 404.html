@@ -52,18 +52,35 @@
 <script src="/theme.js"></script>
 <script src="/typing.js"></script>
 
-<body>
-    <div class="info">
-        <div class="info__frame" style="text-align: left;">
-            <a class="link" href="/"><span id="back">main</span></a>
-            <h1 class="text_tertiary" style="width:fit-content;">/</h1>
-            <h1 class="text_tertiary" style="width:fit-content; color: var(--text_secondary);">404</h1>
+<body class="page_not_found">
+    <div class="grid_project page_not_found">
+        <div class="info">
+            <div class="info__frame" style="text-align: left;">
+                <a class="link" href="/"><span id="back">main</span></a>
+                <h1 class="text_tertiary" style="width:fit-content;">/</h1>
+                <h1 class="text_tertiary" style="width:fit-content; color: var(--text_secondary);">404</h1>
+            </div>
+            <div class="info__frame" style="text-align: center; display: block;">
+                <p class="text_tertiary" style="color: var(--text_secondary);"><span id="timer">timer</span></p>
+            </div>
+            <div class="info__frame" style="text-align: right; display: block">
+                <p class="text_tertiary" style="color: var(--text_secondary);"><span id="date">date</span></p>
+            </div>
         </div>
-        <div class="info__frame" style="text-align: center; display: block;">
-            <p class="text_tertiary" style="color: var(--text_secondary);"><span id="timer">timer</span></p>
-        </div>
-        <div class="info__frame" style="text-align: right; display: block">
-            <p class="text_tertiary" style="color: var(--text_secondary);"><span id="date">date</span></p>
+        <div class="page_not_found">
+            <div class="frame background-none" style="background-color: var(--background_primary);">
+                <div class="frame__title">
+                    <h1 class="text_primary">404 page not found</h1>
+                </div>
+                <p class="text_tertiary">Oops! The page you’re looking for doesn’t
+                    exist. It might have been moved, deleted, or never existed in the first place. Use the navigation
+                    above
+                    to find your way back, or return to the homepage.
+                </p>
+                <div class="additional">
+                    <a class="button_secondary" href="/">go to main</a>
+                </div>
+            </div>
         </div>
     </div>
 </body>
