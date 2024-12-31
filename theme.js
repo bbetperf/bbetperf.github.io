@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const lightButton = document.getElementById("light-button");
     const darkButton = document.getElementById("dark-button");
     function setTheme(theme) {
+        document.documentElement.setAttribute("data-theme", theme);
+        void document.documentElement.offsetHeight;
         if (theme === "dark") {
             document.documentElement.setAttribute("data-theme", "dark");
             lightButton.classList.remove("button_primary");

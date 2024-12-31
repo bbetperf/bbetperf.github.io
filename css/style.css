@@ -61,7 +61,6 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  background-color: var(--background_secondary);
 }
 
 body::-webkit-scrollbar {
@@ -69,7 +68,9 @@ body::-webkit-scrollbar {
 }
 
 html {
+  background-color: var(--background_secondary);
   font-size: clamp(12px, 1vw, 14px);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .info {
@@ -182,10 +183,12 @@ html {
   flex-direction: column;
   justify-content: space-between;
   gap: 1.15rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .frame:hover {
   box-shadow: 0 0 0 0.25rem var(--outline);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .background-none {
@@ -369,6 +372,7 @@ img {
   color: var(--text_primary_inerse);
   background-color: var(--accent_primary);
   min-width: calc(1rem);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .button_primary:hover {
@@ -395,6 +399,7 @@ img {
   color: var(--text_primary);
   background-color: var(--accent_secondary);
   min-width: calc(1rem);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .button_secondary:hover {
@@ -404,6 +409,7 @@ img {
 
 .button p {
   color: var(--neutral-0);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .additional {
@@ -535,12 +541,13 @@ td {
   cursor: default;
   animation-name: snowflakes-shake;
   animation-duration: 3s;
-  animation-timing-function: ease-in-out
+  animation-timing-function: ease-in-out;
 }
 
 .snowflake .inner {
   color: var(--background_tertiary);
   animation-duration: 10s;
   animation-name: snowflakes-fall;
-  animation-timing-function: linear
+  animation-timing-function: linear;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
