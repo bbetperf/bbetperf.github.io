@@ -191,7 +191,7 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 1.15rem;
+  gap: 0.95rem;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -559,4 +559,24 @@ td {
   animation-name: snowflakes-fall;
   animation-timing-function: linear;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--background_secondary);
+  width: fit-content;
+  height: fit-content;
+}
+
+.chip_grid {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0rem;
+  margin: 0rem;
+  align-content: flex-start;
 }
