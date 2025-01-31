@@ -15,6 +15,9 @@
   #name,
   #about {
     aspect-ratio: 1;
+    width: unset;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .grid_index {
@@ -32,7 +35,8 @@
 
   .grid_portfolio .frame {
     aspect-ratio: 1;
-    max-width: unset;
+    max-width: 100%;
+    width: unset;
   }
 
   .grid_project {
@@ -77,7 +81,8 @@
     margin: 0 0 3rem 0;
   }
 
-  #timer, #date {
+  #timer,
+  #date {
     display: none;
   }
 
@@ -85,7 +90,7 @@
     flex-direction: column;
     max-width: calc(20rem * 2 + 0.25rem);
   }
-  
+
   .frame_container_row .frame {
     max-width: calc(20rem * 2 + 0.25rem);
   }
