@@ -124,4 +124,8 @@
     padding: 0rem;
     align-items: flex-start;
   }
+
+  .title {
+    font-size: 2rem;
+  }
 }
