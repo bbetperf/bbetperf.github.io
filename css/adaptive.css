@@ -123,6 +123,7 @@
   .frame-text {
     padding: 0rem;
     align-items: flex-start;
+    gap: 0;
   }
 
   .title {
