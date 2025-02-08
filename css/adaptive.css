@@ -88,11 +88,11 @@
 
   .frame_container_row {
     flex-direction: column;
-    max-width: calc(20rem * 2 + 0.25rem);
+    max-width: unset;
   }
 
   .frame_container_row .frame {
-    max-width: calc(20rem * 2 + 0.25rem);
+    max-width: unset;
   }
 
   body.page_not_found {
@@ -108,5 +108,20 @@
     padding: 0;
     height: 100%;
     align-content: center;
+  }
+
+  .text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  .frame-text {
+    padding: 0rem;
+    align-items: flex-start;
   }
 }

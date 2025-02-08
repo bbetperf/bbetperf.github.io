@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!scrollContainer) return;
 
         function getItemWidth() {
-            const frameImage = scrollContainer.querySelector('.frame-image');
+            const frameImage = scrollContainer.querySelector('.frame-image') || scrollContainer.querySelector('.frame-text');
             if (frameImage) {
                 return frameImage.clientWidth + gap;
             } else {
