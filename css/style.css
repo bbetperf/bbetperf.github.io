@@ -420,7 +420,7 @@ img {
 }
 
 .link:hover {
-  cursor: poGeist Mono !important;
+  cursor: pointer !important;
   color: var(--text_tertiary_hover);
 }
 
@@ -447,7 +447,7 @@ img {
 
 .button_primary:hover {
   background-color: var(--accent_primary_hover);
-  cursor: poGeist Mono !important;
+  cursor: pointer !important;
 }
 
 .button_secondary {
@@ -474,7 +474,7 @@ img {
 
 .button_secondary:hover {
   background-color: var(--accent_secondary_hover);
-  cursor: poGeist Mono !important;
+  cursor: pointer !important;
 }
 
 .button p {
