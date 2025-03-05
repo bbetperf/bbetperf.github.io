@@ -1,4 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const currentMonth = new Date().getMonth(); // 0-11 (декабрь = 11, январь = 0, февраль = 1)
+    const isWinter = currentMonth === 11 || currentMonth === 0 || currentMonth === 1;
+
+    if (!isWinter) return; // Если не зима, прекращаем выполнение
+
     const snowflakesContainer = document.querySelector('.snowflakes');
     const snowflakeCount = 50; // Number of snowflakes
 
