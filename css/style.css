@@ -195,7 +195,7 @@ html {
 .grid_portfolio {
   display: grid;
   grid-template-columns: repeat(4, minmax(5rem, 20rem));
-  grid-template-rows: repeat(2, minmax(5rem, 20rem));
+  grid-template-rows: repeat(3, minmax(5rem, 20rem));
   grid-template-areas: none;
   gap: 0.25rem;
   padding: 15rem 1.5rem;
