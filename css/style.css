@@ -22,7 +22,7 @@
   --outline: var(--neutral-200);
   /* Text */
   --text_primary: var(--neutral-950);
-  --text_primary_inerse: var(--neutral-0);
+  --text_primary_inverse: var(--neutral-0);
   --text_secondary: var(--neutral-500);
   --text_tertiary: var(--neutral-400);
   --text_tertiary_hover: var(--neutral-950);
@@ -44,7 +44,7 @@
   --outline: var(--neutral-800);
   /* Text */
   --text_primary: var(--neutral-0);
-  --text_primary_inerse: var(--neutral-950);
+  --text_primary_inverse: var(--neutral-950);
   --text_secondary: var(--neutral-400);
   --text_tertiary: var(--neutral-600);
   --text_tertiary_hover: var(--neutral-0);
@@ -439,7 +439,7 @@ img {
   text-decoration: none;
   text-transform: lowercase;
   border: 0;
-  color: var(--text_primary_inerse);
+  color: var(--text_primary_inverse);
   background-color: var(--accent_primary);
   min-width: calc(1rem);
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -531,8 +531,8 @@ img {
 }
 
 ::selection {
-  background-color: #ffea00;
-  color: #000000;
+  background-color: #FF00EA;
+  color: var(--text_primary);
 }
 
 table {
@@ -633,4 +633,9 @@ td {
   padding: 0rem;
   margin: 0rem;
   align-content: flex-start;
+}
+
+.highlight {
+  background-color: #ffea00;
+  color: var(--text_primary);
 }
