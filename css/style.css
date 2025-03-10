@@ -195,7 +195,7 @@ html {
 .grid_portfolio {
   display: grid;
   grid-template-columns: repeat(4, minmax(5rem, 20rem));
-  grid-template-rows: repeat(3, minmax(5rem, 20rem));
+  grid-template-rows: repeat(2, minmax(5rem, 20rem));
   grid-template-areas: none;
   gap: 0.25rem;
   padding: 15rem 1.5rem;
@@ -215,7 +215,7 @@ html {
   gap: 0.25rem;
   width: 100%;
   box-sizing: border-box;
-  padding: 15rem 1.5rem;
+  padding: 25vh 1.5rem;
   margin: auto;
 }
 
@@ -531,8 +531,8 @@ img {
 }
 
 ::selection {
-  background-color: #FF00EA;
-  color: var(--text_primary);
+  background-color: #ffea00;
+  color: #000000;
 }
 
 table {
@@ -633,16 +633,4 @@ td {
   padding: 0rem;
   margin: 0rem;
   align-content: flex-start;
-}
-
-.highlight {
-  background-color: #ffea00;
-  color: var(--text_primary);
-}
-
-[data-theme="dark"] {
-  .highlight {
-    background-color: #ffea00;
-    color: var(--text_primary_inverse);
-  }
 }
