@@ -639,3 +639,10 @@ td {
   background-color: #ffea00;
   color: var(--text_primary);
 }
+
+[data-theme="dark"] {
+  .highlight {
+    background-color: #ffea00;
+    color: var(--text_primary_inverse);
+  }
+}
