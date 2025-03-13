@@ -185,8 +185,8 @@ html {
   grid-template-rows: repeat(1, minmax(5rem, 20rem)) repeat(2, minmax(5rem, 9.875rem));
   grid-template-areas:
     ". name about ."
-    "portfolio blog contact contact"
-    ". experience experience theme";
+    "portfolio portfolio contact contact"
+    ". blog theme theme";
   gap: 0.25rem;
   padding: 15rem 1.5rem;
   margin: auto;
