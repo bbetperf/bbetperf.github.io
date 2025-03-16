@@ -77,10 +77,6 @@
     box-shadow: none;
   }
 
-  .frame:last-child {
-    margin: 0 0 3rem 0;
-  }
-
   #timer,
   #date {
     display: none;
@@ -118,12 +114,6 @@
     margin: 0;
     padding: 0;
     height: 100%;
-  }
-
-  .frame-text {
-    padding: 0rem;
-    align-items: flex-start;
-    gap: 0;
   }
 
   .title {
