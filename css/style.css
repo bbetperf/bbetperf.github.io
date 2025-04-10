@@ -179,7 +179,7 @@ html {
   grid-template-areas:
     ". name about ."
     "portfolio portfolio contact contact"
-    ". blog theme theme";
+    "mesoki blog theme theme";
   gap: 0.25rem;
   padding: 15rem 1.5rem;
   margin: auto;
