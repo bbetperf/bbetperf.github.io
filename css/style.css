@@ -60,10 +60,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
+  height: 100%;
   padding: 0;
+  margin: 0;
   min-height: fit-content;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
 body::-webkit-scrollbar {
@@ -78,17 +80,24 @@ html {
 
 .info {
   position: fixed;
+  background-color: var(--background_primary);
+  border-radius: 1.15rem;
   top: 0;
   left: 0;
-  width: 100%;
-  height: fit-content;
-  padding: 1.3rem 1.5rem;
+  width: -webkit-fill-available;
+  height: 3.4rem;
+  padding: 0.95rem 1.15rem;
+  margin: 1.5rem;
   box-sizing: border-box;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
   grid-area: info;
   z-index: 100;
+  text-wrap: nowrap;
+  max-width: calc(20rem * 4 + 0.25rem * 3);
+  left: auto
 }
 
 .info__frame {
@@ -175,14 +184,21 @@ html {
 .grid_index {
   display: grid;
   grid-template-columns: repeat(4, minmax(5rem, 20rem));
-  grid-template-rows: repeat(1, minmax(5rem, 20rem)) repeat(2, minmax(5rem, 9.875rem));
+  grid-template-rows: repeat(1, minmax(5rem, 20rem)) repeat(6, minmax(5rem, 9.875rem));
   grid-template-areas:
-    ". name about ."
-    "portfolio portfolio contact contact"
-    "mesoki blog theme theme";
+    "name about about ."
+    ". portfolio contact contact"
+    "mesoki portfolio . theme"
+    "mesoki blog carplay widgets"
+    ". . carplay widgets"
+    ". noque . ."
+    ". noque . .";
   gap: 0.25rem;
-  padding: 15rem 1.5rem;
-  margin: auto;
+  padding: 0;
+  padding-top: 6.4rem;
+  margin: 0 1.5rem 1.5rem 1.5rem;
+  width: -webkit-fill-available;
+  justify-content: center;
 }
 
 .grid_portfolio {
@@ -191,8 +207,11 @@ html {
   grid-template-rows: repeat(2, minmax(5rem, 20rem));
   grid-template-areas: none;
   gap: 0.25rem;
-  padding: 15rem 1.5rem;
-  margin: auto;
+  padding: 0;
+  padding-top: 6.4rem;
+  margin: 0 1.5rem 1.5rem 1.5rem;
+  width: -webkit-fill-available;
+  justify-content: center;
 }
 
 .grid_portfolio .frame {
@@ -206,10 +225,12 @@ html {
   flex-direction: column;
   align-items: center;
   gap: 0.25rem;
-  width: 100%;
   box-sizing: border-box;
-  padding: 25vh 1.5rem;
-  margin: auto;
+  padding: 0;
+  padding-top: 6.4rem;
+  margin: 0 1.5rem 1.5rem 1.5rem;
+  width: -webkit-fill-available;
+  justify-content: center;
 }
 
 .grid_project .frame {

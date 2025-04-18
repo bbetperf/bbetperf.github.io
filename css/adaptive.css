@@ -3,11 +3,6 @@
     font-size: clamp(12px, 1vw, 16px);
   }
 
-  body {
-    display: unset;
-    align-items: flex-start;
-  }
-
   .frame {
     height: fit-content;
   }
@@ -23,14 +18,15 @@
   .grid_index {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    margin: 0 1rem 1rem 1rem;
+    padding-top: 5.4rem;
   }
 
   .grid_portfolio {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
-    margin: 0;
+    margin: 0 1rem 1rem 1rem;
+    padding-top: 5.4rem;
   }
 
   .grid_portfolio .frame {
@@ -40,20 +36,13 @@
   }
 
   .grid_project {
-    margin: 0;
-    padding: 1rem;
+    margin: 0 1rem 1rem 1rem;
+    padding-top: 5.4rem;
   }
 
   .info {
-    position: relative;
-    background-color: var(--background_primary);
-    border-radius: 1.15rem;
-    padding: 0.95rem 1.15rem;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    z-index: 20;
-    margin: 0 0 3rem 0;
+    margin: 1rem;
   }
 
   #date {
@@ -120,5 +109,9 @@
     font-size: 1rem;
     line-height: 1.5;
     font-weight: 400;
+  }
+
+  .grid_index #widgets, #noque, #carplay {
+    display: none;
   }
 }
