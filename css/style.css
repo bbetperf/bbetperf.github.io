@@ -184,14 +184,13 @@ html {
 .grid_index {
   display: grid;
   grid-template-columns: repeat(4, minmax(5rem, 20rem));
-  grid-template-rows: repeat(1, minmax(5rem, 20rem)) repeat(6, minmax(5rem, 9.875rem));
+  grid-template-rows: repeat(1, minmax(5rem, 20rem)) repeat(4, minmax(5rem, 9.875rem)) repeat(1, minmax(5rem, 20rem));
   grid-template-areas:
     "name about about ."
     ". portfolio contact contact"
     "mesoki portfolio . theme"
     "mesoki blog carplay widgets"
     ". . carplay widgets"
-    ". noque . ."
     ". noque . .";
   gap: 0.25rem;
   padding: 0;
@@ -266,6 +265,7 @@ html {
   justify-content: space-between;
   gap: 0.95rem;
   transition: background-color 0.3s ease, color 0.3s ease;
+  overflow: hidden;
 }
 
 .frame:hover {
@@ -286,7 +286,6 @@ html {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  aspect-ratio: 16/9;
 }
 
 .frame-text {
@@ -348,7 +347,8 @@ code {
 img {
   display: block;
   max-width: 100%;
-  height: auto;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 

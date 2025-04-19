@@ -111,7 +111,7 @@
     font-weight: 400;
   }
 
-  .grid_index #widgets, #noque, #carplay {
+  .grid_index #widgets, #noque, #carplay, #musyka-1, #noque-1, #noque-2, #carplay-1, #carplay-2, #widgets-1, #widgets-2, #widgets-3 {
     display: none;
   }
 }
