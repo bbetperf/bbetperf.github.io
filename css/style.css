@@ -396,10 +396,11 @@ img {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  margin: 0 1.15rem;
+  margin: 0;
   z-index: 10;
   padding: 0.5rem !important;
   background-color: var(--background_primary) !important;
+  border-radius: 0.5rem;
 }
 
 .prev:hover .icon-svg,
@@ -408,11 +409,11 @@ img {
 }
 
 .prev {
-  left: 0;
+  left: 1.15rem;
 }
 
 .next {
-  right: 0;
+  right: 1.15rem;
 }
 
 .scroll-container::-webkit-scrollbar {

@@ -14,19 +14,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const scrollWidth = scrollContainer.scrollWidth;
         const clientWidth = scrollContainer.clientWidth;
 
-        const offsetTolerance = 1;
-
-        if (scrollLeft <= offsetTolerance) {
-            prevButton.style.visibility = 'hidden';
-        } else {
-            prevButton.style.visibility = 'visible';
-        }
-
-        if (scrollLeft + clientWidth >= scrollWidth - offsetTolerance) {
-            nextButton.style.visibility = 'hidden';
-        } else {
-            nextButton.style.visibility = 'visible';
-        }
+        // Hide previous button if we're at the start
+        prevButton.style.visibility = scrollLeft > 5 ? 'visible' : 'hidden';
+        
+        // Hide next button if we're at the end
+        nextButton.style.visibility = Math.ceil(scrollLeft + clientWidth) < scrollWidth - 5 ? 'visible' : 'hidden';
     }
 
     scrollWrappers.forEach(scrollWrapper => {
@@ -72,6 +64,14 @@ document.addEventListener("DOMContentLoaded", function () {
             updateButtonVisibility(scrollContainer, prevButton, nextButton);
         });
 
-        updateButtonVisibility(scrollContainer, prevButton, nextButton);
+        // Update visibility on resize to handle dynamic content
+        window.addEventListener('resize', function () {
+            updateButtonVisibility(scrollContainer, prevButton, nextButton);
+        });
+
+        // Initial visibility update with a slight delay to ensure layout is ready
+        setTimeout(() => {
+            updateButtonVisibility(scrollContainer, prevButton, nextButton);
+        }, 100);
     });
 });
