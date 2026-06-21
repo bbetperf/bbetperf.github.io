@@ -7,6 +7,7 @@ export interface ContentEntry {
   title: string;
   description: string;
   date: string;
+  href?: string;
 }
 
 export function getEntries(type: "projects" | "nuggets" | "readings"): ContentEntry[] {
@@ -23,6 +24,7 @@ export function getEntries(type: "projects" | "nuggets" | "readings"): ContentEn
         date: data.date instanceof Date
           ? data.date.toISOString().slice(0, 10)
           : data.date ? String(data.date) : "",
+        href: data.href ?? undefined,
       };
     })
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
