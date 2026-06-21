@@ -29,6 +29,7 @@ export default async function Page({
     <ContentLayout
       title={data.title}
       description={data.description}
+      date={data.date instanceof Date ? data.date.toISOString().slice(0, 10) : String(data.date ?? "")}
       backHref="/"
     >
       <Post />
