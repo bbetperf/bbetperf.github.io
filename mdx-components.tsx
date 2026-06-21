@@ -6,6 +6,7 @@ import { ProjectAccordion, ProjectAccordionItem } from "@/components/mdx/project
 import { Callout } from "@/components/mdx/callout";
 import { Stat, StatGroup } from "@/components/mdx/stat";
 import { Figure } from "@/components/mdx/figure";
+import { Placeholder } from "@/components/mdx/placeholder";
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
@@ -40,5 +41,6 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     Stat,
     StatGroup,
     Figure,
+    Placeholder,
   };
 }

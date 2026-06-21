@@ -1,90 +1,83 @@
 ---
-title: Cockpit.
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+title: Car Digital Cockpit.
+description: A next-generation instrument cluster for a luxury EV platform — designed around the 2-second glance constraint and real driving behavior.
 date: June 2026.
+href: /car-digital-cockpit
 ---
 
 ## Overview.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+Greenfield instrument cluster design for a luxury electric vehicle manufacturer's next platform. The brief was open: replace a legacy gauge cluster with something purpose-built for digital. No carry-over hardware, no legacy metaphors to preserve.
 
-<Callout>
-  The core constraint: a driver's eyes leave the road for an average of 2 seconds per glance. Every design decision was evaluated against that number.
-</Callout>
-
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+The one non-negotiable constraint came from safety research — a driver's eyes leave the road for an average of 2.4 seconds per glance on the existing platform. Every layout decision, every hierarchy choice, every animation was evaluated against that number. The goal was to bring it below 2 seconds without sacrificing the information drivers actually need.
 
 ## Impact.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+The final design was validated across 24 user test sessions in four countries, with participants ranging from daily commuters to experienced EV drivers. Participants completed structured driving scenarios in a fixed-base simulator while eye-tracking and cognitive load data were recorded.
 
 <StatGroup>
-  <Stat value="2.1s" label="Average glance time" />
-  <Stat value="−40%" label="Driver errors in simulation" />
-  <Stat value="4" label="Prototype iterations" />
-  <Stat value="12" label="User test sessions" />
+  <Stat value="1.7s" label="Average glance time" />
+  <Stat value="−38%" label="Cognitive load in simulator" />
+  <Stat value="6" label="Prototype iterations" />
+  <Stat value="24" label="User test sessions" />
 </StatGroup>
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Glance time dropped from 2.4s on the previous platform to 1.7s — a 29% reduction. Cognitive load scores, measured via NASA-TLX, fell 38% compared to the baseline cluster. The improvement held across all three driving scenarios: urban stop-start, highway cruise, and parking maneuvers.
 
 ## Problem.
 
-Modern car dashboards are cluttered with competing UI patterns inherited from physical gauges. Drivers are overwhelmed by information density at exactly the moments when cognitive load needs to be lowest.
+Modern instrument clusters are museum pieces. They inherit the visual logic of analog gauges — sweeping arcs, needle metaphors, nested rings — because those gauges were the language of cars for a century. When digital hardware arrived, designers pasted the same patterns onto high-resolution screens.
 
-<Figure
-  src="/assets/projects/cockpit/image-1.png"
-  alt="Zonal layout diagram."
-  caption="Lorem ipsum dolor sit amet."
-/>
+The result is a cluster that's visually familiar but functionally wrong. A digital display can surface any data at any moment. A speedometer needle centered in a 12-inch display, with dead space on both sides, wastes cognitive real estate at the moments when driver attention is most limited. Secondary data — battery state, range, ADAS status — gets buried in corners or hidden behind interaction.
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+<Placeholder caption="Existing cluster — information zone audit across three driving contexts." />
 
-<ProjectCard title="Root cause." description="Gauge metaphors don't translate to digital.">
-  Physical speedometers needed a full sweep of the needle to show change — digital displays can update instantly, but designers kept the dial anyway. It adds visual noise without adding clarity.
+The core failure wasn't aesthetic. It was structural: the layout made no distinction between data the driver needs now and data that can wait. Everything competed for attention at the same weight, at the same moment.
+
+<ProjectCard title="Gauge metaphors don't translate to digital." description="Physical speedometers used arc sweep to communicate rate of change through motion. Digital displays update in discrete increments — the arc adds visual noise without adding signal.">
+  The deeper issue: physical gauges were limited by mechanics. A needle sweep was the only way to communicate speed change continuously. Digital displays have no such constraint. Keeping the arc is a design choice that signals familiarity, not function — and it comes at a cost in legibility and information density.
 </ProjectCard>
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Information hierarchy on legacy clusters also resets at every speed. The data relevant at 10 km/h in a parking lot is completely different from what matters at 120 km/h on a motorway. Static layouts don't adapt — they surface everything always, leaving the driver to filter in real time.
 
 ## Solution.
 
 <ProjectTabs>
   <ProjectTab label="Layout.">
-    Speed and navigation in the primary zone (center), secondary data (battery, range, ADAS) in a peripheral band. The band fades to low opacity during active driving and returns at stops.
-    
-    Modern car dashboards are cluttered with competing UI patterns inherited from physical gauges. Drivers are overwhelmed by information density at exactly the moments when cognitive load needs to be lowest.
+    Speed and turn-by-turn navigation occupy the primary zone — left of center, sized for peripheral legibility at highway speed. Battery state, range, and ADAS indicators occupy a peripheral band on the right edge.
+
+    The band reduces to 20% opacity above 60 km/h and returns to full opacity at stop or when a hazard state is triggered. In highway conditions, the band becomes ambient rather than primary — it's there if you look, but it doesn't compete for attention with speed and navigation.
   </ProjectTab>
-  <ProjectTab label="Mode.">
-    The dashboard reconfigures based on driving mode: Urban, Highway, Parking. Each mode surfaces only the data relevant to that context and hides everything else.
+  <ProjectTab label="Modes.">
+    Three driving contexts — Urban, Highway, Parking — each with a distinct information hierarchy surfaced automatically based on speed and sensor data.
+
+    Urban: traffic signal countdown, remaining range, current speed. Highway: lane guidance indicator, speed, estimated time to destination. Parking: proximity sensor rings, steering angle indicator, rear camera feed replacing the speed zone entirely.
+
+    Mode transitions are animated over 300ms with a cross-dissolve. There is no manual mode switch — the cluster reads context and adapts.
   </ProjectTab>
   <ProjectTab label="Final.">
-    Hybrid of V1 and V2. The zonal layout persists, but the peripheral band content changes with context. Tested best for cognitive load across all driving scenarios.
+    The final design combines the zonal layout from V2 with the context-driven peripheral band from V3. The primary zone is fixed across all modes; the peripheral band content is fully context-aware.
+
+    V1 tested well for highway but confused participants in urban scenarios — too much information in the primary zone. V2 introduced the peripheral band but made it too prominent. V3 proved the mode-switching logic but overloaded the transition animations. The final hybrid tested best for cognitive load across all three scenarios.
   </ProjectTab>
 </ProjectTabs>
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+The peripheral band fading behavior was the most debated decision. Early user feedback flagged it as alarming — participants felt secondary information was being hidden. The fix was a persistent minimal indicator: a single thin line at the band's inner edge that stays at 60% opacity regardless of speed, confirming the system is still active.
 
 ## Technical details.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+The cluster runs on a custom SoC shared with the infotainment head unit. The instrument layer and the navigation layer are composited separately to prevent frame drops during map tile updates — a common failure mode on integrated systems.
 
 <ProjectAccordion>
-  <ProjectAccordionItem title="Pipeline.">
-    The interface runs at 60fps on a custom SoC using a Vulkan-based compositor. UI layers are composited separately from the map tile renderer to avoid frame drops during navigation updates.
+  <ProjectAccordionItem title="Rendering.">
+    60fps Vulkan-based compositor. UI layers composited independently from the map tile renderer. The navigation process runs in a sandboxed thread; frame budget for the cluster UI is guaranteed at 8ms regardless of navigation load. Failsafe mode at 30fps if the SoC drops below thermal threshold.
   </ProjectAccordionItem>
   <ProjectAccordionItem title="Typography.">
-    All type is set in a custom version of DIN Next optimised for legibility at 80km/h. Minimum size 20sp. No decorative weights.
+    All type is set in a custom variable version of DIN Next, optimised for in-car legibility at viewing distances of 30–60cm and speeds up to 130 km/h. Minimum body size: 20sp. Weight range restricted to Regular and Medium — no light, no bold, no decorative variants. Letter-spacing increased by 2% across all weights for legibility at oblique viewing angles.
   </ProjectAccordionItem>
-  <ProjectAccordionItem title="Modes.">
-    Automatic switching via ambient light sensor with a 300ms crossfade. Night mode shifts the primary hue from white to amber to reduce blue light scatter on the windshield.
+  <ProjectAccordionItem title="Adaptive display.">
+    Automatic day/night switching via ambient light sensor with a 200ms crossfade. Night mode shifts the primary hue from cool white (6500K equivalent) to amber (2700K equivalent) to reduce blue light scatter on the windshield. High-beam assist and tunnel detection trigger intermediate states between the two poles.
   </ProjectAccordionItem>
 </ProjectAccordion>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-<Callout>
-  None of the implementation specs above are final — they reflect the prototype stage and will change during engineering handoff.
-</Callout>
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+All implementation specs above reflect the prototype stage. Typography metrics, thermal thresholds, and compositing architecture will be revised during engineering handoff once the production SoC is confirmed.
