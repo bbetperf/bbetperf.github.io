@@ -22,14 +22,14 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         alt={alt ?? ""}
         width={1280}
         height={720}
-        className="w-full h-auto rounded-xl ring-1 ring-foreground/10 my-2"
+        className="w-full h-auto rounded-lg ring-1 ring-border my-2"
       />
     ),
     h2: (props) => (
-      <h2 className="text-zinc-950" {...props} />
+      <h2 className="text-primary" {...props} />
     ),
     p: (props) => (
-      <p className="text-zinc-600" {...props} />
+      <p className="text-primary/60" {...props} />
     ),
     ProjectCard,
     ProjectTabs,

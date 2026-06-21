@@ -1,29 +1,31 @@
 ---
 title: Cockpit.
-description: Automotive HMI design for next-generation digital dashboards.
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 date: 2026-06-01
 ---
 
 ## Overview.
 
-Cockpit is an automotive HMI project focused on designing the digital dashboard experience for next-generation vehicles. The goal was to create a clear, distraction-free interface that surfaces the right information at the right moment.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
 
-Modern car dashboards are cluttered with competing UI patterns inherited from physical gauges. Drivers are overwhelmed by information density at exactly the moments when cognitive load needs to be lowest.
-
-
-
-<Callout type="insight">
+<Callout>
   The core constraint: a driver's eyes leave the road for an average of 2 seconds per glance. Every design decision was evaluated against that number.
 </Callout>
 
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
 ## Impact.
 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+
 <StatGroup>
-  <Stat value="2.1s" label="Average glance time (down from 3.8s)" />
+  <Stat value="2.1s" label="Average glance time" />
   <Stat value="−40%" label="Driver errors in simulation" />
   <Stat value="4" label="Prototype iterations" />
   <Stat value="12" label="User test sessions" />
 </StatGroup>
+
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 ## Problem.
 
@@ -31,26 +33,30 @@ Modern car dashboards are cluttered with competing UI patterns inherited from ph
 
 <Figure
   src="/assets/projects/cockpit/image-1.png"
-  alt="Zonal layout diagram"
-  caption="Fig. 1 — Primary zone (center) and peripheral band (edges) in the V3 layout."
+  alt="Zonal layout diagram."
+  caption="Lorem ipsum dolor sit amet."
 />
 
-<ProjectCard title="Root cause" description="Gauge metaphors don't translate to digital.">
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+<ProjectCard title="Root cause." description="Gauge metaphors don't translate to digital.">
   Physical speedometers needed a full sweep of the needle to show change — digital displays can update instantly, but designers kept the dial anyway. It adds visual noise without adding clarity.
 </ProjectCard>
+
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 ## Solution.
 
 <ProjectTabs>
-  <ProjectTab label="Zonal layout">
+  <ProjectTab label="Layout.">
     Speed and navigation in the primary zone (center), secondary data (battery, range, ADAS) in a peripheral band. The band fades to low opacity during active driving and returns at stops.
     
     Modern car dashboards are cluttered with competing UI patterns inherited from physical gauges. Drivers are overwhelmed by information density at exactly the moments when cognitive load needs to be lowest.
   </ProjectTab>
-  <ProjectTab label="Contextual mode">
+  <ProjectTab label="Mode.">
     The dashboard reconfigures based on driving mode: Urban, Highway, Parking. Each mode surfaces only the data relevant to that context and hides everything else.
   </ProjectTab>
-  <ProjectTab label="Final">
+  <ProjectTab label="Final.">
     Hybrid of V1 and V2. The zonal layout persists, but the peripheral band content changes with context. Tested best for cognitive load across all driving scenarios.
   </ProjectTab>
 </ProjectTabs>
@@ -58,18 +64,18 @@ Modern car dashboards are cluttered with competing UI patterns inherited from ph
 ## Technical details.
 
 <ProjectAccordion>
-  <ProjectAccordionItem title="Rendering pipeline">
+  <ProjectAccordionItem title="Pipeline.">
     The interface runs at 60fps on a custom SoC using a Vulkan-based compositor. UI layers are composited separately from the map tile renderer to avoid frame drops during navigation updates.
   </ProjectAccordionItem>
-  <ProjectAccordionItem title="Typography constraints">
+  <ProjectAccordionItem title="Typography.">
     All type is set in a custom version of DIN Next optimised for legibility at 80km/h. Minimum size 20sp. No decorative weights.
   </ProjectAccordionItem>
-  <ProjectAccordionItem title="Day/Night modes">
+  <ProjectAccordionItem title="Modes.">
     Automatic switching via ambient light sensor with a 300ms crossfade. Night mode shifts the primary hue from white to amber to reduce blue light scatter on the windshield.
   </ProjectAccordionItem>
 </ProjectAccordion>
 
 
-<Callout type="warning">
+<Callout>
   None of the implementation specs above are final — they reflect the prototype stage and will change during engineering handoff.
 </Callout>

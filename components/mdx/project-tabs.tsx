@@ -26,7 +26,7 @@ export function ProjectTabs({ children }: ProjectTabsProps) {
   if (tabs.length === 0) return null;
 
   return (
-    <Tabs defaultValue="tab-0" className="gap-8">
+    <Tabs defaultValue="tab-0">
       <TabsList className="w-full">
         {tabs.map((tab, i) => (
           <TabsTrigger key={i} value={`tab-${i}`}>

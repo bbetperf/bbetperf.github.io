@@ -13,14 +13,14 @@ export default function Home() {
         <div className="flex flex-col flex items-left gap-24">
           <div className="flex flex-col flex items-left gap-8 px-3">
             <div className="flex flex-col flex items-left gap-1">
-              <p className="text-base text-zinc-950">Maksim Anisimov. Product and Interface Designer.</p>
-              <p className="text-base text-zinc-500">Chicago, Illinois, United States.</p>
+              <p className="text-base text-primary">Maksim Anisimov. Product and Interface Designer.</p>
+              <p className="text-base text-primary/40">Chicago, Illinois, United States.</p>
             </div>
-            <p className="text-base text-zinc-600">Crafting digital experiences at the intersection of innovative design systems, bold branding, and intuitive interfaces.</p>
+            <p className="text-base text-primary/60">Crafting digital experiences at the intersection of innovative design systems, bold branding, and intuitive interfaces.</p>
           </div>
 
           <div className="flex flex-col flex items-left gap-5">
-            <p className="text-base text-zinc-950 px-3">Projects.</p>
+            <p className="text-base text-primary px-3">Projects.</p>
             <div className="flex flex-col flex items-left">
               {projects.map((entry) => (
                 <Item key={entry.slug} asChild>
@@ -36,7 +36,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col flex items-left gap-5">
-            <p className="text-base text-zinc-950 px-3">Nuggets.</p>
+            <p className="text-base text-primary px-3">Nuggets.</p>
             <div className="flex flex-col flex items-left">
               {nuggets.map((entry) => (
                 <Item key={entry.slug} asChild>
@@ -52,7 +52,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col flex items-left gap-5">
-            <p className="text-base text-zinc-950 px-3">Readings.</p>
+            <p className="text-base text-primary px-3">Readings.</p>
             <div className="flex flex-col flex items-left">
               {readings.map((entry) => (
                 <Item key={entry.slug} asChild>

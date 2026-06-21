@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { AspectRatio } from "@/components/ui/aspect-ratio"
 
 interface FigureProps {
   src: string;
@@ -8,16 +9,16 @@ interface FigureProps {
 
 export function Figure({ src, alt, caption }: FigureProps) {
   return (
-    <figure className="my-2 flex flex-col gap-2">
-      <Image
-        src={src}
-        alt={alt}
-        width={1280}
-        height={720}
-        className="w-full h-auto rounded-xl ring-1 ring-foreground/10"
-      />
+    <figure className="flex flex-col gap-3">
+      <AspectRatio ratio={16 / 9} className="rounded-lg bg-card ring-1 ring-border">
+        <Image
+          src={src}
+          alt={alt}
+          fill
+        />
+      </AspectRatio>
       {caption && (
-        <figcaption className="text-base text-zinc-600 text-center">
+        <figcaption className="text-base text-primary/40 text-center">
           {caption}
         </figcaption>
       )}

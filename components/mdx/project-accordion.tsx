@@ -29,7 +29,7 @@ interface ProjectAccordionProps {
 
 export function ProjectAccordion({ children }: ProjectAccordionProps) {
   return (
-    <Accordion type="multiple" className="border rounded-xl px-3">
+    <Accordion type="multiple" className="border rounded-lg px-3">
       {children}
     </Accordion>
   );
