@@ -25,7 +25,7 @@ export default function Home() {
             <div className="flex flex-col flex items-left">
               {projects.map((entry) => (
                 <Item key={entry.slug} asChild>
-                  <Link href={`/projects/${entry.slug}`}>
+                  <Link href={entry.href ?? `/projects/${entry.slug}`}>
                     <ItemContent>
                       <ItemTitle>{entry.title}</ItemTitle>
                       <ItemDescription>{entry.description}</ItemDescription>
