@@ -1,20 +1,31 @@
 ---
 title: Word choice is design.
-description: Why the words you pick are as load-bearing as the components you build.
+description: A reflection on how Apple Maps uses voice intonation to manage your emotional state while driving, and why Google Maps and Waze don't.
 date: June 2026.
 ---
 
-## The argument.
+## How Apple Maps guides you, not just routes you.
 
-Every label, error message, and tooltip is a micro-decision that shapes how someone understands your product. Most designers treat copy as a final pass. It should be the first.
+I caught it mid-drive and couldn't stop paying attention after.
 
-## Two examples.
+Apple Maps had just guided me through a turn. Before I could second-guess the route, it said "You're still on the fastest route." The voice was unhurried. Almost soft. Like a co-pilot glancing at the map and letting you know, without drama, that everything is fine.
 
-Bad: "An error occurred. Please try again."
-Better: "We couldn't save your changes — check your connection and retry."
+Then came the next turn. "Continue." One word, delivered differently. Tighter, with a quiet push to it. The kind of tone that doesn't ask, it nudges.
 
-The second costs nothing extra to write. It tells the user what happened and what to do. That is design.
+Same app. Same voice. Different intonation entirely.
 
-## Practical rule.
+## Not imagination.
 
-Write the label before you design the component. If you can't name it clearly, you don't understand what it does yet.
+Apple's TTS research, specifically their 2020 paper on controllable neural speech synthesis, describes a system capable of conditioning voice output on prosodic dimensions like pitch, energy, and duration. Declarative sentences and imperative commands carry inherently different prosodic profiles in any well-trained neural model. Apple's internal Siri pipeline, walled off from third-party developers, almost certainly exceeds what its public API exposes. The calm isn't accidental. Neither is the push.
+
+What makes this interesting as a design decision is what it's actually doing. Navigation is an anxiety surface. Every unfamiliar turn is a small moment of doubt. Am I still right? Did I miss something? A good co-pilot reads that anxiety and responds to it, not with more information, but with the right tone at the right moment. Reassurance when you're steady. A nudge when you need to move.
+
+## What everyone else does.
+
+Google Maps doesn't do this. It counts down like a launch sequence. "Turn right in 500 meters... turn right... turn right now." Accurate, reliable, emotionally flat. It solves the routing problem and nothing else. Waze adds personality on top, celebrity voices and playful alerts, but the personality is cosmetic. Swap the voice and the underlying logic is identical: here is the instruction, execute it.
+
+Apple went one level deeper and asked a different question. Not just what does the driver need to hear, but how does the driver feel right now, and what does this moment call for. That is a design question, not an engineering one.
+
+The result is a navigation experience that doesn't feel like being commanded. It feels like being guided. And the difference lives entirely in intonation, a quality so subtle most people never consciously register it, which is precisely the point. The best interface decisions disappear. You just feel calmer behind the wheel and don't know why.
+
+Word choice is design. And so is the voice that carries it.

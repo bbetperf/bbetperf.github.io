@@ -16,7 +16,8 @@ export default function Home() {
               <p className="text-base text-primary">Maksim Anisimov. Product and Interface Designer.</p>
               <p className="text-base text-primary/40">Chicago, Illinois, United States.</p>
             </div>
-            <p className="text-base text-primary/60">Crafting digital experiences at the intersection of innovative design systems, bold branding, and intuitive interfaces.</p>
+            <p className="text-base text-primary/60">I design interfaces, where every interaction is considered and nothing is accidental. The kind of product that's hard to explain but immediately right to use.</p>
+            <p className="text-base text-primary/60">Write me an <a href="mailto:hello@bbetperf.com" target="_blank" className="text-primary hover:underline">Email</a> and check my <a href="https://twitter.com/bbetperf" target="_blank" className="text-primary hover:underline">Tweets</a>, <a href="https://instagram.com/bebetterthanperfect" target="_blank" className="text-primary hover:underline">Shots</a>.</p>
           </div>
 
           <div className="flex flex-col flex items-left gap-5">

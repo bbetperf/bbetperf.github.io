@@ -1,35 +1,12 @@
 ---
 title: Cockpit.
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-date: June 2026.
+description: Developed intuitive digital cockpits integrating real-time data visualization, driver-centric design, and responsive interfaces.
+date: January 2025.
 ---
 
-## Overview.
+## Beginning.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-
-<Callout>
-  The core constraint: a driver's eyes leave the road for an average of 2 seconds per glance. Every design decision was evaluated against that number.
-</Callout>
-
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-## Impact.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-
-<StatGroup>
-  <Stat value="2.1s" label="Average glance time" />
-  <Stat value="−40%" label="Driver errors in simulation" />
-  <Stat value="4" label="Prototype iterations" />
-  <Stat value="12" label="User test sessions" />
-</StatGroup>
-
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-## Problem.
-
-Modern car dashboards are cluttered with competing UI patterns inherited from physical gauges. Drivers are overwhelmed by information density at exactly the moments when cognitive load needs to be lowest.
+This started in a parked car while I stared at the cluster and wondered why it tells me so little about the drive I am actually having. I asked what it would feel like if the interface responded to context rather than just listing dials.
 
 <Figure
   src="/assets/projects/cockpit/image-1.png"
@@ -37,54 +14,86 @@ Modern car dashboards are cluttered with competing UI patterns inherited from ph
   caption="Lorem ipsum dolor sit amet."
 />
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+## Goal.
 
-<ProjectCard title="Root cause." description="Gauge metaphors don't translate to digital.">
-  Physical speedometers needed a full sweep of the needle to show change — digital displays can update instantly, but designers kept the dial anyway. It adds visual noise without adding clarity.
-</ProjectCard>
+Design a cockpit that behaves more like good software. Glanceable, contextual, and calm. Bring speed, RPM, range, navigation, music, and weather into one conversation without clutter.
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+## Problem.
 
-## Solution.
+Most dashboards report numbers but rarely help you understand what matters in the moment. You glance, stitch things together in your head, and return to the road. It felt like wasted attention.
 
-<ProjectTabs>
-  <ProjectTab label="Layout.">
-    Speed and navigation in the primary zone (center), secondary data (battery, range, ADAS) in a peripheral band. The band fades to low opacity during active driving and returns at stops.
-    
-    Modern car dashboards are cluttered with competing UI patterns inherited from physical gauges. Drivers are overwhelmed by information density at exactly the moments when cognitive load needs to be lowest.
-  </ProjectTab>
-  <ProjectTab label="Mode.">
-    The dashboard reconfigures based on driving mode: Urban, Highway, Parking. Each mode surfaces only the data relevant to that context and hides everything else.
-  </ProjectTab>
-  <ProjectTab label="Final.">
-    Hybrid of V1 and V2. The zonal layout persists, but the peripheral band content changes with context. Tested best for cognitive load across all driving scenarios.
-  </ProjectTab>
-</ProjectTabs>
+<Figure
+  src="/assets/projects/cockpit/image-1.png"
+  alt="Zonal layout diagram."
+  caption="Lorem ipsum dolor sit amet."
+/>
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+## Primary insight.
 
-## Technical details.
+Drivers do not need more data. They need a story that ties data together. Once I framed the system around mechanical, environmental, and emotional cues, the layout choices became clearer.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+<Figure
+  src="/assets/projects/cockpit/image-1.png"
+  alt="Zonal layout diagram."
+  caption="Lorem ipsum dolor sit amet."
+/>
 
-<ProjectAccordion>
-  <ProjectAccordionItem title="Pipeline.">
-    The interface runs at 60fps on a custom SoC using a Vulkan-based compositor. UI layers are composited separately from the map tile renderer to avoid frame drops during navigation updates.
-  </ProjectAccordionItem>
-  <ProjectAccordionItem title="Typography.">
-    All type is set in a custom version of DIN Next optimised for legibility at 80km/h. Minimum size 20sp. No decorative weights.
-  </ProjectAccordionItem>
-  <ProjectAccordionItem title="Modes.">
-    Automatic switching via ambient light sensor with a 300ms crossfade. Night mode shifts the primary hue from white to amber to reduce blue light scatter on the windshield.
-  </ProjectAccordionItem>
-</ProjectAccordion>
+## Research and observation.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+I collected photos and videos from different vehicles and studied what stayed consistent, what vanished, and how information was prioritized.
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Many clusters treated each metric in isolation. That gap shaped the concept of a unified center that binds the sides.
 
-<Callout>
-  None of the implementation specs above are final — they reflect the prototype stage and will change during engineering handoff.
-</Callout>
+<Figure
+  src="/assets/projects/cockpit/image-1.png"
+  alt="Zonal layout diagram."
+  caption="Lorem ipsum dolor sit amet."
+/>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+## Exploration and concept.
+
+I leaned into a circular model. The left side carried RPM and transmission. The right side focused on speed and range. The center became the place where the drive comes together with music, navigation, and weather.
+
+<Figure
+  src="/assets/projects/cockpit/image-1.png"
+  alt="Zonal layout diagram."
+  caption="Lorem ipsum dolor sit amet."
+/>
+
+## Design and interaction.
+
+Everything had to read at a glance and work across multiple driving contexts. I prioritized spacing and hierarchy so elements feel related but never crowded.
+
+Utility won every tradeoff. For example, keeping time and odometer visible at all times anchored the system and removed vagueness.
+
+## Key screens.
+
+Circular cluster with left RPM and mode, right speed and range, and a center panel that adapts to media and navigation. Variations for day and night, and contextual states for long drives, city traffic, and quick trips.
+
+<Figure
+  src="/assets/projects/cockpit/image-1.png"
+  alt="Zonal layout diagram."
+  caption="Lorem ipsum dolor sit amet."
+/>
+
+## Visual and motion.
+
+The visuals follow neutrality. Soft whites and shadows add depth without noise. Type is restrained and icons are learnable at a glance.
+
+If I push this further I will invest more in motion since a cockpit is never still and transitions carry meaning for state changes.
+
+<Figure
+  src="/assets/projects/cockpit/image-1.png"
+  alt="Zonal layout diagram."
+  caption="Lorem ipsum dolor sit amet."
+/>
+
+## What I learned.
+
+Detail is not how much you add but how much you learn to leave out. The cockpit felt better when I removed cleverness and restored anchors like time and odometer.
+
+Next I would prototype richer motion to test how the system communicates change without speaking.
+
+## Takeaway.
+
+Car Digital Cockpit is an attempt to make an instrument panel feel like a calm companion. Fewer questions, faster understanding, and a drive that feels connected rather than busy.
