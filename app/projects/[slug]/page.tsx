@@ -2,16 +2,14 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import ContentLayout from "@/components/content-layout";
+import { getPublishedSlugs } from "@/lib/content";
 
 export const dynamicParams = false;
 
 const CONTENT_DIR = path.join(process.cwd(), "content/projects");
 
 export function generateStaticParams() {
-  return fs
-    .readdirSync(CONTENT_DIR)
-    .filter((f) => f.endsWith(".mdx"))
-    .map((f) => ({ slug: f.replace(/\.mdx$/, "") }));
+  return getPublishedSlugs("projects").map((slug) => ({ slug }));
 }
 
 export default async function Page({
