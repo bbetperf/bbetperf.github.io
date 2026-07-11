@@ -31,6 +31,27 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     p: (props) => (
       <p className="text-primary/60" {...props} />
     ),
+    ul: (props) => (
+      <ul className="list-disc pl-6 space-y-2 text-primary/60" {...props} />
+    ),
+    ol: (props) => (
+      <ol className="list-decimal pl-6 space-y-2 text-primary/60" {...props} />
+    ),
+    li: (props) => (
+      <li className="leading-relaxed pl-1 marker:text-primary/40" {...props} />
+    ),
+    strong: (props) => (
+      <strong className="font-semibold text-primary" {...props} />
+    ),
+    em: (props) => (
+      <em className="italic" {...props} />
+    ),
+    a: (props) => (
+      <a className="underline underline-offset-4 hover:text-primary transition-colors" {...props} />
+    ),
+    hr: (props) => (
+      <hr className="border-border" {...props} />
+    ),
     ProjectCard,
     ProjectTabs,
     ProjectTab,

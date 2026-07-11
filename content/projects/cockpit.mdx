@@ -30,14 +30,6 @@ Every decision in this project was evaluated against that number.
 
 ADAS status is part of the secondary data that clusters consistently fail to surface quickly. It belongs in view, but it has never been prioritized correctly.
 
-## 
-
-<Figure
-  src="/assets/projects/cockpit/image-13.png"
-  caption="Tachometer."
-  alt="Automotive tachometer design for vehicle HMI."
-/>
-
 ## Project overview.
 
 A concept instrument cluster for a vehicle platform. The brief was self-imposed. Replace a legacy gauge cluster with something purpose-built for digital — no carry-over hardware, no analog metaphors to preserve.
@@ -72,12 +64,29 @@ Modern clusters are museum pieces — and the problem isn't aesthetic. It's stru
 A zonal layout. Speed and tachometer always fixed, regardless of context. Everything else moves to the edges, weighted by how much the driver needs it right now.
 
 <Figure
-  src="/assets/projects/cockpit/image-27.png"
+  src="/assets/projects/cockpit/image-28.png"
   caption="Speed and tachometer."
   alt="Speed and tachometer layout in zonal instrument cluster design."
 />
 
 The cluster adapts automatically to three driving contexts: urban traffic, highway, and parking. Each surfaces only what's relevant and hides what isn't.
+
+
+<Figure
+  src="/assets/projects/cockpit/image-7.png"
+  caption="Speedometer."
+  alt="Speedometer concept design for vehicle instrument cluster."
+  description="Circular speedometer dial with tick marks. Current speed displayed in large type at center. Speed limit shown above. Range with battery arc at bottom."
+/>
+
+---
+
+<Figure
+  src="/assets/projects/cockpit/image-13.png"
+  caption="Tachometer."
+  alt="Automotive tachometer design for vehicle HMI."
+  description="Circular tachometer dial. Engine temperature at bottom. Redline zone marked in red."
+/>
 
 ## User interviews.
 
@@ -94,14 +103,6 @@ The eye-tracking data from OEM studies was the most useful reference. It showed 
 Audited 8 existing production clusters across different vehicle segments. Mapped information zones, noted primary vs. peripheral data placement, and identified recurring failure patterns — primarily the persistence of gauge arc metaphors and the absence of context-aware hierarchy.
 
 Every cluster audited treated all driving contexts the same. The same layout at 10 mph and 120 mph, the same information weight at a red light and on a motorway. That consistency was the problem.
-
-## 
-
-<Figure
-  src="/assets/projects/cockpit/image-7.png"
-  caption="Speedometer."
-  alt="Speedometer concept design for vehicle instrument cluster."
-/>
 
 ## Persona development.
 
@@ -128,23 +129,23 @@ Started with information architecture — what belongs in the primary zone vs. t
   alt="Cluster dimensions."
 />
 
-Six iterations before touching visual design.
-
 ## Digital wireframes.
 
-Three concept versions were developed.
+Three concept versions were developed. Each tested a different answer to the same question: what does speed look like when you remove the needle.
 
 <ProjectTabs>
   <ProjectTab label="Ver 1.">
-    Kept a gauge arc for speed with a redesigned peripheral zone — tested readable but didn't address the metaphor problem.
+    Kept a gauge arc for speed with a redesigned peripheral zone — tested readable but didn't address the metaphor problem. The arc was still there, still asking the driver to read a sweep instead of a number.
   </ProjectTab>
   <ProjectTab label="Ver 2.">
-    Eliminated all arcs in favor of a horizontal speed tape (used in aviation) — too unfamiliar for automotive.
+    Eliminated all arcs in favor of a horizontal speed tape — a format borrowed from aviation displays where pilots read speed along a moving scale. Legible, but too unfamiliar for automotive. Testers had to learn it before they could use it.
   </ProjectTab>
   <ProjectTab label="Ver 3.">
-    The zonal layout with numeric speed display and an adaptive peripheral band — tested best for legibility and adaptation.
+    The zonal layout with numeric speed display at center and an adaptive peripheral band at the edges. No arc, no sweep — just the number, large, fixed, immediately readable. Tested best across all three driving scenarios.
   </ProjectTab>
 </ProjectTabs>
+
+Ver 3 became the foundation for everything that followed. The arc was gone. What replaced it wasn't a style choice — it was a legibility decision that the first two versions made unavoidable.
 
 ## Gestural mapping.
 
