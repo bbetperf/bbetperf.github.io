@@ -40,6 +40,8 @@ function AccordionTrigger({
     <AccordionPrimitive.Header className="flex text-primary">
       <AccordionPrimitive.Trigger
         data-slot="accordion-trigger"
+        data-cuelume-hover="tick"
+        data-cuelume-press="bloom"
         className={cn(
           "cursor-pointer group/accordion-trigger relative flex flex-1 items-start justify-between rounded-lg border border-transparent py-3 text-left text-base font-base transition-all outline-none hover:underline focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:after:border-ring disabled:pointer-events-none disabled:opacity-50 **:data-[slot=accordion-trigger-icon]:ml-auto **:data-[slot=accordion-trigger-icon]:size-4 **:data-[slot=accordion-trigger-icon]:text-primary/60",
           className
@@ -65,7 +67,7 @@ function AccordionContent({
     >
       <div
         className={cn(
-          "h-(--radix-accordion-content-height) pt-0 pb-2.5 [&_a]:underline [&_a]:underline-offset-3 [&_a]:hover:text-primary/60 [&_p:not(:last-child)]:mb-4",
+          "h-(--radix-accordion-content-height) pt-0 pb-2.5 [&_a]:underline [&_a]:underline-offset-3 [&_a]:hover:text-primary/60 [&_p]:not-last:mb-3 [&_ul]:not-last:mb-3 [&_ol]:not-last:mb-3",
           className
         )}
       >

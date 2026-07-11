@@ -35,7 +35,7 @@ export function ProjectTabs({ children }: ProjectTabsProps) {
         ))}
       </TabsList>
       {tabs.map((tab, i) => (
-        <TabsContent key={i} value={`tab-${i}`} className="[&_p:not(:last-child)]:mb-4">
+        <TabsContent key={i} value={`tab-${i}`} className="[&_p]:not-last:mb-3 [&_ul]:not-last:mb-3 [&_ol]:not-last:mb-3">
           {tab.props.children}
         </TabsContent>
       ))}

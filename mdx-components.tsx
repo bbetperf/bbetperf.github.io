@@ -4,7 +4,6 @@ import { ProjectCard } from "@/components/mdx/project-card";
 import { ProjectTabs, ProjectTab } from "@/components/mdx/project-tabs";
 import { ProjectAccordion, ProjectAccordionItem } from "@/components/mdx/project-accordion";
 import { Callout } from "@/components/mdx/callout";
-import { Stat, StatGroup } from "@/components/mdx/stat";
 import { Figure } from "@/components/mdx/figure";
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
@@ -26,7 +25,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       />
     ),
     h2: (props) => (
-      <h2 className="text-primary" {...props} />
+      <h2 className="font-normal text-primary" {...props} />
     ),
     p: (props) => (
       <p className="text-primary/60" {...props} />
@@ -41,10 +40,10 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       <li className="leading-relaxed pl-1 marker:text-primary/40" {...props} />
     ),
     strong: (props) => (
-      <strong className="font-semibold text-primary" {...props} />
+      <strong className="font-normal text-primary/90" {...props} />
     ),
     em: (props) => (
-      <em className="italic" {...props} />
+      <em className="italic font-newsreader font-normal text-primary/90 text-[1.2em] leading-[calc(1.625/1.2)]" {...props} />
     ),
     a: (props) => (
       <a className="underline underline-offset-4 hover:text-primary transition-colors" {...props} />
@@ -52,14 +51,15 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     hr: (props) => (
       <hr className="border-border" {...props} />
     ),
+    code: (props) => (
+      <code className="font-mono text-primary/90 bg-secondary border rounded-md px-1.25 py-0.5 text-sm tabular-nums text-[1em] leading-[calc(1.625/1)]" {...props} />
+    ),
     ProjectCard,
     ProjectTabs,
     ProjectTab,
     ProjectAccordion,
     ProjectAccordionItem,
     Callout,
-    Stat,
-    StatGroup,
     Figure,
   };
 }

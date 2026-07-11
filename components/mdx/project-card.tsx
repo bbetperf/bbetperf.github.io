@@ -24,7 +24,7 @@ export function ProjectCard({ title, description, action, footer, children }: Pr
         {description && <CardDescription>{description}</CardDescription>}
         {action && <CardAction>{action}</CardAction>}
       </CardHeader>
-      {children && <CardContent className="[&_p:not(:last-child)]:mb-4">{children}</CardContent>}
+      {children && <CardContent className="[&_p]:not-last:mb-3 [&_ul]:not-last:mb-3 [&_ol]:not-last:mb-3">{children}</CardContent>}
       {footer && <CardFooter>{footer}</CardFooter>}
     </Card>
   );

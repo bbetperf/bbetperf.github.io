@@ -69,6 +69,8 @@ function Item({
       data-slot="item"
       data-variant={variant}
       data-size={size}
+      data-cuelume-hover="tick"
+      data-cuelume-press="bloom"
       className={cn(itemVariants({ variant, size, className }))}
       {...props}
     />
@@ -125,7 +127,7 @@ function ItemTitle({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="item-title"
       className={cn(
-        "line-clamp-1 flex w-fit items-center gap-2 text-base text-primary leading-snug group-hover/item:underline",
+        "line-clamp-1 flex w-fit items-center gap-2 font-normal text-primary leading-snug group-hover/item:underline",
         className
       )}
       {...props}
