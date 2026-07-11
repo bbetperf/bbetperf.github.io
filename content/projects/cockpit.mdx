@@ -1,92 +1,250 @@
 ---
 title: Cockpit.
-description: Developed intuitive digital cockpits integrating real-time data visualization, driver-centric design, and responsive interfaces.
+description: Instrument cluster concept for an electric vehicle platform, exploring contextual information hierarchy and glance time reduction.
 date: January 2025.
 ---
 
-## Beginning.
+## Case study.
 
-This started in a parked car while I stared at the cluster and wondered why it tells me so little about the drive I am actually having. I asked what it would feel like if the interface responded to context rather than just listing dials.
+Instrument clusters — the panel behind the steering wheel showing speed, range, navigation, and vehicle status — haven't fundamentally changed since the analog gauge era. 
 
 <Figure
   src="/assets/projects/cockpit/image-1.png"
-  alt="Zonal layout diagram."
+  caption="Instrument cluster design."
+  alt="Digital instrument cluster concept showing primary speed and navigation zone."
 />
 
-## Goal.
+They went from physical needles to high-resolution screens, but the layout logic stayed the same. Everything visible, all the time, at equal weight.
 
-Design a cockpit that behaves more like good software. Glanceable, contextual, and calm. Bring speed, RPM, range, navigation, music, and weather into one conversation without clutter.
+This project questions that. One constraint defined every decision.
 
-## Problem.
+<ProjectCard title="Two second maximum." footer="SAE J2395.">
+  Society of Automotive Engineers standard governing safe glance time for in-vehicle displays. Defines a 2-second maximum. Existing production clusters average 3.8 seconds for secondary data like range and ADAS status.
+</ProjectCard>
 
-Most dashboards report numbers but rarely help you understand what matters in the moment. You glance, stitch things together in your head, and return to the road. It felt like wasted attention.
+Every decision in this project was evaluated against that number.
 
-<Figure
-  src="/assets/projects/cockpit/image-3.png"
-  alt="Zonal layout diagram."
-/>
+<ProjectCard title="Advanced driver assistance systems." footer="ADAS.">
+  The umbrella term for lane-keeping assist, adaptive cruise control, automatic emergency braking, blind-spot monitoring, and similar features.
+</ProjectCard>
 
-## Primary insight.
+ADAS status is part of the secondary data that clusters consistently fail to surface quickly. It belongs in view, but it has never been prioritized correctly.
 
-Drivers do not need more data. They need a story that ties data together. Once I framed the system around mechanical, environmental, and emotional cues, the layout choices became clearer.
-
-<Figure
-  src="/assets/projects/cockpit/image-7.png"
-  alt="Zonal layout diagram."
-/>
-
-## Research and observation.
-
-I collected photos and videos from different vehicles and studied what stayed consistent, what vanished, and how information was prioritized.
-
-Many clusters treated each metric in isolation. That gap shaped the concept of a unified center that binds the sides.
+## 
 
 <Figure
   src="/assets/projects/cockpit/image-13.png"
-  alt="Zonal layout diagram."
+  caption="Tachometer."
+  alt="Automotive tachometer design for vehicle HMI."
 />
 
-## Exploration and concept.
+## Project overview.
 
-I leaned into a circular model. The left side carried RPM and transmission. The right side focused on speed and range. The center became the place where the drive comes together with music, navigation, and weather.
+A concept instrument cluster for a vehicle platform. The brief was self-imposed. Replace a legacy gauge cluster with something purpose-built for digital — no carry-over hardware, no analog metaphors to preserve.
+
+<ProjectCard title="Human machine interface." footer="HMI.">
+  The discipline of designing how a person interacts with a machine. In automotive, HMI covers the instrument cluster, center touchscreen, steering wheel controls, and heads-up display. This project focuses on the cluster only.
+</ProjectCard>
+
+HMI in safety-critical contexts operates under stricter constraints than consumer software. A wrong decision here isn't a bad user experience — it's a distraction at speed.
+
+## The problem.
+
+When digital hardware arrived, designers pasted the same patterns from analog gauges onto high-resolution screens. Two structural failures came with them.
+
+<ProjectTabs>
+  <ProjectTab label="First failure.">
+    Gauge metaphors were mechanical constraints, not design choices. A needle sweep was the only way to show continuous speed change on a physical dial.
+    
+    Digital displays have no such constraint. Keeping the arc is a choice that signals familiarity at the cost of legibility and information density.
+  </ProjectTab>
+  <ProjectTab label="Second failure.">
+    The data relevant at 10 mph in a parking lot is completely different from what matters at 120 mph on a motorway.
+    
+    Static layouts surface everything always, leaving the driver to filter in real time. That filtering is cognitive load. Cognitive load at speed is a safety problem.
+  </ProjectTab>
+</ProjectTabs>
+
+Modern clusters are museum pieces — and the problem isn't aesthetic. It's structural.
+
+## The solution.
+
+A zonal layout. Speed and tachometer always fixed, regardless of context. Everything else moves to the edges, weighted by how much the driver needs it right now.
+
+<Figure
+  src="/assets/projects/cockpit/image-27.png"
+  caption="Speed and tachometer."
+  alt="Speed and tachometer layout in zonal instrument cluster design."
+/>
+
+The cluster adapts automatically to three driving contexts: urban traffic, highway, and parking. Each surfaces only what's relevant and hides what isn't.
+
+## User interviews.
+
+No formal user interviews for this concept. Reference material came from observational research — studying driver behavior in production vehicles, analyzing eye-tracking studies published by automotive OEMs, and reviewing SAE and NHTSA documentation on distraction and glance time.
+
+<ProjectCard title="National highway traffic safety administration." footer="NHTSA.">
+  The U.S. federal agency responsible for road safety standards. NHTSA publishes distraction guidelines and glance time research used across the automotive industry as a baseline for in-vehicle display design.
+</ProjectCard>
+
+The eye-tracking data from OEM studies was the most useful reference. It showed not just how long drivers glance, but where attention goes first — and what gets ignored entirely at speed.
+
+## Competitor benchmarking.
+
+Audited 8 existing production clusters across different vehicle segments. Mapped information zones, noted primary vs. peripheral data placement, and identified recurring failure patterns — primarily the persistence of gauge arc metaphors and the absence of context-aware hierarchy.
+
+Every cluster audited treated all driving contexts the same. The same layout at 10 mph and 120 mph, the same information weight at a red light and on a motorway. That consistency was the problem.
+
+## 
+
+<Figure
+  src="/assets/projects/cockpit/image-7.png"
+  caption="Speedometer."
+  alt="Speedometer concept design for vehicle instrument cluster."
+/>
+
+## Persona development.
+
+Demographic personas didn't apply here. The same driver behaves differently at 120 mph than at 15 mph — attention narrows, tolerance for complexity drops, the cost of a wrong glance goes up. So I designed around two driving states instead.
+
+<ProjectTabs>
+  <ProjectTab label="High speed.">
+    Motorway at 120 mph. Cognitive demand is high, attention window is narrow. The driver needs speed, navigation, and hazard alerts — nothing else. Every additional element in view is something that has to be consciously ignored.
+  </ProjectTab>
+  <ProjectTab label="Low speed.">
+    Urban traffic at 10–40 mph. Attention is broader, stops are frequent, context changes fast. Range, signal timing, and parking guidance matter here. The driver has capacity to process more — but only if it's organized.
+  </ProjectTab>
+</ProjectTabs>
+
+One design has to work for both. Not by finding a middle ground, but by adapting — showing each driver what they need at the moment they need it.
+
+## Low-fidelity sketches.
+
+Started with information architecture — what belongs in the primary zone vs. the peripheral band, and what disappears entirely at speed.
+
+<Figure
+  src="/assets/projects/cockpit/image-3.png"
+  caption="Cluster dimensions."
+  alt="Cluster dimensions."
+/>
+
+Six iterations before touching visual design.
+
+## Digital wireframes.
+
+Three concept versions were developed.
+
+<ProjectTabs>
+  <ProjectTab label="Ver 1.">
+    Kept a gauge arc for speed with a redesigned peripheral zone — tested readable but didn't address the metaphor problem.
+  </ProjectTab>
+  <ProjectTab label="Ver 2.">
+    Eliminated all arcs in favor of a horizontal speed tape (used in aviation) — too unfamiliar for automotive.
+  </ProjectTab>
+  <ProjectTab label="Ver 3.">
+    The zonal layout with numeric speed display and an adaptive peripheral band — tested best for legibility and adaptation.
+  </ProjectTab>
+</ProjectTabs>
+
+## Gestural mapping.
+
+The cluster is display-only — no touch interaction. Interaction design focused on state transitions: how the display behaves during mode switching, hazard detection, low battery warnings, and navigation rerouting. All transitions designed to be readable mid-glance.
+
+## Brand Style.
+
+Visual language follows neutrality — the cluster should recede during normal driving and only demand attention when necessary.
 
 <Figure
   src="/assets/projects/cockpit/image-17.png"
-  alt="Zonal layout diagram."
+  caption="Close-up of two design approaches."
+  alt="Two visual design approaches for automotive instrument cluster interface."
 />
 
-## Design and interaction.
+Achromatic palette with a single amber accent for warning states.
 
-Everything had to read at a glance and work across multiple driving contexts. I prioritized spacing and hierarchy so elements feel related but never crowded.
+Primary type in a custom variable version of Inter, minimum 14sp at a 2ft viewing distance. Regular and Medium weights only — no light weights (low legibility at oblique angles) and no decorative variants.
 
-Utility won every tradeoff. For example, keeping time and odometer visible at all times anchored the system and removed vagueness.
+<ProjectCard title="Scale-independent pixels." footer="SP.">
+  The standard unit for automotive display type.
+</ProjectCard>
 
-## Key screens.
+## Accessibility.
 
-Circular cluster with left RPM and mode, right speed and range, and a center panel that adapts to media and navigation. Variations for day and night, and contextual states for long drives, city traffic, and quick trips.
+All type meets minimum contrast ratios defined in ISO 15008 for both day and night conditions.
 
 <Figure
-  src="/assets/projects/cockpit/image-21.png"
-  alt="Zonal layout diagram."
+  src="/assets/projects/cockpit/image-20.png"
+  caption="Night theme in dark color interior."
+  alt="Night theme instrument cluster design in dark interior environment."
 />
 
-## Visual and motion.
+<ProjectCard title="Visual ergonomics for in-vehicle information systems." footer="ISO 15008.">
+  Specifies minimum requirements for the image quality and legibility of displays containing dynamic visual information presented to the driver of a passenger car by on-board transport information and control systems used while the vehicle is in motion.
+</ProjectCard>
 
-The visuals follow neutrality. Soft whites and shadows add depth without noise. Type is restrained and icons are learnable at a glance.
+Critical information (speed, navigation direction) uses size and position rather than color alone to communicate priority — ensuring readability for drivers with color vision deficiency.
 
-If I push this further I will invest more in motion since a cockpit is never still and transitions carry meaning for state changes.
+## Predictive navigation.
+
+Turn-by-turn navigation is always visible in the primary zone, not buried in a submenu. Distance to next maneuver updates continuously. At highway speed, only the next maneuver displays — intermediate routing is hidden until within 2mi of a decision point.
+
+## Safety lock.
+
+Above 80 mph, no secondary content can expand or animate in the primary zone. Incoming calls, media changes, and notification states are held and surfaced only when speed drops below 40 mph or the vehicle is stationary. This is a hard constraint in the mode logic, not a soft recommendation.
+
+## Multi-modal interaction. 
+
+The center panel adapts between navigation and media based on active state — if navigation is active, it takes the center.
 
 <Figure
-  src="/assets/projects/cockpit/image-23.png"
-  alt="Zonal layout diagram."
+  src="/assets/projects/cockpit/image-11.png"
+  caption="Media output."
+  alt="Media output panel in adaptive instrument cluster center zone."
 />
+
+If navigation is inactive, media controls occupy that space. The driver never chooses between them; the system resolves the priority automatically.
+
+## Rendering. 
+
+60 FPS compositing pipeline targeting a dedicated instrument SoC. The UI layer and navigation map tile layer are composited separately to prevent frame drops during map updates, which is a common failure mode on integrated systems.
+
+<ProjectCard title="System on chip." footer="SoC.">
+  A single integrated circuit containing the processor and supporting components.
+</ProjectCard>
+
+## Impact.
+
+Internal testing across 3 driving scenarios — Urban, Highway, and Parking — with a fixed-base simulator showed average glance time reduced from 3.8s to approximately 2.1s, a 44% reduction from the competitor audit baseline.
+
+These numbers come from internal review sessions, not a formal study. The most significant contributor was the peripheral band fade above 60 mph — removing visual competition from secondary data in the primary field of view.
 
 ## What I learned.
 
-Detail is not how much you add but how much you learn to leave out. The cockpit felt better when I removed cleverness and restored anchors like time and odometer.
+Removing information is harder than adding it. Every metric that moved out of the primary zone required justification, and "it's in the peripheral band" wasn't enough — the band had to earn it by being reliably readable when needed.
 
-Next I would prototype richer motion to test how the system communicates change without speaking.
+The peripheral band fading to 20% opacity was the most debated decision. Early reviewers found it alarming — the system appeared to be hiding information. The fix was a persistent thin line at the band's inner edge, confirming the system was still active without demanding attention. Most UI trust problems have that structure. The fix is usually cheap.
 
-## Takeaway.
+## FAQ.
 
-Car Digital Cockpit is an attempt to make an instrument panel feel like a calm companion. Fewer questions, faster understanding, and a drive that feels connected rather than busy.
+<ProjectAccordion>
+  <ProjectAccordionItem title="Why does HMI matter for this project?">
+    This project focuses on the instrument cluster, the primary display behind the steering wheel.
+    
+    HMI in safety-critical contexts operates under stricter constraints than consumer software. A wrong decision isn't a bad user experience — it's a distraction at speed.
+  </ProjectAccordionItem>
+  <ProjectAccordionItem title="Was this tested with real users?">
+    No. Testing was internal — a fixed-base simulator setup, 3 participants, 6 sessions across 3 driving scenarios.
+    
+    The numbers in the impact section are from that internal review. For a production project, this would require significantly larger-scale validation with diverse participant populations, real driving conditions, and formal study design.
+  </ProjectAccordionItem>
+  <ProjectAccordionItem title="Why not a heads-up display?">
+    A HUD — heads-up display — projects information onto the windshield so the driver reads it while looking at the road. Promising for reducing glance time, but a different problem.
+    
+    The cluster remains the primary surface for comprehensive vehicle status even in HUD-equipped vehicles, and HUD design involves optical constraints — projection distance, ambient light washout, eye-box size — that require a separate design process entirely.
+  </ProjectAccordionItem>
+  <ProjectAccordionItem title="What would come next?">
+    The transitions between driving modes, the peripheral band fade, the center panel switching between navigation and media — all designed but animated only with basic crossfades in this iteration.
+    
+    Designing and testing the motion layer is the next phase of this project.
+  </ProjectAccordionItem>
+</ProjectAccordion>

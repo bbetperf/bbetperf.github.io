@@ -14,7 +14,7 @@ export function Figure({ src, alt, caption }: FigureProps) {
 
   return (
     <figure className="flex flex-col gap-3">
-      <AspectRatio ratio={16 / 9} className="overflow-hidden rounded-lg bg-secondary ring-1 ring-border sm:shadow-sm sm:dark:shadow-inset-border">
+      <AspectRatio ratio={16 / 9} className="overflow-hidden rounded-lg bg-secondary ring-1 ring-border">
         {isVideo ? (
           <video
             src={src}
