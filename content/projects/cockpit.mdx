@@ -220,9 +220,11 @@ These numbers come from internal review sessions, not a formal study. The most s
 
 ## What I learned.
 
-Removing information is harder than adding it. Every metric that moved out of the primary zone required justification, and "it's in the peripheral band" wasn't enough — the band had to earn it by being reliably readable when needed.
+Removing information is harder than adding it. Every metric that moved out of the primary zone required justification — the layout had to earn every decision.
 
-The peripheral band fading to 20% opacity was the most debated decision. Early reviewers found it alarming — the system appeared to be hiding information. The fix was a persistent thin line at the band's inner edge, confirming the system was still active without demanding attention. Most UI trust problems have that structure. The fix is usually cheap.
+The hardest technical constraint was designing circular elements while keeping them editable at the component level. Arcs, rings, and dials look simple on screen but break fast when you try to build them as scalable, reusable components.
+
+Every radius change, every weight adjustment had to work across states without rebuilding from scratch. That's where most of the iteration time went — not the visual design, but making the visual design actually maintainable.
 
 ## FAQ.
 
@@ -238,7 +240,7 @@ The peripheral band fading to 20% opacity was the most debated decision. Early r
     The numbers in the impact section are from that internal review. For a production project, this would require significantly larger-scale validation with diverse participant populations, real driving conditions, and formal study design.
   </ProjectAccordionItem>
   <ProjectAccordionItem title="Why not a heads-up display?">
-    A HUD — heads-up display — projects information onto the windshield so the driver reads it while looking at the road. Promising for reducing glance time, but a different problem.
+    A HUD projects information onto the windshield so the driver reads it while looking at the road. Promising for reducing glance time, but a different problem.
     
     The cluster remains the primary surface for comprehensive vehicle status even in HUD-equipped vehicles, and HUD design involves optical constraints — projection distance, ambient light washout, eye-box size — that require a separate design process entirely.
   </ProjectAccordionItem>
