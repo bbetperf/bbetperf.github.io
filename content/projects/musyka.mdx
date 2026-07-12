@@ -1,112 +1,167 @@
 ---
 title: Musyka
-description: Designed a vibrant digital music experience tailored specifically to the dynamic preferences of new generation.
-date: November 2024.
+description: Music app concept built around a persistent mini player and comments pinned to an exact timestamp in a track, so a reaction and the moment that caused it stay in the same view.
+date: November 2024
 ---
 
-## Beginning
+## Case study
 
-This started as a side thought while I was exploring a larger automotive interface. I kept noticing that not everything needs a full screen or a central cluster.
+Musyka is a concept for a music app built around one idea: listening and reacting shouldn't require two different screens. A persistent mini player stays visible everywhere in the app, and a comment attached to a track points at the exact second that prompted it, not just the song as a whole.
 
-Small focused parts could do more by doing less. That became the seed for widgets that live quietly on the phone and lock screen.
-
-<Figure
-  src="/assets/projects/mysuka/image-1.png"
-  alt="Zonal layout diagram."
-/>
-
-## Goal
-
-Create a light, social listening flow. I wanted play to feel instant, discovery to feel playful, and comments to live right where the music is happening.
-
-## Problem
-
-Most music apps feel heavy when you just want to press play and share a moment.
-
-Discovery takes effort, conversations live far from the player, and reacting to a specific second in a track is awkward.
+The starting point was a specific frustration with existing music apps. Pressing play felt instant. Everything after that, finding something new, seeing what a friend thought about a specific moment, felt like leaving the music to go do something else.
 
 <Figure
   src="/assets/projects/mysuka/image-3.png"
-  alt="Zonal layout diagram."
+  caption="Explore screen"
+  alt="Explore tab showing the Explorety entry point and a For You rail with two album picks, above a docked mini player."
 />
 
-## Primary insight
+## Project overview
 
-People respond to presence and pace. If the app keeps you in the song while surfacing what friends think at the exact second, you engage more and switch screens less.
+A solo concept, not a client brief, scoped to iOS phone screens only.
 
-## Research and observation
+- Four screens, Now Playing, Explore, Library, Friends, kept deliberately tight instead of expanding into a full app surface;
+- One mini player, docked to every tab, rather than a separate now-playing state per screen.
 
-I reviewed Spotify, Apple Music, and YouTube Music, and pulled patterns from TikTok and BeReal.
+Both limits kept the comparison to Spotify and Apple Music honest. Fewer screens, but every one of them had to justify the player taking up permanent space at the bottom.
 
-The common thread was quick feedback loops and timestamped context. That shaped the idea of comments pinned to a moment in the track.
+## The problem
 
-## Exploration and concept
+Most music apps get heavy the moment someone wants to do more than press play. Two failures showed up across the apps studied.
 
-I sketched different ways to reduce navigation. Instead of long lists I leaned into cards and a persistent mini player.
+<ProjectTabs>
+  <ProjectTab label="Discovery">
+    Finding something new took a search, a scroll, or a curated playlist picked days earlier. None of it matched the one-tap feeling of just pressing play.
+  </ProjectTab>
+  <ProjectTab label="Reactions">
+    Conversations about a track lived in a separate messaging app, disconnected from the second in the song that prompted them. Reacting to a specific moment meant describing it in words instead of pointing at it directly.
+  </ProjectTab>
+</ProjectTabs>
 
-I created Explorety on the home screen as a one tap way to start an endless stream.
+Both failures pulled attention away from the song itself, which is the one thing a music app should protect.
 
-For comments I tested a small lane that expands only when needed.
+## Competitor benchmarking
 
-## Design and interaction
+I reviewed how Spotify, Apple Music, and YouTube Music handle discovery and social features, then looked outside music entirely at TikTok and BeReal for how they handle quick reactions.
 
-The player is the center. Like, save, skip, and comment are reachable with one hand.
+- Spotify, Apple Music, YouTube Music: strong catalogs, a thin social layer, discovery buried behind search or a curated tab;
+- TikTok, BeReal: quick feedback loops, content tied to a specific moment rather than a whole session.
 
-Tapping a comment jumps to that exact second.
+The common thread across the social apps was timestamped context. A reaction pinned to a second carried more information than a like on the song overall, and that became the starting point for comments in Musyka.
 
-The mini player docks to the nav bar so your current track is always available from Explore, Library, or Friends.
+## The solution
+
+Keeping someone inside the song while surfacing what a friend thinks at the exact second holds attention better than pulling them into a separate feed. 
+
+That principle ruled out a few directions early, a dedicated feed screen for comments, a separate messaging tab, anything that pulled a listener away from the track already playing.
+
+<Figure
+  src="/assets/projects/mysuka/image-1.png"
+  caption="Now Playing"
+  alt="Now Playing screen showing album art, a scrubber at 1:22, playback controls, and the Favorites playlist row."
+/>
+
+The response centered on two mechanics. A mini player docks to the bottom of every tab, so the current track stays reachable from Explore, Library, or Friends without a second tap to get back to it. Comments attach to a timestamp instead of a track, so a reaction points at the exact second that caused it.
+
+A comment tied to a specific second in a track rather than the song as a whole, shown as a marker on the scrubber that jumps playback to that second when tapped.
+
+## Explore
+
+Explorety is the single entry point on the home tab: one large control that starts an endless stream of tracks with a tap, instead of a search bar asking what to type first. A For You rail sits underneath it for anyone who wants to browse instead of just pressing play.
+
+The tab reduces to two states on purpose, play something now, or scroll a short list, so a returning listener never has to relearn where to start.
+
+## Now Playing
+
+The player sits at the center of the app: art, a scrubber, and like, save, skip, and comment controls reachable with one hand.
+
+<Figure
+  src="/assets/projects/mysuka/image-7.png"
+  caption="Player controls"
+  alt="Now Playing screen showing the track title, a scrubber, playback controls, and the Favorites playlist row with shuffle, repeat, like, and queue actions."
+/>
+
+---
 
 <Figure
   src="/assets/projects/mysuka/image-2.png"
-  alt="Zonal layout diagram."
+  caption="Comments on a moment"
+  alt="Now Playing screen with a comment panel open, showing two comments left at the 1:22 timestamp of the track."
 />
 
-## Visual and motion
+Tapping a comment jumps playback to the exact second it was left on, so reading a reaction and hearing what caused it happen in the same motion instead of two separate steps.
 
-I kept the surface clean and calm so the music art stands out. Soft gradients and quiet scaling make transitions feel natural.
+## Library
 
-Micro animations pulse on play and on comment reveal to guide attention without shouting.
-
-## Key screens
-
-Now Playing shows art, simple controls, a progress bar, and a compact comment stack that opens when you want to read or write. 
-
-Home introduces Explorety with a large, playful entry and a For You rail for quick picks.
-
-Library focuses on clarity with Albums and Songs that feel obvious to scan.
-
-Friends groups the social tools in one place with Chats, Updates, and Shared Playlists so you can react or build together without leaving the music.
-
-## User Flow and Sitemap
-
-I mapped a very short loop. Open the app, hit Explorety, hear something, react or save, and keep moving.
-
-The sitemap acted as a checklist to keep patterns consistent across tabs and to stop scope creep.
-
-## Scenarios
-
-You start Explorety and instantly get a track. At 1:22 you see a friend’s note and jump to that moment. You like it and save to Favorites. Later you open Friends and drop the track into a shared playlist that updates for everyone.
-
-<Figure
-  src="/assets/projects/mysuka/image-5.png"
-  alt="Zonal layout diagram."
-/>
-
-## Heuristics applied
-
-Clear status at all times. Predictable placement of controls. Simple language. Easy undo and Back. One way to perform each core action. Visual rhythm that stays the same across tabs.
-
-## Key metrics
-
-Starts from Explorety, jumps into timestamped moments, saves to Favorites, and the number of shared playlists created. These tell me if the experience is fast, social, and sticky.
+Library stays to sections, instead of the folders and smart playlists most streaming apps default to. The goal was a screen that reads at a glance, built for finding something specific rather than browsing.
 
 <Figure
   src="/assets/projects/mysuka/image-4.png"
-  alt="Zonal layout diagram."
+  caption="Library"
+  alt="Library screen with Albums and Songs sections, showing saved albums and individual tracks above the docked mini player."
 />
 
-## Takeaway
+## Friends
 
-Musyka worked best when the interface felt invisible. Keeping conversation next to playback made the app feel alive without turning it into a chat tool.
+Every social feature lives on one tab instead of spreading across the app: SharePlay, chats, update notifications, and shared playlists, next to a friends list split into all friends, favorites, and blocked.
 
-If I iterate again I will simplify the Friends hub and tighten the comment composer so writing feels as quick as a tap on Play.
+<Figure
+  src="/assets/projects/mysuka/image-5.png"
+  caption="Friends"
+  alt="Friends screen grouping SharePlay, Chats, Updates, and Shared Playlists into one surface, above a friends list split into All Friends, Favorites, and Blocked."
+/>
+
+Reacting to a track or building a shared playlist happens without leaving the people who are actually going to hear it.
+
+## Flow
+
+The core loop stays short on purpose: open the app, hit Explorety, hear something, react or save, keep moving. Nothing in the flow asks for a decision before the music starts.
+
+A flow of the four screens acted as a checklist while designing each one. Any new feature had to earn a place on an existing screen before a fifth tab got considered, which kept scope from creeping past what a mini player and four tabs could reasonably hold.
+
+## Success metrics
+
+None of the numbers below were measured outside the prototype, but they set the target the flow was designed around: starts triggered from Explorety, taps into a timestamped comment, saves to Favorites, and shared playlists created. Together they describe whether the experience reads as fast, social, and worth returning to, not just a working player.
+
+## Visual language
+
+The surface stays quiet on purpose so the album art carries the color: soft gradients behind the player, calm scaling on transitions, nothing competing with the artwork for attention.
+
+A short pulse animation marks the moment play starts and the moment a comment reveals, enough to catch the eye without pulling focus off the track.
+
+## Interaction heuristics
+
+A short set of heuristics got checked against every screen before it counted as done.
+
+- Status visible at all times, current track, current tab, current friend count;
+- Controls in the same place on every screen;
+- One way to perform each core action, no duplicate paths to the same result;
+- An undo or a back option within one tap of any action.
+
+Consistency mattered more than any individual heuristic. A listener who learns the pattern on Now Playing should never have to relearn it on Friends.
+
+## What I learned
+
+The interface worked best when it stopped feeling like an interface. Putting comments next to playback made the app feel alive without turning it into a chat client, which was the actual risk of the whole idea: get the balance wrong, and Friends becomes a messaging app that happens to play music.
+
+A second pass would simplify the Friends hub and tighten the comment composer so writing a reaction feels as quick as tapping play. Composing still asks for more attention right now than the one-tap feeling the rest of the app promises.
+
+## FAQ
+
+<ProjectAccordion>
+  <ProjectAccordionItem title="What does a timestamped comment actually look like?">
+    A small marker on the scrubber, at the second someone left it. Tapping the marker opens the comment and jumps playback to that second, so reading the reaction and hearing what caused it happen together instead of requiring a search through the track.
+  </ProjectAccordionItem>
+  <ProjectAccordionItem title="Was this tested with real users?">
+    Not through formal user testing. The four screens came out of competitor research and internal review, not a study with outside participants. The success metrics describe what I would track if it shipped, not results already measured.
+  </ProjectAccordionItem>
+  <ProjectAccordionItem title="Why a mini player instead of a full-screen player by default?">
+    Because browsing and listening needed to happen at the same time. A full-screen player is correct for Now Playing, but Explore, Library, and Friends all needed the current track to stay present without taking over the screen a listener actually wants to use.
+  </ProjectAccordionItem>
+  <ProjectAccordionItem title="How is this different from commenting on a playlist somewhere else?">
+    A playlist comment attaches to the whole track or the whole list. A Musyka comment attaches to one second inside a track, which is a different piece of information, closer to a reaction at a specific lyric or a specific drop than a review of the song.
+  </ProjectAccordionItem>
+  <ProjectAccordionItem title="What would come next?">
+    Simplifying the Friends hub, which currently groups four features that do not all carry equal weight, and tightening the comment composer so writing a reaction feels as fast as tapping play. Both were flagged during the first pass and left for a second iteration.
+  </ProjectAccordionItem>
+</ProjectAccordion>

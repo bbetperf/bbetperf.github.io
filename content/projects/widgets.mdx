@@ -1,101 +1,167 @@
 ---
 title: Widgets
-description: Crafted native-style widgets for car controls, bringing Apple’s clarity and consistency into everyday driving.
+description: WidgetKit concept for car status widgets, fuel, EV charge, engine state, tire pressure, and cabin temperature, each built as a single glanceable card instead of a full companion-app screen.
 date: October 2024
 ---
 
-## Beginning
+## Case study
 
-This started as a side thought while I was exploring a larger automotive interface. I kept noticing that not everything needs a full screen or a central cluster.
-
-Small focused parts could do more by doing less. That became the seed for widgets that live quietly on the phone and lock screen.
-
-<Figure
-  src="/assets/projects/widgets/image-24.png"
-  alt="Zonal layout diagram."
-/>
-
-## Goal
-
-Design a widgets that behaves more like good software. Glanceable, contextual, and calm. Bring speed, RPM, range, navigation, music, and weather into one conversation without clutter.
-
-## Problem
-
-Most companion car apps feel heavy when you only need a quick glance. Checking tire pressure, range, or engine status often means opening a full app, waiting on loading states, and navigating nested screens. I wanted a faster way to see and act on essentials.
-
-<Figure
-  src="/assets/projects/widgets/image-1.png"
-  alt="Zonal layout diagram."
-/>
-
-## Research and observation
-
-I looked at CarPlay patterns and apps like Tesla and MyHyundai. Many solutions felt overbranded or busy.
-
-Friends who drive EVs and hybrids told me their needs change by moment. Before a trip they care about range. After a charge they care about battery and temperature. On the road they want quick reassurance.
-
-These notes shaped the set of widgets I pursued.
+Checking a car's status from a phone usually means opening the companion app, waiting for it to load, then tapping through to the one screen that has the number you actually want. This concept skips all three steps: a fuel level, a charge estimate, a tire pressure warning, each one lives as its own widget on the Home Screen or Lock Screen, readable without unlocking into the app at all.
 
 <Figure
   src="/assets/projects/widgets/image-3.png"
-  alt="Zonal layout diagram."
+  caption="Combined status widget"
+  alt="Large widget stacking an EV charging card, showing charge percentage and range, above a fuel card showing gallons remaining and range."
 />
 
-## Scope and constraints
+## Project overview
 
-Two constraints guided every decision. It must feel like part of iOS. Each widget must stand alone.
+A self-directed concept, not a client brief, built around WidgetKit, Apple's framework for small, glanceable views that live on the Home Screen, Lock Screen, or StandBy display without opening the full app, rather than a custom in-app dashboard. Every widget here was designed against that constraint: a fixed size, no scrolling, and a refresh cycle the system controls rather than the app pushing updates in real time.
 
-That pushed me to focus on a tight set of data points like fuel, battery, engine, tire pressure, and temperature. It also set the bar for clarity and legibility.
+- Fuel, battery, engine, tire pressure, and cabin temperature as the tight set of data points in scope;
+- No custom iconography, SF Symbols only, so a car widget reads as native rather than a manufacturer's app bolted onto iOS.
 
-<Figure
-  src="/assets/projects/widgets/image-5.png"
-  alt="Zonal layout diagram."
-/>
+Both limits pushed the same direction: less to design, more time spent on whether a single number was legible at a glance.
 
-## Exploration and concept
+## The problem
 
-I explored card sizes and densities to find a rhythm that feels at home near Weather and Calendar.
+Most companion car apps feel heavy the moment someone wants a single number instead of a dashboard.
 
-The concept treated each widget as a single answer card rather than a tiny app. Open and you instantly know what you are looking at. No learning curve and no secondary chrome.
+<ProjectTabs>
+  <ProjectTab label="Full app">
+    Checking tire pressure, range, or engine status meant opening the companion app, waiting on a loading state, then navigating to the right screen, all for one number that should have been visible at a glance.
+  </ProjectTab>
+  <ProjectTab label="One dashboard">
+    A shared dashboard trying to hold fuel, battery, tires, and engine status at once got dense fast. None of the individual numbers were easy to scan against everything competing around them.
+  </ProjectTab>
+</ProjectTabs>
+
+Both failures came from treating a glance and a full session as the same interaction.
+
+## Competitor benchmarking
+
+I looked at CarPlay patterns and companion apps like Tesla and MyHyundai. Most solutions felt overbranded, cramming a full dashboard into a widget-sized space instead of designing for it.
+
+Conversations with friends who drive EVs and hybrids surfaced a pattern the competitor apps missed entirely: the same driver needs different information depending on when they check.
+
+<ProjectTabs>
+  <ProjectTab label="Before a trip">
+    Range is the only number that matters. Everything else, tire pressure, engine status, can wait until the car is actually moving.
+  </ProjectTab>
+  <ProjectTab label="After a charge">
+    Battery percentage and charging temperature take over. A driver checking right after a charge wants confirmation it worked, not a full status report.
+  </ProjectTab>
+  <ProjectTab label="On the road">
+    A quick reassurance check, fuel or charge remaining, nothing that requires reading past one number.
+  </ProjectTab>
+</ProjectTabs>
+
+That shaped the set of widgets pursued: no single dashboard trying to serve all three moments, a small set of single-answer cards instead.
+
+## Sizing
+
+Card sizes and densities got tested against the rhythm of Weather and Calendar widgets already sitting on a driver's Home Screen, since a car widget next to them had to hold the same visual weight without reading as bolted-on.
 
 <Figure
   src="/assets/projects/widgets/image-7.png"
-  alt="Zonal layout diagram."
+  caption="Fuel widget, compact"
+  alt="Small square widget showing a fuel pump icon with gallons remaining and estimated range."
 />
 
-## Design and interaction
+The same two numbers, a fuel level and a range estimate, had to hold up at a small square and at a wider card. That ruled out any layout depending on extra space showing up later: the compact version is not a cropped version of the expanded one, it is a separate composition built for its own size.
 
-I leaned on native system pieces like SF Symbols, iOS type, and familiar elevation.
+<Figure
+  src="/assets/projects/widgets/image-19.png"
+  caption="Fuel widget, expanded"
+  alt="Larger fuel widget with a filled gauge background, showing the same gallons and range numbers at a bigger scale."
+/>
 
-Status states needed to be explicit yet calm. OFF should not read as an error. Numbers and units had to align so scanning felt natural. Charge indicators animate just enough to feel alive while staying quiet.
+## EV charging
 
-The smallest decisions often took the most time because legibility depends on them.
+The charging card pairs two states in one glance: percentage and range on one row, time-to-full and charging rate on the other.
+
+<Figure
+  src="/assets/projects/widgets/image-17.png"
+  caption="EV charging widget"
+  alt="Green widget showing battery percentage and range on one row, and time to full charge with charging rate on the other."
+/>
+
+Color does part of the work before a driver reads a single number, green marks the card as electric on sight.
+
+## Engine status
 
 <Figure
   src="/assets/projects/widgets/image-9.png"
-  alt="Zonal layout diagram."
+  caption="Engine status widget"
+  alt="Engine status widget reading Off in grey, next to a greyed-out power icon."
 />
 
-## Visual and motion
+Off needed to read as neutral, not broken. The resting state uses the same grey as an inactive iOS toggle rather than a warning color, since a parked car with the engine off is the expected state, not an error worth flagging.
 
-The visual language is modular and soft. Rounded rectangles, high contrast for readability, and minimal iconography. Micro motion supports meaning without creating noise.
+## Tire pressure
 
-When a value changes the card breathes instead of flashing. The goal is presence without pull.
+Four rings track pressure per wheel, filled black at a healthy reading and red the moment one drops out of range.
 
 <Figure
-  src="/assets/projects/widgets/image-11.png"
-  alt="Zonal layout diagram."
+  src="/assets/projects/widgets/image-15.png"
+  caption="Tire pressure widget"
+  alt="Four circular gauges showing tire pressure per wheel, three filled black at a normal reading and one filled red at a low reading."
 />
 
-## What I learned
+In the version shown here, three wheels read 34 and one reads 20, and that single red ring is the entire point of the widget, catching the one number that changed without reading all four every time.
 
-Designing small does not mean thinking small. It means editing harder and being precise with space, contrast, and tempo. The best parts are often invisible. When they work you do not notice them. You just get the information and move on.
+## Cabin preconditioning
+
+A circular gauge shows target cabin temperature and the minutes left until the car reaches it, set before a driver opens the door.
+
+<Figure
+  src="/assets/projects/widgets/image-5.png"
+  caption="Cabin preconditioning widget"
+  alt="Circular gauge widget showing a target cabin temperature of 83 degrees Fahrenheit and 2 minutes remaining until it is reached."
+/>
+
+Blue and red mark the low and high ends of the dial, so the current setting reads as a position on a range rather than an isolated number with no context.
+
+## Efficiency
+
+A bar chart tracks fuel economy through the day against a fixed 0-to-100 scale, so a short trip does not visually dwarf a longer one sitting next to it.
 
 <Figure
   src="/assets/projects/widgets/image-13.png"
-  alt="Zonal layout diagram."
+  caption="Efficiency widget"
+  alt="Bar chart widget showing miles per gallon through the morning, with a 35.1 MPG average at the top."
 />
 
-## Takeaway
+The average at the top is the number that actually matters. The bars underneath are context, not the headline.
 
-Car control widgets made me pay attention to the quiet parts of an interface. Not the screen filling moments but the tiny pieces that live in the margins and end up being what people rely on most.
+## Visual and motion
+
+The visual language stays modular and quiet: rounded rectangles, high-contrast type, and SF Symbols instead of custom iconography, so a widget reads as native rather than borrowed from a car manufacturer's own app.
+
+A value that changes breathes instead of flashing, a slight scale animation on the charge indicator, nothing sharp enough to catch a driver's eye while the car is moving. Presence without pull was the standard every motion decision got checked against.
+
+## What I learned
+
+Designing small does not mean thinking small. It means editing harder, being precise about space, contrast, and tempo when there is no second screen available to hide an unclear decision on.
+
+The best parts turned out to be invisible. A widget that works does not get noticed, a driver reads the number and moves on, which made restraint the actual skill being practiced here, not any single visual choice.
+
+## FAQ
+
+<ProjectAccordion>
+  <ProjectAccordionItem title="What is WidgetKit?">
+    WidgetKit is Apple's framework for Home Screen, Lock Screen, and StandBy widgets. Building against it instead of a custom in-app dashboard meant every card had to work within Apple's own size and refresh constraints, which is what forced the single-answer approach in the first place.
+  </ProjectAccordionItem>
+  <ProjectAccordionItem title="How often does a widget like this actually update?">
+    WidgetKit widgets refresh on a schedule the system manages, called a timeline, not a live connection to the car. A widget requests updates at set intervals and the system decides when it is efficient to redraw it, so a number here can lag the dashboard by a few minutes in a real implementation.
+  </ProjectAccordionItem>
+  <ProjectAccordionItem title="Was this connected to a real vehicle?">
+    No. This is a concept, and the values shown, 83 degrees, 34 PSI, 35.1 MPG, are static examples rather than a live telemetry feed. A production version would need a paired data source from the vehicle or its companion app.
+  </ProjectAccordionItem>
+  <ProjectAccordionItem title="Why does the tire pressure widget flag one wheel instead of the whole card?">
+    Because the problem is almost always one wheel, not all four. Flagging the whole card red for a single low tire would bury the useful information, which wheel, under a warning state that reads the same whether one tire or all four need attention.
+  </ProjectAccordionItem>
+  <ProjectAccordionItem title="Why build widgets instead of just improving the companion app?">
+    A widget and a full app answer different distances from a driver's attention. The app still exists for anything that needs a decision, changing a charge schedule, reviewing trip history. A widget only needs to answer one question at a glance, and that is a different design problem, not a smaller version of the same one.
+  </ProjectAccordionItem>
+</ProjectAccordion>

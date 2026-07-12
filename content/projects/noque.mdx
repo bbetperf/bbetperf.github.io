@@ -1,136 +1,173 @@
 ---
 title: Noque
-description: Engineered an innovative mobile app simplifying restaurant interactions through streamlined ordering and efficient pickup.
+description: Mobile marketplace for ordering pickup and delivery from independent restaurants, with loyalty points tracked per restaurant instead of one shared program.
 date: March 2024
 ---
 
-## Store selection
+## Case study
 
-On launch the app opens to nearby restaurants. A map view helps you spot the closest options, while a list view with search and a distance filter narrows results to a comfortable radius. This shortens the time from open to order.
-
-<Figure
-  src="/assets/projects/noque/image-1.png"
-  alt="Zonal layout diagram."
-/>
-
-## Goal
-
-Build a single mobile marketplace that lets people browse nearby spots, order fast, and collect rewards in one place.
-
-Keep the flow light for customers and affordable for small restaurants that cannot build their own app.
-
-## Problem
-
-Ordering food is slower than it should be. Lines at cafes, scattered loyalty apps, and long menus make quick decisions hard.
-
-I wanted a way to walk in, pick up my order, and leave without waiting or juggling multiple apps.
-
-<Figure
-  src="/assets/projects/noque/image-2.png"
-  alt="Zonal layout diagram."
-/>
-
-## Key concept
-
-Two ways to receive an order. Pickup and delivery, with pickup as the core idea. Pickup cuts fees, removes courier delays, and lets restaurants nudge in-person visits with special offers.
-
-<Figure
-  src="/assets/projects/noque/image-3.png"
-  alt="Zonal layout diagram."
-/>
-
-## Main page
-
-The restaurant menu is front and center with a quick switch for delivery method.
-
-A bottom tab bar with integrated search keeps frequent actions reachable and leaves content in focus, which helped usability on larger screens.
+Noque is a mobile marketplace for ordering from independent restaurants: browse what's nearby, customize an order, and pick it up or have it delivered, all from one app instead of a different one per restaurant.
 
 <Figure
   src="/assets/projects/noque/image-4.png"
-  alt="Zonal layout diagram."
+  caption="Restaurant page"
+  alt="Restaurant page for BJ's Restaurant and Brewhouse showing a pickup and delivery toggle, a promoted item, and a search bar above the tab bar."
 />
+
+The restaurant page keeps the menu in front, with a single switch between pickup and delivery instead of two separate flows. A bottom tab bar with search built into it keeps the actions used most, ordering, cart, account, reachable without digging through a nested menu.
+
+## Project overview
+
+A single mobile marketplace where people browse nearby restaurants, order fast, and collect rewards without switching apps. The brief also had to work for the restaurants themselves: a small cafe without the budget for its own app still needed a real presence in the marketplace.
+
+- Pickup treated as the default flow, not an afterthought bolted onto delivery;
+- Loyalty tracked per restaurant instead of one generic points system across the whole marketplace.
+
+Both choices came directly from the problem. A generic delivery clone would have solved less than half of what small restaurants and quick-pickup customers actually needed.
+
+## The problem
+
+Ordering food is slower than it should be for a quick pickup, and loyalty made it worse instead of better.
+
+<ProjectTabs>
+  <ProjectTab label="Slow lines">
+    A line at a cafe or a food court forces a wait before an order even starts, then another wait for it to be made. Nothing about standing in line adds value to the order itself.
+  </ProjectTab>
+  <ProjectTab label="Scattered loyalty">
+    A different loyalty app or card for every restaurant meant most people just stopped using any of them. Rewards that require their own separate app get abandoned before they get used.
+  </ProjectTab>
+</ProjectTabs>
+
+Solving one without the other would have left half the frustration in place.
+
+## Competitor benchmarking
+
+I watched how people ordered in food courts and coffee shops before designing anything. Decision fatigue and slow queues were the constant, not one bad menu or one slow cashier.
+
+Benchmarking the large delivery marketplaces surfaced three gaps that mattered more for quick pickup than for delivery:
+
+- Pickup treated as a secondary flow behind delivery, not the primary one;
+- Customization buried a few taps deep instead of visible on the item card;
+- Loyalty run as one program across every restaurant, diluting what any single venue could offer.
+
+Those three gaps set the direction for the concept that followed.
+
+## Key concept
+
+Two ways to receive an order, pickup and delivery, with pickup treated as the primary path instead of a delivery flow with pickup bolted on.
+
+<Figure
+  src="/assets/projects/noque/image-2.png"
+  caption="Order type selection"
+  alt="Onboarding screen letting a new user choose between pickup, ready in store, and delivery, right to your door."
+/>
+
+Pickup cuts the fees a delivery order carries, removes the wait on a courier, and gives a restaurant a reason to bring someone through the door with an in-person offer.
+
+## Store discovery
+
+The map surfaces the closest options first, with a list view underneath for anyone who would rather scan names and ratings than pins on a map.
+
+<Figure
+  src="/assets/projects/noque/image-3.png"
+  caption="Store discovery"
+  alt="Map view showing a selected restaurant with rating, price, and distance, plus nearby alternatives, above a Yes, here confirmation button."
+/>
+
+Confirming a store, Yes, here, is a single tap once the right one is on screen, instead of a separate page loading to confirm it.
 
 ## Product view
 
-Each item card shows actions and results in one place. After customizing, you see name, quantity, calories, and total price at a glance. There is also a shortcut to find similar dishes to widen choice without leaving the flow.
+ An item card holds actions and results in the same view. Picking chicken, steak, or carnitas updates the calorie count and price in place, with the total visible before the tap that adds it to the cart.
 
 <Figure
   src="/assets/projects/noque/image-5.png"
-  alt="Zonal layout diagram."
+  caption="Product customization"
+  alt="Product customization screen for a dish showing protein options with running totals and an Add to Cart button."
 />
 
-## Research and observation
-
-I watched how people order in food courts and coffee shops. Decision fatigue and slow queues were the constant.
-
-I benchmarked large marketplaces and mapped the gaps that matter for quick pickup, simple customization, and loyalty that feels personal.
-
-## My role
-
-I originated the idea, led the concept, and acted as product designer and art director.
-
-I coordinated with developers, an analyst, and sales, moved from sketches to prototypes, and refined through testing and feedback until the flow felt instant and clear.
-
-<Figure
-  src="/assets/projects/noque/image-6.png"
-  alt="Zonal layout diagram."
-/>
+A shortcut to similar dishes sits next to the description, for anyone comparing options without leaving the flow.
 
 ## Cart
 
-Items are grouped by restaurant so mixed orders stay clear. You can add cutlery, remove items, or clear a group in one step. This reduced confusion when people ordered from more than one place.
-
 <Figure
-  src="/assets/projects/noque/image-7.png"
-  alt="Zonal layout diagram."
+  src="/assets/projects/noque/image-11.png"
+  caption="Cart"
+  alt="Cart screen with two identical items grouped under one restaurant, a utensils toggle, and split checkout totals for the current store and the full order."
 />
 
-## Workflow
+An order spanning more than one restaurant checks out as separate totals per store instead of one blended charge. In the cart shown here, the current restaurant totals $24.44 on its own, and $54.99 once every restaurant in the cart is included, so a mixed order never hides which restaurant charged what.
 
-Discovery and market research fed into iterative prototyping. I combined familiar marketplace patterns with the specific needs of pickup.
-
-The result was an interface optimized for quick decisions and minimal friction.
-
-## Target audience
-
-Students, singles, couples, and office workers who order to save time or avoid cooking. Most are 18 to 45 with average or above average income and clear needs around speed, value, and convenience.
-
-<Figure
-  src="/assets/projects/noque/image-8.png"
-  alt="Zonal layout diagram."
-/>
+Items stay grouped by restaurant, with cutlery, item removal, or clearing a whole group handled in one step instead of hunting through a flat list.
 
 ## Rewards
 
-Loyalty points are collected per restaurant rather than one generic system. Owners can create their own offers and customers feel real value when they return to a favorite spot.
+Points build up against the restaurant that earned them instead of pooling into one marketplace-wide balance. The account shown here holds $707.10 total, split unevenly across seven restaurants, from $10.00 at Jersey Mike's Subs up to $92.01 at Sharetea. A restaurant owner sets their own offers against that balance, so a customer feels the value tied to the specific place they keep returning to, not a generic marketplace-wide discount.
 
 <Figure
-  src="/assets/projects/noque/image-9.png"
-  alt="Zonal layout diagram."
+  src="/assets/projects/noque/image-7.png"
+  caption="Rewards balance"
+  alt="Rewards screen listing dollars available per restaurant, including Sharetea, BJ's Restaurant and Brewhouse, and Starbucks, next to Scan to pay and Show QR to collect actions."
 />
 
-## Key screens
-
-Store selection on a map or list, restaurant menu with quick method switch, product card with instant totals, a grouped cart, and a loyalty area tied to each venue. These screens formed the happy path from first open to paid order.
-
-## Design and system
-
-I built a token based design system with components that scale across 34 plus screens. The dark theme was designed in parallel to keep parity from the start.
+Scan to pay and Show QR to collect cover the same interaction from both directions: a customer's code gets scanned in store, or a restaurant's code gets scanned from the customer's side, depending on who is holding the phone that reads it.
 
 <Figure
-  src="/assets/projects/noque/image-10.png"
-  alt="Zonal layout diagram."
+  src="/assets/projects/noque/image-14.png"
+  caption="Collect points"
+  alt="Personal QR code screen used to collect loyalty points in person, with a note that the code is private and can be shared to let someone else collect on the account holder's behalf."
 />
 
-## What’s next
-
-Add richer delivery tracking, better courier routing, and a restaurant console for order management, analytics, and personalized promotions. These steps round out the marketplace and keep operations efficient.
+## Account and favorites
 
 <Figure
-  src="/assets/projects/noque/image-11.png"
-  alt="Zonal layout diagram."
+  src="/assets/projects/noque/image-13.png"
+  caption="Favorites"
+  alt="Favorites screen listing saved restaurants with a swipe action to remove one from the list."
 />
 
-## Takeaway
+Favorites and account settings sit one tab away from ordering, not buried behind a separate settings app. Removing a favorite takes a single swipe, the same gesture used elsewhere in the app instead of a dedicated confirmation step.
 
-Noque started as a workaround. It became a practice in restraint. The project changed the way I think about time. Not just loading time or pickup time, but time as a design constraint.
+## Target audience
+
+Students, singles, couples, and office workers who order to save time or skip cooking made up the core audience, generally between 18 and 45 with average or above-average income. Speed, value, and convenience mattered more to this group than restaurant discovery for its own sake, which is part of why pickup outranked delivery as the primary flow.
+
+## Role
+
+I originated the idea, led the concept, and worked as product designer and art director on it. Coordinating with developers, an analyst, and sales shaped the scope as much as any single design decision did.
+
+Sketches moved to prototypes, then through rounds of testing and feedback, until the flow read as instant rather than merely functional.
+
+## Design system
+
+A token-based design system carried color, type, and spacing across more than 34 screens, with a dark theme designed in parallel instead of retrofitted afterward. Building both themes from the same pass kept them from drifting apart as the screen count grew.
+
+## Workflow
+
+Discovery and market research fed into iterative prototyping, combining patterns familiar from large marketplaces with the specific needs pickup introduces: faster confirmation, clearer per-restaurant totals, loyalty that does not require its own separate app. The result optimized for quick decisions and minimal friction over feature breadth.
+
+## What I learned
+
+Noque started as a workaround for a personal annoyance, standing in line for something that should have taken one tap. It became a practice in restraint instead, since every screen had to earn its place against how fast someone could get from open app to picked-up order.
+
+The project changed how I think about time as a design constraint. Not just loading time or pickup time, but the time a decision takes when the options in front of someone are actually the right ones.
+
+## FAQ
+
+<ProjectAccordion>
+  <ProjectAccordionItem title="How is Noque different from a general delivery app?">
+    Pickup is the primary flow, not delivery with pickup added on. Loyalty is tracked per restaurant instead of one marketplace-wide points system, and a small restaurant without the budget for its own app still gets a real presence instead of a listing buried behind bigger chains.
+  </ProjectAccordionItem>
+  <ProjectAccordionItem title="How does the per-restaurant rewards system work?">
+    Dollars earned at a restaurant stay tied to that restaurant rather than pooling into one marketplace-wide balance. A restaurant owner sets their own offers against what a customer has built up there, and Scan to pay or Show QR handles the collecting and spending in person.
+  </ProjectAccordionItem>
+  <ProjectAccordionItem title="Is the scan-to-pay and show-QR flow connected to a real point-of-sale system?">
+    Not in this concept. The balances and codes shown are static examples, not a live payment connection. A production version would need integration with each restaurant's actual point-of-sale system to collect and redeem for real.
+  </ProjectAccordionItem>
+  <ProjectAccordionItem title="Was this tested with real users?">
+    Validation came from watching real ordering behavior in food courts and coffee shops and from benchmarking existing marketplaces, not a formal usability study with recruited participants. That observation is what shaped the pickup-first decision and the per-restaurant rewards model.
+  </ProjectAccordionItem>
+  <ProjectAccordionItem title="What would come next?">
+    Richer delivery tracking, better courier routing, and a restaurant console for order management, analytics, and personalized promotions. Those three would round out the marketplace side that this concept left mostly on the customer-facing half.
+  </ProjectAccordionItem>
+</ProjectAccordion>

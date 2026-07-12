@@ -1,120 +1,183 @@
 ---
 title: Kodomi
-description: Built a versatile no-code tool empowering designers to rapidly prototype and share UI components and full websites.
+description: No-code platform for building real websites from GitHub-connected UI libraries, a token-based design system, and an AI assistant that generates pages from a prompt.
 date: December 2024
 ---
 
-## Beginning
+## Case study
 
-This started in a parked car while I stared at the cluster and wondered why it tells me so little about the drive I am actually having. I asked what it would feel like if the interface responded to context rather than just listing dials.
+Kodomi is a no-code platform for designers and small teams who need to build a real website, not a mockup of one. A page built in Kodomi publishes as a working site, styled from the same design tokens as every other page in the project, whether its components came from a connected GitHub library, the built-in marketplace, or a prompt typed into the AI Designer.
+
+The idea came out of a recurring problem: sharing an interface idea with a client or a developer took longer than designing it did. A mockup communicated the look of a page. It did not communicate a working page, and the gap between the two ate most of the schedule on every project.
+
+<Figure
+  src="/assets/projects/kodomi/image-19.png"
+  caption="Projects dashboard"
+  alt="Kodomi projects dashboard showing recent files, including the Kodomi and Mesoki projects, opened from a shared workspace."
+/>
+
+## Project overview
+
+A no-code platform where designers and developers can connect UI libraries from GitHub, build real sites, and publish them through a system that holds together across every page in a project. The brief was self-imposed, aimed at individuals and small teams rather than specialists working inside an existing design system.
+
+- No dedicated engineering team beyond one developer and one art director;
+- A working design system needed before any investor conversation.
+
+Both constraints shaped scope more than any single feature request did. The token system had to be solid enough to demo cold, and every screen had to hold up without a larger team behind it to patch inconsistencies.
+
+## The problem
+
+Design tools handed off a picture of an interface. No-code builders assembled a live one. Every project sat in the gap between those two, and two structural failures kept showing up there.
+
+<ProjectTabs>
+  <ProjectTab label="Handoff gap">
+    A finished mockup still had to be rebuilt by a developer, who translated spacing, states, and interactions by eye. That translation step is where consistency broke down, and where most of the schedule disappeared on every project.
+  </ProjectTab>
+  <ProjectTab label="Assets don't travel">
+    A component built for one project stayed there. Reusing a button or a card on the next project meant copying a screenshot or describing it from memory, with no version history to confirm the copy still matched the original.
+  </ProjectTab>
+</ProjectTabs>
+
+Neither gap was a tooling limitation so much as a structural one. Nothing in the existing workflow treated a component as a persistent, shared object.
+
+## Competitor benchmarking
+
+I mapped the space across five existing no-code builders, Webflow, Framer, Bubble, Wix, and a smaller tool called TapTop. Each handled part of the problem. None handled all of it.
+
+- Portable component libraries that survive a move between projects;
+- Version history on individual components, not just whole-project snapshots;
+- A sitemap clear enough to plan a full site before building a single page.
+
+Those three gaps recurred across every platform audited, and they became the baseline Kodomi had to clear before anything else got designed.
 
 <Figure
   src="/assets/projects/kodomi/image-4.png"
-  alt="Zonal layout diagram."
+  caption="Page creator"
+  alt="Editor canvas showing the project's page list, Main, About, Contact, and Company, next to the layer tree and a style panel for the selected header."
 />
 
-## Goal
+## The solution
 
-Create a no code platform where designers and developers can build real sites, plug in UI libraries from GitHub, and publish with a system that stays consistent across pages. Make the tool friendly for individuals and small teams, not just specialists.
+Modularity became the answer to both gaps at once. A component that already carries its own tokens travels cleanly between projects, and a site built from those components publishes as the working page a developer would otherwise have had to rebuild.
 
-## Problem
-
-Sharing interface ideas often felt harder than it should. Design tools were great for mockups but not for building live, modular sites. Hand off took too long and moving assets between projects was messy. I wanted a way to think in components and publish without leaving the flow.
-
-<Figure
-  src="/assets/projects/kodomi/image-9.png"
-  alt="Zonal layout diagram."
-/>
-
-## Research and benchmarking
-
-I mapped the space across Webflow, Framer, Bubble, Wix, and a niche builder called TapTop. Each had strengths, but most lacked simple component libraries that travel across projects, version history, or a clear sitemap. These gaps shaped what Kodomi had to do from day one.
-
-<Figure
-  src="/assets/projects/kodomi/image-2.png"
-  alt="Zonal layout diagram."
-/>
-
-## Primary insight
-
-Speed comes from modularity. If tokens, components, and libraries are first class, people design faster and ship with fewer errors. That guided everything from the asset model to how pages inherit style.
-
-<Figure
-  src="/assets/projects/kodomi/image-10.png"
-  alt="Zonal layout diagram."
-/>
-
-## Key concepts
-
-Integrate UI libraries through GitHub and let users buy full kits or single elements in a marketplace. Keep a token based design system under the hood so style stays consistent. Add an AI Designer that can generate a page or refine an element from a prompt.
-
-<Figure
-  src="/assets/projects/kodomi/image-5.png"
-  alt="Zonal layout diagram."
-/>
-
-## Key screens
-
-Assets Editor for full project control. AI Designer for generation and refinement. Sitemap to plan and reuse templates. Library and Marketplace to mix GitHub based kits and individual elements. These screens formed the shortest path from idea to a working site.
-
-## Personas
-
-I focused on three users. A small business owner who needs a site she can update herself. A freelance designer who wants to reuse high quality UI and deliver fast. A startup founder who needs customization and quick launch without hiring a large team. Their needs validated the library model, the sitemap, and the AI helper.
-
-<Figure
-  src="/assets/projects/kodomi/image-16.png"
-  alt="Zonal layout diagram."
-/>
-
-## AI designer
-
-The AI Designer turns intent into structure. Type what you need and it assembles a layout with the right components and styles. It can also tune an existing screen and suggest improvements based on trends and your connected libraries.
-
-<Figure
-  src="/assets/projects/kodomi/image-12.png"
-  alt="Zonal layout diagram."
-/>
-
-## Design system
-
-Everything runs on tokens and components. Color, type, spacing, and motion inherit from tokens so changes cascade safely. I built both light and dark themes early to keep parity as screens grew. The first version covered 22 screens and set the pattern for more.
-
-## My role.
-
-I initiated the concept, led product design, created the sitemap and flows, built the token system, and partnered with an art director and a developer to prototype and test. I also shaped the strategy toward an investor ready direction.
-
-<Figure
-  src="/assets/projects/kodomi/image-6.png"
-  alt="Zonal layout diagram."
-/>
-
-## Workflow
-
-Competitive analysis fed into sketches, then wireframes, then an interactive prototype. I kept a tight loop between asset structure, tokens, and publishing so each decision improved speed and clarity rather than adding settings.
-
-<Figure
-  src="/assets/projects/kodomi/image-14.png"
-  alt="Zonal layout diagram."
-/>
-
-## Assets editor
-
-The assets editor became the control room. It shows every element, section, and form in one place and lets you update, remix, or create components without hunting across pages. It also pulls in new libraries so projects evolve without a rebuild.
-
-<Figure
-  src="/assets/projects/kodomi/image-8.png"
-  alt="Zonal layout diagram."
-/>
-
-## What's next
-
-Expand the marketplace, deepen library integration, and add multiuser collaboration with version control and performance work to meet a growing user base.
+The response had three parts. UI libraries connect straight from GitHub, so an existing component set does not need to be rebuilt inside Kodomi from nothing. A marketplace sits next to that connection, for a kit bought whole or a single element bought on its own. Underneath both, a token-based design system keeps color, type, spacing, and motion consistent no matter which library a page pulls from.
 
 <Figure
   src="/assets/projects/kodomi/image-11.png"
-  alt="Zonal layout diagram."
+  caption="Spacing edit section"
+  alt="Spacing panel showing margin, padding, and element values arranged as a nested box diagram, each field set in pixels."
 />
 
-## Takeaway
+Every button, input, and header in Kodomi pulled its width, color, and spacing from the same token set, which is what let a page built from three different libraries still read as one product.
 
-Kodomi taught me that good tools feel quiet. When components, tokens, and libraries do the heavy lifting, designers stay in flow and teams move faster from sketch to site.
+## Persona development
+
+No formal interviews shaped these personas. They came out of the benchmarking phase, matched against the three groups most likely to actually adopt a tool like this.
+
+<ProjectTabs>
+  <ProjectTab label="Business">
+    Needs a site she can update herself after launch, without calling a developer for a copy change or a new photo.
+  </ProjectTab>
+  <ProjectTab label="Designer">
+    Wants to reuse a high-quality UI library across client projects and hand over a working site, not just a set of frames.
+  </ProjectTab>
+  <ProjectTab label="Founder">
+    Needs enough customization to look distinct, plus a fast launch, without hiring a design or engineering team first.
+  </ProjectTab>
+</ProjectTabs>
+
+All three validated the same three decisions: a library model that travels between projects, a sitemap that shows the whole site before it gets built, and an AI assistant that removes the blank-canvas start.
+
+## Sitemap
+
+Every project opens onto a page list instead of a single canvas: Main, About, Contact, Company, each one holding its own layer tree. A page can reference a header or a layout built on another page in the same project rather than rebuilding it from scratch.
+
+That is where the library model actually pays off. A header built once shows up correctly on every page that references it, and a change to that header updates every page that uses it at the same time.
+
+## Design system
+
+Color, type, spacing, and motion all inherit from tokens, so a change to a base value cascades through every component built on top of it instead of requiring a manual pass through every screen.
+
+<Figure
+  src="/assets/projects/kodomi/image-9.png"
+  caption="Size and class controls"
+  alt="Style panel showing a class assignment and fixed width and height fields for a selected button component."
+/>
+
+Light and dark themes got built early, before the screen count grew past what a manual pass could realistically catch.
+
+<Figure
+  src="/assets/projects/kodomi/image-10.png"
+  caption="Typography controls"
+  alt="Typography panel showing font, weight, size, and line height, and a named color value, above background and clipping controls for the same element."
+/>
+
+## AI Designer
+
+Type what a page needs to do, and the AI Designer assembles a layout from the components and colors already attached to the project rather than inventing new ones.
+
+<Figure
+  src="/assets/projects/kodomi/image-12.png"
+  caption="AI Designer prompt"
+  alt="AI Designer prompt panel with a text prompt requesting a contact page, connected libraries listed as assets, and a brand color reference."
+/>
+
+It can also open an existing screen and suggest a targeted change, a new color, tighter spacing, a different font weight, pulled from the same token set the rest of the project already uses.
+
+## Assets viewer
+
+Every element, section, and form in a project lives in the assets editor, in one place, instead of scattered across pages.
+
+<Figure
+  src="/assets/projects/kodomi/image-18.png"
+  caption="Assets panel"
+  alt="Assets tab open in the editor showing saved button components as thumbnails, next to a search field and an empty canvas."
+/>
+
+Every one of those traces back to the token it was built from. Updating one, or pulling in a newly connected library, does not require touching the pages that already use it.
+
+## Marketplace
+
+Libraries connected through GitHub cover a designer's own components. The marketplace covers everything else: a full kit from another team, or a single element bought on its own, a button, a color palette, a type scale.
+
+<Figure
+  src="/assets/projects/kodomi/image-16.png"
+  caption="Marketplace"
+  alt="Marketplace panel listing libraries, bundles, and elements available to add to a project, with recently viewed and top-rated results."
+/>
+
+Buying one element instead of an entire library matters most late in a project, when a page is nearly finished and only needs one more piece.
+
+## Workflow
+
+Competitive analysis fed into sketches, then wireframes, then an interactive prototype. Asset structure, tokens, and publishing stayed in a tight loop through all of it. A change to a token got checked against the sitemap before it got checked against a single screen, since one wrong value could ripple through every page that referenced it.
+
+## Role
+
+I initiated the concept, led product design, and built the token system everything else runs on. Sitemap and flows for the first 22 screens came out of that same pass. An art director and a developer partnered on prototyping and testing, and I shaped the product strategy toward a direction we could pitch to investors.
+
+## What I learned
+
+Modularity turned out to be a discipline, not a checkbox on a spec. Every component pulled into the token system had to give up whatever made it special, its own one-off spacing, its own shade of a color already in the palette, before it earned a place in the library. That trade-off was the real work behind a phrase like design tokens, more than the token system itself.
+
+Partnering with a developer early caught places where a token looked consistent inside the design tool but produced a different value once it shipped, a gap no amount of visual review alone would have caught.
+
+## FAQ
+
+<ProjectAccordion>
+  <ProjectAccordionItem title="What counts as a no-code platform here?">
+    A tool that lets someone assemble and publish a working site or app visually, without writing code by hand. Kodomi still runs on a real codebase underneath what a designer sees. It is the writing of that code that gets removed from the workflow, not the code itself.
+  </ProjectAccordionItem>
+  <ProjectAccordionItem title="How does the GitHub library integration actually work?">
+    A project connects to a GitHub repository, similar to how component libraries like shadcn work, and the components defined there appear in the assets panel, shown as Connected. Changes pushed to the repository reflect in the tool automatically. Two-way sync back to the source repository was not in scope for this concept.
+  </ProjectAccordionItem>
+  <ProjectAccordionItem title="Was this tested with real users?">
+    Not through formal usability testing. Validation came from the three personas developed during competitor benchmarking, small business owner, freelance designer, startup founder, and from using the tool internally to build the sitemap and screens shown here.
+  </ProjectAccordionItem>
+  <ProjectAccordionItem title="Is the AI Designer generating a real page or just a picture of one?">
+    A real one. It assembles a layout from existing components rather than rendering a mockup image. What it does not guarantee is a zero-cleanup result. Adjusting spacing or swapping a component the AI picked for a better-fitting one is still expected after a generation.
+  </ProjectAccordionItem>
+  <ProjectAccordionItem title="What would come next?">
+    Expanding the marketplace, deepening the GitHub integration so updates in a source repository sync automatically, and adding multiuser collaboration with real version control. Performance work follows from that: a project with a few hundred components in the assets editor already shows where the current build slows down.
+  </ProjectAccordionItem>
+</ProjectAccordion>
