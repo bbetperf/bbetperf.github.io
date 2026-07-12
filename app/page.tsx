@@ -17,7 +17,7 @@ export default function Home() {
               <p className="text-primary/40">Chicago, Illinois, United States.</p>
             </div>
             <p className="text-primary/60">I design interfaces, where every interaction is considered and nothing is accidental. The kind of product that's hard to explain but immediately right to use.</p>
-            <p className="text-primary/60">Write me an <a data-cuelume-hover="tick" data-cuelume-press="bloom" href="mailto:hello@bbetperf.com" target="_blank" className="text-primary hover:underline">Email</a> and check my <a data-cuelume-hover="tick" data-cuelume-press="bloom" href="https://twitter.com/bbetperf" target="_blank" className="text-primary hover:underline">Tweets</a>, <a data-cuelume-hover="tick" data-cuelume-press="bloom" href="https://instagram.com/bebetterthanperfect" target="_blank" className="text-primary hover:underline">Shots</a>.</p>
+            <p className="text-primary/60">Write me an <a  data-cuelume-press="bloom" href="mailto:hello@bbetperf.com" target="_blank" className="text-primary hover:underline">Email</a> and check my <a  data-cuelume-press="bloom" href="https://twitter.com/bbetperf" target="_blank" className="text-primary hover:underline">Tweets</a>, <a  data-cuelume-press="bloom" href="https://instagram.com/bebetterthanperfect" target="_blank" className="text-primary hover:underline">Shots</a>.</p>
           </div>
 
           <div className="flex flex-col flex items-left gap-5">

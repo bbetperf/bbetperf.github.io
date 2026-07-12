@@ -11,8 +11,10 @@ Checking a car's status from a phone usually means opening the companion app, wa
 <Figure
   src="/assets/projects/widgets/image-3.png"
   caption="Combined status widget"
-  alt="Large widget stacking an EV charging card, showing charge percentage and range, above a fuel card showing gallons remaining and range."
+  alt="Large widget stacking an EV charging card, showing charge percentage and range, above a fuel card showing gallons remaining and range"
 />
+
+Both cards in that stack read from the same widget family, sized to sit together on one Home Screen row.
 
 ## Project overview
 
@@ -40,18 +42,18 @@ Both failures came from treating a glance and a full session as the same interac
 
 ## Competitor benchmarking
 
-I looked at CarPlay patterns and companion apps like Tesla and MyHyundai. Most solutions felt overbranded, cramming a full dashboard into a widget-sized space instead of designing for it.
+I looked at CarPlay patterns and companion apps like Tesla and MyHyundai, and most solutions felt overbranded, cramming a full dashboard into a widget-sized space instead of designing for it.
 
 Conversations with friends who drive EVs and hybrids surfaced a pattern the competitor apps missed entirely: the same driver needs different information depending on when they check.
 
 <ProjectTabs>
-  <ProjectTab label="Before a trip">
+  <ProjectTab label="Before trip">
     Range is the only number that matters. Everything else, tire pressure, engine status, can wait until the car is actually moving.
   </ProjectTab>
-  <ProjectTab label="After a charge">
+  <ProjectTab label="After charge">
     Battery percentage and charging temperature take over. A driver checking right after a charge wants confirmation it worked, not a full status report.
   </ProjectTab>
-  <ProjectTab label="On the road">
+  <ProjectTab label="While driving">
     A quick reassurance check, fuel or charge remaining, nothing that requires reading past one number.
   </ProjectTab>
 </ProjectTabs>
@@ -60,79 +62,85 @@ That shaped the set of widgets pursued: no single dashboard trying to serve all 
 
 ## Sizing
 
-Card sizes and densities got tested against the rhythm of Weather and Calendar widgets already sitting on a driver's Home Screen, since a car widget next to them had to hold the same visual weight without reading as bolted-on.
+Fuel was the simplest card, and the first one tested across sizes.
 
 <Figure
   src="/assets/projects/widgets/image-7.png"
   caption="Fuel widget, compact"
-  alt="Small square widget showing a fuel pump icon with gallons remaining and estimated range."
+  alt="Small square widget showing a fuel pump icon with gallons remaining and estimated range"
 />
 
-The same two numbers, a fuel level and a range estimate, had to hold up at a small square and at a wider card. That ruled out any layout depending on extra space showing up later: the compact version is not a cropped version of the expanded one, it is a separate composition built for its own size.
+---
 
 <Figure
   src="/assets/projects/widgets/image-19.png"
   caption="Fuel widget, expanded"
-  alt="Larger fuel widget with a filled gauge background, showing the same gallons and range numbers at a bigger scale."
+  alt="Larger fuel widget with a filled gauge background, showing the same gallons and range numbers at a bigger scale"
 />
+
+Card sizes and densities got tested against the rhythm of Weather and Calendar widgets already sitting on a driver's Home Screen, since a car widget next to them had to hold the same visual weight without reading as bolted-on.
+
+The same two numbers, a fuel level and a range estimate, had to hold up at a small square and at a wider card. That ruled out any layout depending on extra space showing up later: the compact version is not a cropped version of the expanded one, it is a separate composition built for its own size.
 
 ## EV charging
 
-The charging card pairs two states in one glance: percentage and range on one row, time-to-full and charging rate on the other.
+The charging widget pairs two states most companion apps split across separate screens.
 
 <Figure
   src="/assets/projects/widgets/image-17.png"
   caption="EV charging widget"
-  alt="Green widget showing battery percentage and range on one row, and time to full charge with charging rate on the other."
+  alt="Green widget showing battery percentage and range on one row, and time to full charge with charging rate on the other"
 />
 
-Color does part of the work before a driver reads a single number, green marks the card as electric on sight.
+The charging card pairs percentage and range on one row, time-to-full and charging rate on the other. Color does part of the work before a driver reads a single number, green marks the card as electric on sight.
 
 ## Engine status
+
+Engine status is the simplest card in the set, a single word and an icon.
 
 <Figure
   src="/assets/projects/widgets/image-9.png"
   caption="Engine status widget"
-  alt="Engine status widget reading Off in grey, next to a greyed-out power icon."
+  alt="Engine status widget reading Off in grey, next to a greyed-out power icon"
 />
 
 Off needed to read as neutral, not broken. The resting state uses the same grey as an inactive iOS toggle rather than a warning color, since a parked car with the engine off is the expected state, not an error worth flagging.
 
 ## Tire pressure
 
-Four rings track pressure per wheel, filled black at a healthy reading and red the moment one drops out of range.
+Tire pressure is the one reading where a single wheel matters more than the average.
 
 <Figure
   src="/assets/projects/widgets/image-15.png"
   caption="Tire pressure widget"
-  alt="Four circular gauges showing tire pressure per wheel, three filled black at a normal reading and one filled red at a low reading."
+  alt="Four circular gauges showing tire pressure per wheel, three filled black at a normal reading and one filled red at a low reading"
 />
 
-In the version shown here, three wheels read 34 and one reads 20, and that single red ring is the entire point of the widget, catching the one number that changed without reading all four every time.
+Four rings track pressure per wheel, filled black at a healthy reading and red the moment one drops out of range. In the version shown here, three wheels read 34 psi and one reads 20 psi and that single red ring is the entire point of the widget, catching the one number that changed without reading all four every time.
 
 ## Cabin preconditioning
 
-A circular gauge shows target cabin temperature and the minutes left until the car reaches it, set before a driver opens the door.
+Climate is the one card where a countdown matters as much as the number itself.
 
 <Figure
   src="/assets/projects/widgets/image-5.png"
   caption="Cabin preconditioning widget"
-  alt="Circular gauge widget showing a target cabin temperature of 83 degrees Fahrenheit and 2 minutes remaining until it is reached."
+  alt="Circular gauge widget showing a target cabin temperature of 83 degrees Fahrenheit and 2 minutes remaining until it is reached"
 />
 
-Blue and red mark the low and high ends of the dial, so the current setting reads as a position on a range rather than an isolated number with no context.
+A circular gauge shows target cabin temperature, 83°F in the version shown here, and the 2 min left until the car reaches it, set before a driver opens the door. Blue and red mark the low and high ends of the dial, so the current setting reads as a position on a range rather than an isolated number with no context.
 
 ## Efficiency
 
-A bar chart tracks fuel economy through the day against a fixed 0-to-100 scale, so a short trip does not visually dwarf a longer one sitting next to it.
+Efficiency is the one card that trades a single number for a short history.
 
 <Figure
   src="/assets/projects/widgets/image-13.png"
   caption="Efficiency widget"
-  alt="Bar chart widget showing miles per gallon through the morning, with a 35.1 MPG average at the top."
+  alt="Bar chart widget showing miles per gallon through the morning, with a 35.1 MPG average at the top"
 />
 
-The average at the top is the number that actually matters. The bars underneath are context, not the headline.
+A bar chart tracks fuel economy through the day against a fixed 0-to-100 scale, so a short trip does not visually dwarf a longer one sitting next to it. The average at the top, 35.1 mpg in the version shown here, is the number that actually matters, while the bars underneath stay context rather than the headline.
 
 ## Visual and motion
 
@@ -146,17 +154,17 @@ Designing small does not mean thinking small. It means editing harder, being pre
 
 The best parts turned out to be invisible. A widget that works does not get noticed, a driver reads the number and moves on, which made restraint the actual skill being practiced here, not any single visual choice.
 
-## FAQ
+## Questions
 
 <ProjectAccordion>
   <ProjectAccordionItem title="What is WidgetKit?">
-    WidgetKit is Apple's framework for Home Screen, Lock Screen, and StandBy widgets. Building against it instead of a custom in-app dashboard meant every card had to work within Apple's own size and refresh constraints, which is what forced the single-answer approach in the first place.
+    Apple's framework for Home Screen, Lock Screen, and StandBy widgets. Building against it instead of a custom in-app dashboard meant every card had to work within Apple's own size and refresh constraints, which is what forced the single-answer approach in the first place.
   </ProjectAccordionItem>
   <ProjectAccordionItem title="How often does a widget like this actually update?">
     WidgetKit widgets refresh on a schedule the system manages, called a timeline, not a live connection to the car. A widget requests updates at set intervals and the system decides when it is efficient to redraw it, so a number here can lag the dashboard by a few minutes in a real implementation.
   </ProjectAccordionItem>
   <ProjectAccordionItem title="Was this connected to a real vehicle?">
-    No. This is a concept, and the values shown, 83 degrees, 34 PSI, 35.1 MPG, are static examples rather than a live telemetry feed. A production version would need a paired data source from the vehicle or its companion app.
+    No, this is a concept, and the values shown, 83°F 34 psi 35.1 mpg are static examples rather than a live telemetry feed. A production version would need a paired data source from the vehicle or its companion app.
   </ProjectAccordionItem>
   <ProjectAccordionItem title="Why does the tire pressure widget flag one wheel instead of the whole card?">
     Because the problem is almost always one wheel, not all four. Flagging the whole card red for a single low tire would bury the useful information, which wheel, under a warning state that reads the same whether one tire or all four need attention.

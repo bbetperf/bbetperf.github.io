@@ -69,7 +69,7 @@ function Item({
       data-slot="item"
       data-variant={variant}
       data-size={size}
-      data-cuelume-hover="tick"
+      
       data-cuelume-press="bloom"
       className={cn(itemVariants({ variant, size, className }))}
       {...props}

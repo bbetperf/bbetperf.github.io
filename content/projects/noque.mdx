@@ -8,13 +8,15 @@ date: March 2024
 
 Noque is a mobile marketplace for ordering from independent restaurants: browse what's nearby, customize an order, and pick it up or have it delivered, all from one app instead of a different one per restaurant.
 
+The restaurant page keeps the menu in front, with a single switch between pickup and delivery instead of two separate flows. A bottom tab bar with search built into it keeps the actions used most, ordering, cart, account, reachable without digging through a nested menu.
+
 <Figure
   src="/assets/projects/noque/image-4.png"
   caption="Restaurant page"
-  alt="Restaurant page for BJ's Restaurant and Brewhouse showing a pickup and delivery toggle, a promoted item, and a search bar above the tab bar."
+  alt="Restaurant page for BJ's Restaurant and Brewhouse showing a pickup and delivery toggle, a promoted item, and a search bar above the tab bar"
 />
 
-The restaurant page keeps the menu in front, with a single switch between pickup and delivery instead of two separate flows. A bottom tab bar with search built into it keeps the actions used most, ordering, cart, account, reachable without digging through a nested menu.
+That toggle at the top of the page is what the rest of the app is built around.
 
 ## Project overview
 
@@ -23,7 +25,7 @@ A single mobile marketplace where people browse nearby restaurants, order fast, 
 - Pickup treated as the default flow, not an afterthought bolted onto delivery;
 - Loyalty tracked per restaurant instead of one generic points system across the whole marketplace.
 
-Both choices came directly from the problem. A generic delivery clone would have solved less than half of what small restaurants and quick-pickup customers actually needed.
+Both choices came directly from the problem, since a generic delivery clone would have solved less than half of what small restaurants and quick-pickup customers actually needed.
 
 ## The problem
 
@@ -54,46 +56,48 @@ Those three gaps set the direction for the concept that followed.
 
 ## Key concept
 
-Two ways to receive an order, pickup and delivery, with pickup treated as the primary path instead of a delivery flow with pickup bolted on.
+Two ways to receive an order, pickup and delivery, with pickup treated as the primary path instead of a delivery flow with pickup bolted on. Pickup cuts the fees a delivery order carries, removes the wait on a courier, and gives a restaurant a reason to bring someone through the door with an in-person offer.
 
 <Figure
   src="/assets/projects/noque/image-2.png"
   caption="Order type selection"
-  alt="Onboarding screen letting a new user choose between pickup, ready in store, and delivery, right to your door."
+  alt="Onboarding screen letting a new user choose between pickup, ready in store, and delivery, right to your door"
 />
 
-Pickup cuts the fees a delivery order carries, removes the wait on a courier, and gives a restaurant a reason to bring someone through the door with an in-person offer.
+That choice is the first thing a new user sees, before a single restaurant loads.
 
 ## Store discovery
 
-The map surfaces the closest options first, with a list view underneath for anyone who would rather scan names and ratings than pins on a map.
+Finding a restaurant starts with a map, not a search field.
 
 <Figure
   src="/assets/projects/noque/image-3.png"
   caption="Store discovery"
-  alt="Map view showing a selected restaurant with rating, price, and distance, plus nearby alternatives, above a Yes, here confirmation button."
+  alt="Map view showing a selected restaurant with rating, price, and distance, plus nearby alternatives, above a Yes, here confirmation button"
 />
 
-Confirming a store, Yes, here, is a single tap once the right one is on screen, instead of a separate page loading to confirm it.
+The map surfaces the closest options first, with a list view underneath for anyone who would rather scan names and ratings than pins on a map. Confirming a store, Yes, here, is a single tap once the right one is on screen, instead of a separate page loading to confirm it.
 
 ## Product view
 
- An item card holds actions and results in the same view. Picking chicken, steak, or carnitas updates the calorie count and price in place, with the total visible before the tap that adds it to the cart.
+Every item card holds actions and results in the same view instead of splitting them across two screens.
 
 <Figure
   src="/assets/projects/noque/image-5.png"
   caption="Product customization"
-  alt="Product customization screen for a dish showing protein options with running totals and an Add to Cart button."
+  alt="Product customization screen for a dish showing protein options with running totals and an Add to Cart button"
 />
 
-A shortcut to similar dishes sits next to the description, for anyone comparing options without leaving the flow.
+Picking chicken, steak, or carnitas updates the calorie count and price in place, with the total visible before the tap that adds it to the cart. A shortcut to similar dishes sits next to the description, for anyone comparing options without leaving the flow.
 
 ## Cart
+
+A mixed order needed its own math, not one combined total.
 
 <Figure
   src="/assets/projects/noque/image-11.png"
   caption="Cart"
-  alt="Cart screen with two identical items grouped under one restaurant, a utensils toggle, and split checkout totals for the current store and the full order."
+  alt="Cart screen with two identical items grouped under one restaurant, a utensils toggle, and split checkout totals for the current store and the full order"
 />
 
 An order spanning more than one restaurant checks out as separate totals per store instead of one blended charge. In the cart shown here, the current restaurant totals $24.44 on its own, and $54.99 once every restaurant in the cart is included, so a mixed order never hides which restaurant charged what.
@@ -102,28 +106,34 @@ Items stay grouped by restaurant, with cutlery, item removal, or clearing a whol
 
 ## Rewards
 
-Points build up against the restaurant that earned them instead of pooling into one marketplace-wide balance. The account shown here holds $707.10 total, split unevenly across seven restaurants, from $10.00 at Jersey Mike's Subs up to $92.01 at Sharetea. A restaurant owner sets their own offers against that balance, so a customer feels the value tied to the specific place they keep returning to, not a generic marketplace-wide discount.
+Every restaurant runs its own balance instead of pulling from one shared marketplace pool.
 
 <Figure
   src="/assets/projects/noque/image-7.png"
   caption="Rewards balance"
-  alt="Rewards screen listing dollars available per restaurant, including Sharetea, BJ's Restaurant and Brewhouse, and Starbucks, next to Scan to pay and Show QR to collect actions."
+  alt="Rewards screen listing dollars available per restaurant, including Sharetea, BJ's Restaurant and Brewhouse, and Starbucks, next to Scan to pay and Show QR to collect actions"
 />
 
-Scan to pay and Show QR to collect cover the same interaction from both directions: a customer's code gets scanned in store, or a restaurant's code gets scanned from the customer's side, depending on who is holding the phone that reads it.
+---
 
 <Figure
   src="/assets/projects/noque/image-14.png"
   caption="Collect points"
-  alt="Personal QR code screen used to collect loyalty points in person, with a note that the code is private and can be shared to let someone else collect on the account holder's behalf."
+  alt="Personal QR code screen used to collect loyalty points in person, with a note that the code is private and can be shared to let someone else collect on the account holder's behalf"
 />
 
+Points build up against the restaurant that earned them instead of pooling into one marketplace-wide balance. The account shown here holds $707.10 total, split unevenly across seven restaurants, from $10.00 at Jersey Mike's Subs up to $92.01 at Sharetea. A restaurant owner sets their own offers against that balance, so a customer feels the value tied to the specific place they keep returning to, not a generic marketplace-wide discount.
+
+Scan to pay and Show QR to collect cover the same interaction from both directions: a customer's code gets scanned in store, or a restaurant's code gets scanned from the customer's side, depending on who is holding the phone that reads it.
+
 ## Account and favorites
+
+Everything outside ordering itself collapses into one tab.
 
 <Figure
   src="/assets/projects/noque/image-13.png"
   caption="Favorites"
-  alt="Favorites screen listing saved restaurants with a swipe action to remove one from the list."
+  alt="Favorites screen listing saved restaurants with a swipe action to remove one from the list"
 />
 
 Favorites and account settings sit one tab away from ordering, not buried behind a separate settings app. Removing a favorite takes a single swipe, the same gesture used elsewhere in the app instead of a dedicated confirmation step.
@@ -150,9 +160,9 @@ Discovery and market research fed into iterative prototyping, combining patterns
 
 Noque started as a workaround for a personal annoyance, standing in line for something that should have taken one tap. It became a practice in restraint instead, since every screen had to earn its place against how fast someone could get from open app to picked-up order.
 
-The project changed how I think about time as a design constraint. Not just loading time or pickup time, but the time a decision takes when the options in front of someone are actually the right ones.
+The project changed how I think about time as a design constraint, not just loading time or pickup time, but the time a decision takes when the options in front of someone are actually the right ones.
 
-## FAQ
+## Questions
 
 <ProjectAccordion>
   <ProjectAccordionItem title="How is Noque different from a general delivery app?">
@@ -162,7 +172,7 @@ The project changed how I think about time as a design constraint. Not just load
     Dollars earned at a restaurant stay tied to that restaurant rather than pooling into one marketplace-wide balance. A restaurant owner sets their own offers against what a customer has built up there, and Scan to pay or Show QR handles the collecting and spending in person.
   </ProjectAccordionItem>
   <ProjectAccordionItem title="Is the scan-to-pay and show-QR flow connected to a real point-of-sale system?">
-    Not in this concept. The balances and codes shown are static examples, not a live payment connection. A production version would need integration with each restaurant's actual point-of-sale system to collect and redeem for real.
+    Not in this concept, where the balances and codes shown are static examples rather than a live payment connection. A production version would need integration with each restaurant's actual point-of-sale system to collect and redeem for real.
   </ProjectAccordionItem>
   <ProjectAccordionItem title="Was this tested with real users?">
     Validation came from watching real ordering behavior in food courts and coffee shops and from benchmarking existing marketplaces, not a formal usability study with recruited participants. That observation is what shaped the pickup-first decision and the per-restaurant rewards model.
