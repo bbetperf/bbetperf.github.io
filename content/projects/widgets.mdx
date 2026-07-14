@@ -6,7 +6,7 @@ date: October 2024
 
 ## Case study
 
-Checking a car's status from a phone usually means opening the companion app, waiting for it to load, then tapping through to the one screen that has the number you actually want. This concept skips all three steps: a fuel level, a charge estimate, a tire pressure warning, each one lives as its own widget on the Home Screen or Lock Screen, readable without unlocking into the app at all.
+Checking a car's status from a phone usually means opening the companion app, waiting for it to load, then tapping through to the one screen that has the number you actually want.
 
 <Figure
   src="/assets/projects/widgets/image-3.png"
@@ -14,7 +14,7 @@ Checking a car's status from a phone usually means opening the companion app, wa
   alt="Large widget stacking an EV charging card, showing charge percentage and range, above a fuel card showing gallons remaining and range"
 />
 
-Both cards in that stack read from the same widget family, sized to sit together on one Home Screen row.
+This concept skips all three steps: a fuel level, a charge estimate, a tire pressure warning, each one lives as its own widget on the Home Screen or Lock Screen, readable without unlocking into the app at all.
 
 ## Project overview
 
@@ -62,7 +62,7 @@ That shaped the set of widgets pursued: no single dashboard trying to serve all 
 
 ## Sizing
 
-Fuel was the simplest card, and the first one tested across sizes.
+Card sizes and densities got tested against the rhythm of Weather and Calendar widgets already sitting on a driver's Home Screen, since a car widget next to them had to hold the same visual weight without reading as bolted-on.
 
 <Figure
   src="/assets/projects/widgets/image-7.png"
@@ -77,8 +77,6 @@ Fuel was the simplest card, and the first one tested across sizes.
   caption="Fuel widget, expanded"
   alt="Larger fuel widget with a filled gauge background, showing the same gallons and range numbers at a bigger scale"
 />
-
-Card sizes and densities got tested against the rhythm of Weather and Calendar widgets already sitting on a driver's Home Screen, since a car widget next to them had to hold the same visual weight without reading as bolted-on.
 
 The same two numbers, a fuel level and a range estimate, had to hold up at a small square and at a wider card. That ruled out any layout depending on extra space showing up later: the compact version is not a cropped version of the expanded one, it is a separate composition built for its own size.
 
@@ -96,15 +94,13 @@ The charging card pairs percentage and range on one row, time-to-full and chargi
 
 ## Engine status
 
-Engine status is the simplest card in the set, a single word and an icon.
+Off needed to read as neutral, not broken. The resting state uses the same grey as an inactive iOS toggle rather than a warning color, since a parked car with the engine off is the expected state, not an error worth flagging.
 
 <Figure
   src="/assets/projects/widgets/image-9.png"
   caption="Engine status widget"
   alt="Engine status widget reading Off in grey, next to a greyed-out power icon"
 />
-
-Off needed to read as neutral, not broken. The resting state uses the same grey as an inactive iOS toggle rather than a warning color, since a parked car with the engine off is the expected state, not an error worth flagging.
 
 ## Tire pressure
 
@@ -165,9 +161,6 @@ The best parts turned out to be invisible. A widget that works does not get noti
   </ProjectAccordionItem>
   <ProjectAccordionItem title="Was this connected to a real vehicle?">
     No, this is a concept, and the values shown, 83°F 34 psi 35.1 mpg are static examples rather than a live telemetry feed. A production version would need a paired data source from the vehicle or its companion app.
-  </ProjectAccordionItem>
-  <ProjectAccordionItem title="Why does the tire pressure widget flag one wheel instead of the whole card?">
-    Because the problem is almost always one wheel, not all four. Flagging the whole card red for a single low tire would bury the useful information, which wheel, under a warning state that reads the same whether one tire or all four need attention.
   </ProjectAccordionItem>
   <ProjectAccordionItem title="Why build widgets instead of just improving the companion app?">
     A widget and a full app answer different distances from a driver's attention. The app still exists for anything that needs a decision, changing a charge schedule, reviewing trip history. A widget only needs to answer one question at a glance, and that is a different design problem, not a smaller version of the same one.
